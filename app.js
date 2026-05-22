@@ -1,4 +1,4 @@
-const navItems = document.querySelectorAll(".nav-item");
+﻿const navItems = document.querySelectorAll(".nav-item");
 const screens = document.querySelectorAll(".screen");
 const pageTitle = document.getElementById("page-title");
 const pageSubtitle = document.getElementById("page-subtitle");
@@ -113,7 +113,64 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal-overlay")) {
     e.target.classList.remove("open");
   }
+  // Close region dropdown when clicking outside
+  const dd = document.getElementById("region-dropdown");
+  if (dd && !e.target.closest("#region-pill-trigger")) {
+    dd.classList.remove("open");
+  }
 });
+
+// ── Language Toggle ─────────────────────────────────────────────
+let currentLang = "en";
+
+const langLabels = {
+  en: { "page-title": null, placeholder: "Search project, role, vehicle..." },
+  fr: {
+    "page-title": null,
+    placeholder: "Rechercher projet, rôle, véhicule...",
+  },
+};
+
+function toggleLanguage() {
+  currentLang = currentLang === "en" ? "fr" : "en";
+  document
+    .getElementById("lang-en")
+    .classList.toggle("active", currentLang === "en");
+  document
+    .getElementById("lang-fr")
+    .classList.toggle("active", currentLang === "fr");
+  const searchInput = document.querySelector(".topbar-search input");
+  if (searchInput)
+    searchInput.placeholder = langLabels[currentLang].placeholder;
+  showToast(
+    currentLang === "fr"
+      ? "Langue changée en Français 🇫🇷"
+      : "Language switched to English 🇨🇦",
+    "info",
+  );
+}
+
+// Set English active on load
+document.addEventListener("DOMContentLoaded", () => {
+  const enEl = document.getElementById("lang-en");
+  if (enEl) enEl.classList.add("active");
+});
+
+function toggleRegionDropdown(e) {
+  e.stopPropagation();
+  document.getElementById("region-dropdown").classList.toggle("open");
+}
+
+function selectRegion(e, region) {
+  e.stopPropagation();
+  document.getElementById("region-pill-label").textContent = region;
+  document.getElementById("region-dropdown").classList.remove("open");
+  document
+    .querySelectorAll(".region-dropdown-item")
+    .forEach((el) => el.classList.remove("active"));
+  e.currentTarget.classList.add("active");
+  showToast(`Region switched to ${region}`, "info");
+}
 
 // Close modal on Escape key
 document.addEventListener("keydown", (e) => {
@@ -127,23 +184,23 @@ document.addEventListener("keydown", (e) => {
 // ── Budget Planning ────────────────────────────────────────────
 const budgetProjects = {
   proj1: {
-    budget: "₹5.00 Cr",
-    manpower: "₹1.20 Cr",
+    budget: "CAD 5.00M",
+    manpower: "CAD 1.20M",
     manpowerPct: "24%",
-    vehicle: "₹20 L",
+    vehicle: "CAD 200K",
     vehiclePct: "4%",
-    equipment: "₹35 L",
+    equipment: "CAD 350K",
     equipmentPct: "7%",
-    contingency: "₹15 L",
+    contingency: "CAD 150K",
     contingencyPct: "3%",
-    total: "₹1.90 Cr",
+    total: "CAD 1.90M",
     totalPct: "38%",
     barPct: 38,
     barColor: "linear-gradient(90deg,var(--primary),var(--success))",
-    barLabel: "₹1.90 Cr / ₹5.00 Cr (38%)",
+    barLabel: "CAD 1.90M / CAD 5.00M (38%)",
     barLegend:
-      "🔵 Manpower: ₹1.20 Cr (24%)&nbsp;&nbsp;🟡 Vehicles: ₹20 L (4%)&nbsp;&nbsp;🟠 Equipment: ₹35 L (7%)&nbsp;&nbsp;⚪ Regional: ₹20 L (4%)&nbsp;&nbsp;⚪ Contingency: ₹15 L (3%)",
-    variance: "Budget Variance: ₹3.10 Cr remaining",
+      "🔵 Manpower: CAD 1.20M (24%)&nbsp;&nbsp;🟡 Vehicles: CAD 200K (4%)&nbsp;&nbsp;🟠 Equipment: CAD 350K (7%)&nbsp;&nbsp;⚪ Regional: CAD 200K (4%)&nbsp;&nbsp;⚪ Contingency: CAD 150K (3%)",
+    variance: "Budget Variance: CAD 3.10M remaining",
     varianceColor: "#dcfce7",
     varianceTextColor: "#15803d",
     varianceBorderColor: "#86efac",
@@ -151,184 +208,184 @@ const budgetProjects = {
     statusText: "Budget Status: Within Budget",
     tableRows: `<tr>
       <td><i class="fa-solid fa-users" style="color:var(--primary);margin-right:6px;"></i>Manpower Cost</td>
-      <td>₹1.10 Cr</td><td>₹1.20 Cr</td><td>24%</td>
+      <td>CAD 1.10M</td><td>CAD 1.20M</td><td>24%</td>
       <td style="color:#d97706;">+9.1%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-truck" style="color:var(--warning);margin-right:6px;"></i>Vehicle Cost</td>
-      <td>₹16 L</td><td>₹20 L</td><td>4%</td>
+      <td>CAD 160K</td><td>CAD 200K</td><td>4%</td>
       <td style="color:#dc2626;">+25%</td><td><span class="badge badge-danger">Rental Impact</span></td></tr>
     <tr><td><i class="fa-solid fa-screwdriver-wrench" style="color:var(--purple);margin-right:6px;"></i>Equipment Cost</td>
-      <td>₹33 L</td><td>₹35 L</td><td>7%</td>
+      <td>CAD 330K</td><td>CAD 350K</td><td>7%</td>
       <td style="color:#16a34a;">+6.1%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr><td><i class="fa-solid fa-earth-americas" style="color:#0ea5e9;margin-right:6px;"></i>Regional Cost Impact</td>
-      <td>₹18 L</td><td>₹20 L</td><td>4%</td>
+      <td>CAD 180K</td><td>CAD 200K</td><td>4%</td>
       <td style="color:#d97706;">+11.1%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-shield-halved" style="color:#64748b;margin-right:6px;"></i>Contingency</td>
-      <td>₹15 L</td><td>₹15 L</td><td>3%</td>
+      <td>CAD 150K</td><td>CAD 150K</td><td>3%</td>
       <td style="color:#16a34a;">0%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr style="background:#f8faff;"><td><strong>Total Estimated Resource Cost</strong></td>
-      <td><strong>₹1.72 Cr</strong></td><td><strong>₹1.90 Cr</strong></td><td><strong>38%</strong></td>
+      <td><strong>CAD 1.72M</strong></td><td><strong>CAD 1.90M</strong></td><td><strong>38%</strong></td>
       <td style="color:#d97706;"><strong>+10.5%</strong></td><td><span class="badge badge-success">Within Budget</span></td></tr>
     <tr style="background:#f0fdf4;"><td><strong>Budget Variance (Remaining)</strong></td>
-      <td colspan="2" style="color:#15803d;"><strong>₹3.10 Cr available</strong></td><td><strong>62%</strong></td>
+      <td colspan="2" style="color:#15803d;"><strong>CAD 3.10M available</strong></td><td><strong>62%</strong></td>
       <td style="color:#15803d;"><strong>—</strong></td><td><span class="badge badge-success">Healthy</span></td></tr>`,
-    regionalRows: `<tr><td style="padding:8px 14px;">🇨🇦 Alberta</td><td style="text-align:right;padding:8px 14px;">₹52 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">27%</td></tr>
-    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇨🇦 Ontario</td><td style="text-align:right;padding:8px 14px;">₹48 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">25%</td></tr>
-    <tr><td style="padding:8px 14px;">🇮🇳 Telangana</td><td style="text-align:right;padding:8px 14px;">₹58 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">31%</td></tr>
-    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇺🇸 Texas</td><td style="text-align:right;padding:8px 14px;">₹32 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">17%</td></tr>
-    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;">₹1.90 Cr</td><td style="text-align:right;padding:8px 14px;">100%</td></tr>`,
-    alerts: `<div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-car-side"></i></div><div class="alert-content"><strong>Vehicle cost +25%</strong><p>External crane rental adds ₹4 L above estimate.</p></div></div>
-    <div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-users"></i></div><div class="alert-content"><strong>Manpower revised up +9.1%</strong><p>Supervisor overtime added ₹10 L above plan.</p></div></div>
-    <div class="alert alert-success"><div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div><div class="alert-content"><strong>Overall within budget</strong><p>Total resource cost ₹1.90 Cr is 62% below the ₹5 Cr cap.</p></div></div>`,
+    regionalRows: `<tr><td style="padding:8px 14px;">🇨🇦 Alberta</td><td style="text-align:right;padding:8px 14px;">CAD 520K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">27%</td></tr>
+    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇨🇦 Ontario</td><td style="text-align:right;padding:8px 14px;">CAD 480K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">25%</td></tr>
+    <tr><td style="padding:8px 14px;">🇮🇳 Telangana</td><td style="text-align:right;padding:8px 14px;">CAD 580K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">31%</td></tr>
+    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇺🇸 Texas</td><td style="text-align:right;padding:8px 14px;">CAD 320K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">17%</td></tr>
+    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;">CAD 1.90M</td><td style="text-align:right;padding:8px 14px;">100%</td></tr>`,
+    alerts: `<div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-car-side"></i></div><div class="alert-content"><strong>Vehicle cost +25%</strong><p>External crane rental adds CAD 40K above estimate.</p></div></div>
+    <div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-users"></i></div><div class="alert-content"><strong>Manpower revised up +9.1%</strong><p>Supervisor overtime added CAD 100K above plan.</p></div></div>
+    <div class="alert alert-success"><div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div><div class="alert-content"><strong>Overall within budget</strong><p>Total resource cost CAD 1.90M is 62% below the CAD 5M cap.</p></div></div>`,
   },
   proj2: {
-    budget: "₹8.50 Cr",
-    manpower: "₹2.10 Cr",
+    budget: "CAD 8.50M",
+    manpower: "CAD 2.10M",
     manpowerPct: "25%",
-    vehicle: "₹35 L",
+    vehicle: "CAD 350K",
     vehiclePct: "4%",
-    equipment: "₹28 L",
+    equipment: "CAD 280K",
     equipmentPct: "3%",
-    contingency: "₹25 L",
+    contingency: "CAD 250K",
     contingencyPct: "3%",
-    total: "₹3.06 Cr",
+    total: "CAD 3.06M",
     totalPct: "36%",
     barPct: 36,
     barColor: "linear-gradient(90deg,var(--primary),var(--success))",
-    barLabel: "₹3.06 Cr / ₹8.50 Cr (36%)",
+    barLabel: "CAD 3.06M / CAD 8.50M (36%)",
     barLegend:
-      "🔵 Manpower: ₹2.10 Cr (25%)&nbsp;&nbsp;🟡 Vehicles: ₹35 L (4%)&nbsp;&nbsp;🟠 Equipment: ₹28 L (3%)&nbsp;&nbsp;⚪ Regional: ₹8 L (1%)&nbsp;&nbsp;⚪ Contingency: ₹25 L (3%)",
-    variance: "Budget Variance: ₹5.44 Cr remaining",
+      "🔵 Manpower: CAD 2.10M (25%)&nbsp;&nbsp;🟡 Vehicles: CAD 350K (4%)&nbsp;&nbsp;🟠 Equipment: CAD 280K (3%)&nbsp;&nbsp;⚪ Regional: CAD 80K (1%)&nbsp;&nbsp;⚪ Contingency: CAD 250K (3%)",
+    variance: "Budget Variance: CAD 5.44M remaining",
     varianceColor: "#dcfce7",
     varianceTextColor: "#15803d",
     varianceBorderColor: "#86efac",
     status: "within",
     statusText: "Budget Status: Within Budget",
     tableRows: `<tr><td><i class="fa-solid fa-users" style="color:var(--primary);margin-right:6px;"></i>Manpower Cost</td>
-      <td>₹1.95 Cr</td><td>₹2.10 Cr</td><td>25%</td>
+      <td>CAD 1.95M</td><td>CAD 2.10M</td><td>25%</td>
       <td style="color:#d97706;">+7.7%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-truck" style="color:var(--warning);margin-right:6px;"></i>Vehicle Cost</td>
-      <td>₹30 L</td><td>₹35 L</td><td>4%</td>
+      <td>CAD 300K</td><td>CAD 350K</td><td>4%</td>
       <td style="color:#d97706;">+16.7%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-screwdriver-wrench" style="color:var(--purple);margin-right:6px;"></i>Equipment Cost</td>
-      <td>₹28 L</td><td>₹28 L</td><td>3%</td>
+      <td>CAD 280K</td><td>CAD 280K</td><td>3%</td>
       <td style="color:#16a34a;">0%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr><td><i class="fa-solid fa-earth-americas" style="color:#0ea5e9;margin-right:6px;"></i>Regional Cost Impact</td>
-      <td>₹7 L</td><td>₹8 L</td><td>1%</td>
+      <td>CAD 70K</td><td>CAD 80K</td><td>1%</td>
       <td style="color:#d97706;">+14.3%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-shield-halved" style="color:#64748b;margin-right:6px;"></i>Contingency</td>
-      <td>₹25 L</td><td>₹25 L</td><td>3%</td>
+      <td>CAD 250K</td><td>CAD 250K</td><td>3%</td>
       <td style="color:#16a34a;">0%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr style="background:#f8faff;"><td><strong>Total Estimated Resource Cost</strong></td>
-      <td><strong>₹2.85 Cr</strong></td><td><strong>₹3.06 Cr</strong></td><td><strong>36%</strong></td>
+      <td><strong>CAD 2.85M</strong></td><td><strong>CAD 3.06M</strong></td><td><strong>36%</strong></td>
       <td style="color:#d97706;"><strong>+7.4%</strong></td><td><span class="badge badge-success">Within Budget</span></td></tr>
     <tr style="background:#f0fdf4;"><td><strong>Budget Variance (Remaining)</strong></td>
-      <td colspan="2" style="color:#15803d;"><strong>₹5.44 Cr available</strong></td><td><strong>64%</strong></td>
+      <td colspan="2" style="color:#15803d;"><strong>CAD 5.44M available</strong></td><td><strong>64%</strong></td>
       <td style="color:#15803d;"><strong>—</strong></td><td><span class="badge badge-success">Healthy</span></td></tr>`,
-    regionalRows: `<tr><td style="padding:8px 14px;">🇮🇳 Telangana (Primary)</td><td style="text-align:right;padding:8px 14px;">₹1.85 Cr</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">60%</td></tr>
-    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇮🇳 Andhra Pradesh</td><td style="text-align:right;padding:8px 14px;">₹82 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">27%</td></tr>
-    <tr><td style="padding:8px 14px;">🇨🇦 Ontario (Remote)</td><td style="text-align:right;padding:8px 14px;">₹39 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">13%</td></tr>
-    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;">₹3.06 Cr</td><td style="text-align:right;padding:8px 14px;">100%</td></tr>`,
-    alerts: `<div class="alert alert-success"><div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div><div class="alert-content"><strong>Well within budget</strong><p>Only 36% of ₹8.50 Cr budget consumed.</p></div></div>
+    regionalRows: `<tr><td style="padding:8px 14px;">🇮🇳 Telangana (Primary)</td><td style="text-align:right;padding:8px 14px;">CAD 1.85M</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">60%</td></tr>
+    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇮🇳 Andhra Pradesh</td><td style="text-align:right;padding:8px 14px;">CAD 820K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">27%</td></tr>
+    <tr><td style="padding:8px 14px;">🇨🇦 Ontario (Remote)</td><td style="text-align:right;padding:8px 14px;">CAD 390K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">13%</td></tr>
+    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;">CAD 3.06M</td><td style="text-align:right;padding:8px 14px;">100%</td></tr>`,
+    alerts: `<div class="alert alert-success"><div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div><div class="alert-content"><strong>Well within budget</strong><p>Only 36% of CAD 8.50M budget consumed.</p></div></div>
     <div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-truck"></i></div><div class="alert-content"><strong>Vehicle cost +16.7%</strong><p>Logistics cost higher due to pipeline terrain access.</p></div></div>`,
   },
   proj3: {
-    budget: "₹2.00 Cr",
-    manpower: "₹72 L",
+    budget: "CAD 2.00M",
+    manpower: "CAD 720K",
     manpowerPct: "36%",
-    vehicle: "₹8 L",
+    vehicle: "CAD 80K",
     vehiclePct: "4%",
-    equipment: "₹12 L",
+    equipment: "CAD 120K",
     equipmentPct: "6%",
-    contingency: "₹8 L",
+    contingency: "CAD 80K",
     contingencyPct: "4%",
-    total: "₹1.06 Cr",
+    total: "CAD 1.06M",
     totalPct: "53%",
     barPct: 53,
     barColor: "linear-gradient(90deg,#f59e0b,#d97706)",
-    barLabel: "₹1.06 Cr / ₹2.00 Cr (53%)",
+    barLabel: "CAD 1.06M / CAD 2.00M (53%)",
     barLegend:
-      "🔵 Manpower: ₹72 L (36%)&nbsp;&nbsp;🟡 Vehicles: ₹8 L (4%)&nbsp;&nbsp;🟠 Equipment: ₹12 L (6%)&nbsp;&nbsp;⚪ Regional: ₹6 L (3%)&nbsp;&nbsp;⚪ Contingency: ₹8 L (4%)",
-    variance: "Budget Variance: ₹94 L remaining",
+      "🔵 Manpower: CAD 720K (36%)&nbsp;&nbsp;🟡 Vehicles: CAD 80K (4%)&nbsp;&nbsp;🟠 Equipment: CAD 120K (6%)&nbsp;&nbsp;⚪ Regional: CAD 60K (3%)&nbsp;&nbsp;⚪ Contingency: CAD 80K (4%)",
+    variance: "Budget Variance: CAD 940K remaining",
     varianceColor: "#fef9c3",
     varianceTextColor: "#92400e",
     varianceBorderColor: "#fde68a",
     status: "within",
     statusText: "Budget Status: Within Budget",
     tableRows: `<tr><td><i class="fa-solid fa-users" style="color:var(--primary);margin-right:6px;"></i>Manpower Cost</td>
-      <td>₹68 L</td><td>₹72 L</td><td>36%</td>
+      <td>CAD 680K</td><td>CAD 720K</td><td>36%</td>
       <td style="color:#d97706;">+5.9%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-truck" style="color:var(--warning);margin-right:6px;"></i>Vehicle Cost</td>
-      <td>₹8 L</td><td>₹8 L</td><td>4%</td>
+      <td>CAD 80K</td><td>CAD 80K</td><td>4%</td>
       <td style="color:#16a34a;">0%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr><td><i class="fa-solid fa-screwdriver-wrench" style="color:var(--purple);margin-right:6px;"></i>Equipment Cost</td>
-      <td>₹10 L</td><td>₹12 L</td><td>6%</td>
+      <td>CAD 100K</td><td>CAD 120K</td><td>6%</td>
       <td style="color:#d97706;">+20%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr><td><i class="fa-solid fa-earth-americas" style="color:#0ea5e9;margin-right:6px;"></i>Regional Cost Impact</td>
-      <td>₹6 L</td><td>₹6 L</td><td>3%</td>
+      <td>CAD 60K</td><td>CAD 60K</td><td>3%</td>
       <td style="color:#16a34a;">0%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr><td><i class="fa-solid fa-shield-halved" style="color:#64748b;margin-right:6px;"></i>Contingency</td>
-      <td>₹8 L</td><td>₹8 L</td><td>4%</td>
+      <td>CAD 80K</td><td>CAD 80K</td><td>4%</td>
       <td style="color:#16a34a;">0%</td><td><span class="badge badge-success">OK</span></td></tr>
     <tr style="background:#f8faff;"><td><strong>Total Estimated Resource Cost</strong></td>
-      <td><strong>₹1.00 Cr</strong></td><td><strong>₹1.06 Cr</strong></td><td><strong>53%</strong></td>
+      <td><strong>CAD 1.00M</strong></td><td><strong>CAD 1.06M</strong></td><td><strong>53%</strong></td>
       <td style="color:#d97706;"><strong>+6%</strong></td><td><span class="badge badge-success">Within Budget</span></td></tr>
     <tr style="background:#f0fdf4;"><td><strong>Budget Variance (Remaining)</strong></td>
-      <td colspan="2" style="color:#15803d;"><strong>₹94 L available</strong></td><td><strong>47%</strong></td>
+      <td colspan="2" style="color:#15803d;"><strong>CAD 940K available</strong></td><td><strong>47%</strong></td>
       <td style="color:#15803d;"><strong>—</strong></td><td><span class="badge badge-success">Moderate</span></td></tr>`,
-    regionalRows: `<tr><td style="padding:8px 14px;">🇨🇦 Ontario (Primary)</td><td style="text-align:right;padding:8px 14px;">₹1.06 Cr</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">100%</td></tr>
-    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;">₹1.06 Cr</td><td style="text-align:right;padding:8px 14px;">100%</td></tr>`,
+    regionalRows: `<tr><td style="padding:8px 14px;">🇨🇦 Ontario (Primary)</td><td style="text-align:right;padding:8px 14px;">CAD 1.06M</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">100%</td></tr>
+    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;">CAD 1.06M</td><td style="text-align:right;padding:8px 14px;">100%</td></tr>`,
     alerts: `<div class="alert alert-success"><div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div><div class="alert-content"><strong>Budget comfortable at 53%</strong><p>AMC project has healthy remaining budget.</p></div></div>
     <div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><div class="alert-content"><strong>Equipment cost +20%</strong><p>Specialized testing tools required for pump inspection.</p></div></div>`,
   },
   proj4: {
-    budget: "₹3.50 Cr",
-    manpower: "₹2.80 Cr",
+    budget: "CAD 3.50M",
+    manpower: "CAD 2.80M",
     manpowerPct: "80%",
-    vehicle: "₹45 L",
+    vehicle: "CAD 450K",
     vehiclePct: "13%",
-    equipment: "₹52 L",
+    equipment: "CAD 520K",
     equipmentPct: "15%",
-    contingency: "₹22 L",
+    contingency: "CAD 220K",
     contingencyPct: "6%",
-    total: "₹4.27 Cr",
+    total: "CAD 4.27M",
     totalPct: "122%",
     barPct: 100,
     barColor: "linear-gradient(90deg,var(--danger),#b91c1c)",
-    barLabel: "₹4.27 Cr / ₹3.50 Cr (122%) ⚠ OVER BUDGET",
+    barLabel: "CAD 4.27M / CAD 3.50M (122%) ⚠ OVER BUDGET",
     barLegend:
-      "🔴 Manpower: ₹2.80 Cr (80%)&nbsp;&nbsp;🔴 Vehicles: ₹45 L (13%)&nbsp;&nbsp;🔴 Equipment: ₹52 L (15%)&nbsp;&nbsp;🔴 Regional: ₹28 L (8%)&nbsp;&nbsp;🔴 Contingency: ₹22 L (6%)",
-    variance: "⚠ OVER BUDGET by ₹77 L — Action Required",
+      "🔴 Manpower: CAD 2.80M (80%)&nbsp;&nbsp;🔴 Vehicles: CAD 450K (13%)&nbsp;&nbsp;🔴 Equipment: CAD 520K (15%)&nbsp;&nbsp;🔴 Regional: CAD 280K (8%)&nbsp;&nbsp;🔴 Contingency: CAD 220K (6%)",
+    variance: "⚠ OVER BUDGET by CAD 770K — Action Required",
     varianceColor: "#fee2e2",
     varianceTextColor: "#b91c1c",
     varianceBorderColor: "#fca5a5",
     status: "over",
     statusText: "⚠ Resource Cost Exceeds Budget!",
     tableRows: `<tr><td><i class="fa-solid fa-users" style="color:var(--primary);margin-right:6px;"></i>Manpower Cost</td>
-      <td>₹1.80 Cr</td><td>₹2.80 Cr</td><td>80%</td>
+      <td>CAD 1.80M</td><td>CAD 2.80M</td><td>80%</td>
       <td style="color:#dc2626;">+55.6%</td><td><span class="badge badge-danger">Over Budget</span></td></tr>
     <tr><td><i class="fa-solid fa-truck" style="color:var(--warning);margin-right:6px;"></i>Vehicle Cost</td>
-      <td>₹28 L</td><td>₹45 L</td><td>13%</td>
+      <td>CAD 280K</td><td>CAD 450K</td><td>13%</td>
       <td style="color:#dc2626;">+60.7%</td><td><span class="badge badge-danger">Over Budget</span></td></tr>
     <tr><td><i class="fa-solid fa-screwdriver-wrench" style="color:var(--purple);margin-right:6px;"></i>Equipment Cost</td>
-      <td>₹38 L</td><td>₹52 L</td><td>15%</td>
+      <td>CAD 380K</td><td>CAD 520K</td><td>15%</td>
       <td style="color:#dc2626;">+36.8%</td><td><span class="badge badge-danger">Over Budget</span></td></tr>
     <tr><td><i class="fa-solid fa-earth-americas" style="color:#0ea5e9;margin-right:6px;"></i>Regional Cost Impact</td>
-      <td>₹22 L</td><td>₹28 L</td><td>8%</td>
+      <td>CAD 220K</td><td>CAD 280K</td><td>8%</td>
       <td style="color:#dc2626;">+27.3%</td><td><span class="badge badge-danger">Over Budget</span></td></tr>
     <tr><td><i class="fa-solid fa-shield-halved" style="color:#64748b;margin-right:6px;"></i>Contingency</td>
-      <td>₹18 L</td><td>₹22 L</td><td>6%</td>
+      <td>CAD 180K</td><td>CAD 220K</td><td>6%</td>
       <td style="color:#d97706;">+22.2%</td><td><span class="badge badge-warning">Review</span></td></tr>
     <tr style="background:#fee2e2;"><td><strong>Total Estimated Resource Cost</strong></td>
-      <td><strong>₹2.86 Cr</strong></td><td><strong>₹4.27 Cr</strong></td><td><strong>122%</strong></td>
+      <td><strong>CAD 2.86M</strong></td><td><strong>CAD 4.27M</strong></td><td><strong>122%</strong></td>
       <td style="color:#dc2626;"><strong>+49.3%</strong></td><td><span class="badge badge-danger">Over Budget</span></td></tr>
     <tr style="background:#fee2e2;"><td><strong>Budget Variance (Shortfall)</strong></td>
-      <td colspan="2" style="color:#dc2626;"><strong>₹77 L OVER BUDGET</strong></td><td><strong>—</strong></td>
+      <td colspan="2" style="color:#dc2626;"><strong>CAD 770K OVER BUDGET</strong></td><td><strong>—</strong></td>
       <td style="color:#dc2626;"><strong>↑</strong></td><td><span class="badge badge-danger">Action Required</span></td></tr>`,
-    regionalRows: `<tr><td style="padding:8px 14px;">🇺🇸 Texas (Primary)</td><td style="text-align:right;padding:8px 14px;">₹3.20 Cr</td><td style="text-align:right;padding:8px 14px;color:#dc2626;">75%</td></tr>
-    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇺🇸 Nevada (Support)</td><td style="text-align:right;padding:8px 14px;">₹72 L</td><td style="text-align:right;padding:8px 14px;color:#d97706;">17%</td></tr>
-    <tr><td style="padding:8px 14px;">🇨🇦 Alberta (Remote Mgmt)</td><td style="text-align:right;padding:8px 14px;">₹35 L</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">8%</td></tr>
-    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;color:#dc2626;">₹4.27 Cr</td><td style="text-align:right;padding:8px 14px;color:#dc2626;">100%</td></tr>`,
-    alerts: `<div class="alert alert-danger"><div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="alert-content"><strong>OVER BUDGET by ₹77 L</strong><p>Total resource cost ₹4.27 Cr exceeds the ₹3.50 Cr cap. Immediate review required.</p></div></div>
+    regionalRows: `<tr><td style="padding:8px 14px;">🇺🇸 Texas (Primary)</td><td style="text-align:right;padding:8px 14px;">CAD 3.20M</td><td style="text-align:right;padding:8px 14px;color:#dc2626;">75%</td></tr>
+    <tr style="background:#fafbfc;"><td style="padding:8px 14px;">🇺🇸 Nevada (Support)</td><td style="text-align:right;padding:8px 14px;">CAD 720K</td><td style="text-align:right;padding:8px 14px;color:#d97706;">17%</td></tr>
+    <tr><td style="padding:8px 14px;">🇨🇦 Alberta (Remote Mgmt)</td><td style="text-align:right;padding:8px 14px;">CAD 350K</td><td style="text-align:right;padding:8px 14px;color:var(--primary);">8%</td></tr>
+    <tr style="font-weight:700;border-top:2px solid var(--border);"><td style="padding:8px 14px;">Total</td><td style="text-align:right;padding:8px 14px;color:#dc2626;">CAD 4.27M</td><td style="text-align:right;padding:8px 14px;color:#dc2626;">100%</td></tr>`,
+    alerts: `<div class="alert alert-danger"><div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="alert-content"><strong>OVER BUDGET by CAD 770K</strong><p>Total resource cost CAD 4.27M exceeds the CAD 3.50M cap. Immediate review required.</p></div></div>
     <div class="alert alert-danger"><div class="alert-icon"><i class="fa-solid fa-users"></i></div><div class="alert-content"><strong>Manpower surge +55.6%</strong><p>Texas solar installation requires double the planned crew size.</p></div></div>
     <div class="alert alert-warning"><div class="alert-icon"><i class="fa-solid fa-lightbulb"></i></div><div class="alert-content"><strong>Recommendation</strong><p>Consider applying Lowest Cost scenario or phasing the project to Q1 2027.</p></div></div>`,
   },
