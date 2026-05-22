@@ -22,7 +22,9 @@
         </div>
 
         <nav class="sidebar-nav">
-          <div class="nav-section-label">Workspace</div>
+          <div class="nav-section-label" data-i18n="nav-section-workspace">
+            Workspace
+          </div>
           <div
             class="nav-item active"
             data-screen="dashboard"
@@ -30,7 +32,7 @@
             data-subtitle="Dashboards &amp; Reports"
           >
             <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
-            <span class="nav-label">Dashboard</span>
+            <span class="nav-label" data-i18n="nav-dashboard">Dashboard</span>
           </div>
           <div
             class="nav-item"
@@ -39,7 +41,9 @@
             data-subtitle="Capture scope, region, budget and constraints"
           >
             <span class="nav-icon"><i class="fa-solid fa-plus"></i></span>
-            <span class="nav-label">Create Project</span>
+            <span class="nav-label" data-i18n="nav-create-project"
+              >Create Project</span
+            >
           </div>
           <div
             class="nav-item"
@@ -50,7 +54,9 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-diagram-project"></i
             ></span>
-            <span class="nav-label">Project Detail</span>
+            <span class="nav-label" data-i18n="nav-project-detail"
+              >Project Detail</span
+            >
           </div>
           <div
             class="nav-item"
@@ -59,11 +65,13 @@
             data-subtitle="Explainable resource recommendation engine"
           >
             <span class="nav-icon"><i class="fa-solid fa-robot"></i></span>
-            <span class="nav-label">AI Planner</span>
+            <span class="nav-label" data-i18n="nav-ai-planner">AI Planner</span>
             <span class="nav-badge">AI</span>
           </div>
 
-          <div class="nav-section-label">Resource Core</div>
+          <div class="nav-section-label" data-i18n="nav-section-resource">
+            Resource Core
+          </div>
           <div
             class="nav-item"
             data-screen="resources"
@@ -71,7 +79,7 @@
             data-subtitle="Unified manpower, vehicle and equipment registry"
           >
             <span class="nav-icon"><i class="fa-solid fa-cubes"></i></span>
-            <span class="nav-label">Resources</span>
+            <span class="nav-label" data-i18n="nav-resources">Resources</span>
           </div>
           <div
             class="nav-item"
@@ -82,7 +90,7 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-helmet-safety"></i
             ></span>
-            <span class="nav-label">Manpower</span>
+            <span class="nav-label" data-i18n="nav-manpower">Manpower</span>
           </div>
           <div
             class="nav-item"
@@ -91,7 +99,7 @@
             data-subtitle="Fleet availability and utilization"
           >
             <span class="nav-icon"><i class="fa-solid fa-truck"></i></span>
-            <span class="nav-label">Vehicles</span>
+            <span class="nav-label" data-i18n="nav-vehicles">Vehicles</span>
           </div>
           <div
             class="nav-item"
@@ -102,7 +110,7 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-screwdriver-wrench"></i
             ></span>
-            <span class="nav-label">Equipment</span>
+            <span class="nav-label" data-i18n="nav-equipment">Equipment</span>
           </div>
           <div
             class="nav-item"
@@ -113,7 +121,9 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-earth-americas"></i
             ></span>
-            <span class="nav-label">Region Settings</span>
+            <span class="nav-label" data-i18n="nav-regions"
+              >Region Settings</span
+            >
           </div>
           <div
             class="nav-item"
@@ -124,10 +134,14 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-clock-rotate-left"></i
             ></span>
-            <span class="nav-label">Historical Data</span>
+            <span class="nav-label" data-i18n="nav-historical"
+              >Historical Data</span
+            >
           </div>
 
-          <div class="nav-section-label">Planning</div>
+          <div class="nav-section-label" data-i18n="nav-section-planning">
+            Planning
+          </div>
           <div
             class="nav-item"
             data-screen="calendar"
@@ -137,7 +151,9 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-calendar-days"></i
             ></span>
-            <span class="nav-label">Capacity Calendar</span>
+            <span class="nav-label" data-i18n="nav-calendar"
+              >Capacity Calendar</span
+            >
           </div>
           <div
             class="nav-item"
@@ -148,7 +164,7 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-people-arrows-left-right"></i
             ></span>
-            <span class="nav-label">Allocation</span>
+            <span class="nav-label" data-i18n="nav-allocation">Allocation</span>
           </div>
           <div
             class="nav-item"
@@ -157,7 +173,7 @@
             data-subtitle="Cost structure and variance analysis"
           >
             <span class="nav-icon"><i class="fa-solid fa-wallet"></i></span>
-            <span class="nav-label">Budget</span>
+            <span class="nav-label" data-i18n="nav-budget">Budget</span>
           </div>
           <div
             class="nav-item"
@@ -166,7 +182,7 @@
             data-subtitle="Exports for management and project teams"
           >
             <span class="nav-icon"><i class="fa-solid fa-file-lines"></i></span>
-            <span class="nav-label">Reports</span>
+            <span class="nav-label" data-i18n="nav-reports">Reports</span>
           </div>
           <div
             class="nav-item"
@@ -177,7 +193,7 @@
             <span class="nav-icon"
               ><i class="fa-solid fa-shield-halved"></i
             ></span>
-            <span class="nav-label">Admin</span>
+            <span class="nav-label" data-i18n="nav-admin">Admin</span>
           </div>
         </nav>
 
@@ -314,10 +330,12 @@
             <div class="page-header" style="padding-bottom: 0">
               <div class="page-header-actions">
                 <button class="btn btn-outline" data-goto="calendar">
-                  <i class="fa-solid fa-calendar"></i> Open Calendar
+                  <i class="fa-solid fa-calendar"></i>
+                  <span data-i18n="btn-open-calendar">Open Calendar</span>
                 </button>
                 <button class="btn btn-primary" data-goto="create-project">
-                  <i class="fa-solid fa-plus"></i> New Project
+                  <i class="fa-solid fa-plus"></i>
+                  <span data-i18n="btn-new-project">New Project</span>
                 </button>
               </div>
             </div>
@@ -326,21 +344,25 @@
               <div class="tabs">
                 <div class="tab active" data-tab="mgmt">
                   <i class="fa-solid fa-chart-pie" style="margin-right: 6px"></i
-                  >Management Dashboard
+                  ><span data-i18n="tab-mgmt-dashboard"
+                    >Management Dashboard</span
+                  >
                 </div>
                 <div class="tab" data-tab="project">
                   <i
                     class="fa-solid fa-diagram-project"
                     style="margin-right: 6px"
                   ></i
-                  >Project Dashboard
+                  ><span data-i18n="tab-proj-dashboard">Project Dashboard</span>
                 </div>
                 <div class="tab" data-tab="regional">
                   <i
                     class="fa-solid fa-earth-americas"
                     style="margin-right: 6px"
                   ></i
-                  >Regional Dashboard
+                  ><span data-i18n="tab-regional-dashboard"
+                    >Regional Dashboard</span
+                  >
                 </div>
               </div>
 
@@ -356,10 +378,15 @@
                       class="kpi-accent"
                       style="background: var(--primary)"
                     ></div>
-                    <div class="kpi-label">Active Projects</div>
+                    <div class="kpi-label" data-i18n="kpi-active-projects">
+                      Active Projects
+                    </div>
                     <div class="kpi-value">42</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">+6</span> from last month
+                      <span class="trend-up">+6</span>
+                      <span data-i18n="kpi-sub-last-month"
+                        >from last month</span
+                      >
                     </div>
                     <div class="kpi-icon blue">
                       <i class="fa-solid fa-briefcase"></i>
@@ -370,10 +397,15 @@
                       class="kpi-accent"
                       style="background: var(--success)"
                     ></div>
-                    <div class="kpi-label">Available Manpower</div>
+                    <div class="kpi-label" data-i18n="kpi-avail-manpower">
+                      Available Manpower
+                    </div>
                     <div class="kpi-value">284</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">218</span> currently deployed
+                      <span class="trend-up">218</span>
+                      <span data-i18n="kpi-sub-deployed"
+                        >currently deployed</span
+                      >
                     </div>
                     <div class="kpi-icon green">
                       <i class="fa-solid fa-helmet-safety"></i>
@@ -384,10 +416,15 @@
                       class="kpi-accent"
                       style="background: var(--purple)"
                     ></div>
-                    <div class="kpi-label">Allocated Manpower</div>
+                    <div class="kpi-label" data-i18n="kpi-alloc-manpower">
+                      Allocated Manpower
+                    </div>
                     <div class="kpi-value">218</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">77%</span> of total workforce
+                      <span class="trend-up">77%</span>
+                      <span data-i18n="kpi-sub-total-workforce"
+                        >of total workforce</span
+                      >
                     </div>
                     <div class="kpi-icon" style="background: #ede9fe">
                       <i
@@ -398,10 +435,15 @@
                   </div>
                   <div class="kpi-card">
                     <div class="kpi-accent" style="background: #0ea5e9"></div>
-                    <div class="kpi-label">Available Vehicles</div>
+                    <div class="kpi-label" data-i18n="kpi-avail-vehicles">
+                      Available Vehicles
+                    </div>
                     <div class="kpi-value">38</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">5</span> in maintenance this month
+                      <span class="trend-up">5</span>
+                      <span data-i18n="kpi-sub-maintenance"
+                        >in maintenance this month</span
+                      >
                     </div>
                     <div class="kpi-icon" style="background: #e0f2fe">
                       <i class="fa-solid fa-truck" style="color: #0284c7"></i>
@@ -421,10 +463,15 @@
                       class="kpi-accent"
                       style="background: var(--success)"
                     ></div>
-                    <div class="kpi-label">Resource Utilization</div>
+                    <div class="kpi-label" data-i18n="kpi-resource-util">
+                      Resource Utilization
+                    </div>
                     <div class="kpi-value">84%</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">Stable</span> within target band
+                      <span class="trend-up">Stable</span>
+                      <span data-i18n="kpi-sub-target-band"
+                        >within target band</span
+                      >
                     </div>
                     <div class="kpi-icon green">
                       <i class="fa-solid fa-chart-line"></i>
@@ -432,11 +479,15 @@
                   </div>
                   <div class="kpi-card">
                     <div class="kpi-accent" style="background: #f97316"></div>
-                    <div class="kpi-label">Projects at Risk</div>
+                    <div class="kpi-label" data-i18n="kpi-projects-risk">
+                      Projects at Risk
+                    </div>
                     <div class="kpi-value">9</div>
                     <div class="kpi-sub">
-                      <span class="trend-down">4 critical</span> need
-                      intervention
+                      <span class="trend-down">4 critical</span>
+                      <span data-i18n="kpi-sub-intervention"
+                        >need intervention</span
+                      >
                     </div>
                     <div class="kpi-icon orange">
                       <i class="fa-solid fa-shield-halved"></i>
@@ -447,24 +498,30 @@
                       class="kpi-accent"
                       style="background: var(--danger)"
                     ></div>
-                    <div class="kpi-label">Budget Overruns</div>
+                    <div class="kpi-label" data-i18n="kpi-budget-overruns">
+                      Budget Overruns
+                    </div>
                     <div class="kpi-value">7</div>
                     <div class="kpi-sub">
-                      <span class="trend-down">2 high risk</span> require review
+                      <span class="trend-down">2 high risk</span>
+                      <span data-i18n="kpi-sub-review">require review</span>
                     </div>
                     <div class="kpi-icon red">
                       <i class="fa-solid fa-wallet"></i>
                     </div>
                   </div>
-                  <div class="kpi-card">
+                  <div class="kpi-card" style="padding-right: 76px">
                     <div
                       class="kpi-accent"
                       style="background: var(--warning)"
                     ></div>
-                    <div class="kpi-label">Upcoming Shortages</div>
+                    <div class="kpi-label" data-i18n="kpi-upcoming-shortages">
+                      Upcoming Shortages
+                    </div>
                     <div class="kpi-value">11</div>
                     <div class="kpi-sub">
-                      <span class="trend-down">3 critical</span> next 30 days
+                      <span class="trend-down">3 critical</span>
+                      <span data-i18n="kpi-sub-next30">next 30 days</span>
                     </div>
                     <div class="kpi-icon orange">
                       <i class="fa-solid fa-triangle-exclamation"></i>
@@ -477,12 +534,23 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">Project Pipeline</div>
-                          <div class="card-subtitle">
+                          <div
+                            class="card-title"
+                            data-i18n="card-project-pipeline"
+                          >
+                            Project Pipeline
+                          </div>
+                          <div
+                            class="card-subtitle"
+                            data-i18n="sub-project-pipeline"
+                          >
                             New opportunities and baseline planning readiness
                           </div>
                         </div>
-                        <button class="btn btn-sm btn-outline">
+                        <button
+                          class="btn btn-sm btn-outline"
+                          data-i18n="btn-this-quarter"
+                        >
                           This Quarter
                         </button>
                       </div>
@@ -499,19 +567,25 @@
                             </div>
                             <div class="pc-body">
                               <div class="pc-meta-row">
-                                <span class="label">Region</span
+                                <span class="label" data-i18n="th-region"
+                                  >Region</span
                                 ><span class="value">Alberta, Canada</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Budget</span
+                                <span
+                                  class="label"
+                                  data-i18n="kpi-project-budget"
+                                  >Budget</span
                                 ><span class="value">CAD 4.2M</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Start</span
+                                <span class="label" data-i18n="lbl-start"
+                                  >Start</span
                                 ><span class="value">01 Jul 2026</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Complexity</span
+                                <span class="label" data-i18n="lbl-complexity"
+                                  >Complexity</span
                                 ><span class="value">High</span>
                               </div>
                             </div>
@@ -528,19 +602,25 @@
                             </div>
                             <div class="pc-body">
                               <div class="pc-meta-row">
-                                <span class="label">Region</span
+                                <span class="label" data-i18n="th-region"
+                                  >Region</span
                                 ><span class="value">Telangana, India</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Budget</span
+                                <span
+                                  class="label"
+                                  data-i18n="kpi-project-budget"
+                                  >Budget</span
                                 ><span class="value">CAD 18M</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Length</span
+                                <span class="label" data-i18n="lbl-length"
+                                  >Length</span
                                 ><span class="value">42 km</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Risk</span
+                                <span class="label" data-i18n="lbl-risk"
+                                  >Risk</span
                                 ><span class="value">Monsoon Window</span>
                               </div>
                             </div>
@@ -557,19 +637,23 @@
                             </div>
                             <div class="pc-body">
                               <div class="pc-meta-row">
-                                <span class="label">Region</span
+                                <span class="label" data-i18n="th-region"
+                                  >Region</span
                                 ><span class="value">Texas, USA</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Sites</span
+                                <span class="label" data-i18n="lbl-sites"
+                                  >Sites</span
                                 ><span class="value">18 assets</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Issue</span
+                                <span class="label" data-i18n="lbl-issue"
+                                  >Issue</span
                                 ><span class="value">Supervisor shortage</span>
                               </div>
                               <div class="pc-meta-row">
-                                <span class="label">Action</span
+                                <span class="label" data-i18n="lbl-action"
+                                  >Action</span
                                 ><span class="value">Rebalance required</span>
                               </div>
                             </div>
@@ -582,17 +666,24 @@
                       <div class="card">
                         <div class="card-header">
                           <div>
-                            <div class="card-title">
+                            <div
+                              class="card-title"
+                              data-i18n="card-demand-vs-capacity"
+                            >
                               Demand vs Available Capacity
                             </div>
-                            <div class="card-subtitle">
+                            <div
+                              class="card-subtitle"
+                              data-i18n="sub-demand-vs-capacity"
+                            >
                               Critical roles over the next 90 days
                             </div>
                           </div>
                         </div>
                         <div class="card-body">
                           <div class="stat-row">
-                            <span class="s-label">Site Engineers</span
+                            <span class="s-label" data-i18n="lbl-site-engineers"
+                              >Site Engineers</span
                             ><span class="s-val">Demand 29 / Available 24</span>
                           </div>
                           <div class="progress-bar">
@@ -602,7 +693,8 @@
                             ></div>
                           </div>
                           <div class="stat-row mt-12">
-                            <span class="s-label">Supervisors</span
+                            <span class="s-label" data-i18n="th-supervisors"
+                              >Supervisors</span
                             ><span class="s-val">Demand 46 / Available 41</span>
                           </div>
                           <div class="progress-bar">
@@ -612,7 +704,8 @@
                             ></div>
                           </div>
                           <div class="stat-row mt-12">
-                            <span class="s-label">Technicians</span
+                            <span class="s-label" data-i18n="th-technicians"
+                              >Technicians</span
                             ><span class="s-val"
                               >Demand 148 / Available 162</span
                             >
@@ -624,7 +717,8 @@
                             ></div>
                           </div>
                           <div class="stat-row mt-12">
-                            <span class="s-label">Cranes</span
+                            <span class="s-label" data-i18n="th-cranes"
+                              >Cranes</span
                             ><span class="s-val">Demand 6 / Available 5</span>
                           </div>
                           <div class="progress-bar">
@@ -639,8 +733,16 @@
                       <div class="card">
                         <div class="card-header">
                           <div>
-                            <div class="card-title">Regional Load</div>
-                            <div class="card-subtitle">
+                            <div
+                              class="card-title"
+                              data-i18n="card-regional-load"
+                            >
+                              Regional Load
+                            </div>
+                            <div
+                              class="card-subtitle"
+                              data-i18n="sub-regional-load"
+                            >
                               Utilization heat by region
                             </div>
                           </div>
@@ -691,8 +793,16 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">Decision Queue</div>
-                          <div class="card-subtitle">
+                          <div
+                            class="card-title"
+                            data-i18n="card-decision-queue"
+                          >
+                            Decision Queue
+                          </div>
+                          <div
+                            class="card-subtitle"
+                            data-i18n="sub-decision-queue"
+                          >
                             Items requiring action
                           </div>
                         </div>
@@ -703,8 +813,10 @@
                             <i class="fa-solid fa-circle-exclamation"></i>
                           </div>
                           <div class="alert-content">
-                            <strong>Supervisor shortage in Alberta</strong>
-                            <p>
+                            <strong data-i18n="alert-supervisor-shortage-title"
+                              >Supervisor shortage in Alberta</strong
+                            >
+                            <p data-i18n="alert-supervisor-shortage-desc">
                               North Ridge 5 MW will need 2 additional
                               supervisors in August.
                             </p>
@@ -715,8 +827,10 @@
                             <i class="fa-solid fa-triangle-exclamation"></i>
                           </div>
                           <div class="alert-content">
-                            <strong>Crane overlap in Week 32</strong>
-                            <p>
+                            <strong data-i18n="alert-crane-overlap-title"
+                              >Crane overlap in Week 32</strong
+                            >
+                            <p data-i18n="alert-crane-overlap-desc">
                               One crane is double-booked across solar and
                               pipeline jobs.
                             </p>
@@ -727,8 +841,10 @@
                             <i class="fa-solid fa-lightbulb"></i>
                           </div>
                           <div class="alert-content">
-                            <strong>AI suggests subcontract option</strong>
-                            <p>
+                            <strong data-i18n="alert-subcontract-title"
+                              >AI suggests subcontract option</strong
+                            >
+                            <p data-i18n="alert-subcontract-desc">
                               Service van rental reduces capital lock-in for the
                               service portfolio.
                             </p>
@@ -740,8 +856,16 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">Upcoming Approvals</div>
-                          <div class="card-subtitle">
+                          <div
+                            class="card-title"
+                            data-i18n="card-upcoming-approvals"
+                          >
+                            Upcoming Approvals
+                          </div>
+                          <div
+                            class="card-subtitle"
+                            data-i18n="sub-upcoming-approvals"
+                          >
                             Plan and budget workflows
                           </div>
                         </div>
@@ -833,10 +957,15 @@
                       class="kpi-accent"
                       style="background: var(--primary)"
                     ></div>
-                    <div class="kpi-label">Project Budget</div>
+                    <div class="kpi-label" data-i18n="kpi-proj-budget">
+                      Project Budget
+                    </div>
                     <div class="kpi-value">CAD 4.2M</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">Approved</span> baseline
+                      <span class="trend-up">Approved</span>
+                      <span data-i18n="kpi-sub-approved-baseline"
+                        >baseline</span
+                      >
                     </div>
                     <div class="kpi-icon blue">
                       <i class="fa-solid fa-coins"></i>
@@ -847,10 +976,15 @@
                       class="kpi-accent"
                       style="background: var(--warning)"
                     ></div>
-                    <div class="kpi-label">Est. Resource Cost</div>
+                    <div class="kpi-label" data-i18n="kpi-est-resource-cost">
+                      Est. Resource Cost
+                    </div>
                     <div class="kpi-value">CAD 1.48M</div>
                     <div class="kpi-sub">
-                      <span class="trend-down">35%</span> of budget used
+                      <span class="trend-down">35%</span>
+                      <span data-i18n="kpi-sub-of-budget-used"
+                        >of budget used</span
+                      >
                     </div>
                     <div class="kpi-icon orange">
                       <i class="fa-solid fa-chart-bar"></i>
@@ -861,7 +995,9 @@
                       class="kpi-accent"
                       style="background: var(--success)"
                     ></div>
-                    <div class="kpi-label">Timeline Progress</div>
+                    <div class="kpi-label" data-i18n="kpi-timeline-progress">
+                      Timeline Progress
+                    </div>
                     <div class="kpi-value">0%</div>
                     <div class="kpi-sub">
                       Start: <span class="trend-up">Jul 1, 2026</span>
@@ -875,10 +1011,13 @@
                       class="kpi-accent"
                       style="background: var(--danger)"
                     ></div>
-                    <div class="kpi-label">Active Risks</div>
+                    <div class="kpi-label" data-i18n="kpi-active-risks">
+                      Active Risks
+                    </div>
                     <div class="kpi-value">6</div>
                     <div class="kpi-sub">
-                      <span class="trend-down">3 critical</span> unresolved
+                      <span class="trend-down">3 critical</span>
+                      <span data-i18n="kpi-sub-unresolved">unresolved</span>
                     </div>
                     <div class="kpi-icon red">
                       <i class="fa-solid fa-shield-halved"></i>
@@ -892,7 +1031,12 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">Budget vs Estimated Cost</div>
+                          <div
+                            class="card-title"
+                            data-i18n="card-budget-vs-est"
+                          >
+                            Budget vs Estimated Cost
+                          </div>
                           <div class="card-subtitle">
                             Breakdown by cost category
                           </div>
@@ -1003,7 +1147,12 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">Phase-wise Manpower Plan</div>
+                          <div
+                            class="card-title"
+                            data-i18n="card-phase-manpower"
+                          >
+                            Phase-wise Manpower Plan
+                          </div>
                           <div class="card-subtitle">
                             Headcount required per project phase
                           </div>
@@ -1084,7 +1233,10 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">
+                          <div
+                            class="card-title"
+                            data-i18n="card-ai-rec-summary"
+                          >
                             AI Recommendation Summary
                           </div>
                           <div class="card-subtitle">Confidence: 82%</div>
@@ -1213,8 +1365,12 @@
                     <div class="card">
                       <div class="card-header">
                         <div>
-                          <div class="card-title">Risks &amp; Alerts</div>
-                          <div class="card-subtitle">6 open issues</div>
+                          <div class="card-title" data-i18n="card-risks-alerts">
+                            Risks &amp; Alerts
+                          </div>
+                          <div class="card-subtitle" data-i18n="issues-open">
+                            6 open issues
+                          </div>
                         </div>
                       </div>
                       <div class="card-body alert-list">
@@ -1288,7 +1444,9 @@
                       class="kpi-accent"
                       style="background: var(--primary)"
                     ></div>
-                    <div class="kpi-label">Active Regions</div>
+                    <div class="kpi-label" data-i18n="kpi-active-regions">
+                      Active Regions
+                    </div>
                     <div class="kpi-value">7</div>
                     <div class="kpi-sub">
                       <span class="trend-up">3</span> high-utilization
@@ -1302,7 +1460,9 @@
                       class="kpi-accent"
                       style="background: var(--danger)"
                     ></div>
-                    <div class="kpi-label">Regions with Shortage</div>
+                    <div class="kpi-label" data-i18n="kpi-regions-shortage">
+                      Regions with Shortage
+                    </div>
                     <div class="kpi-value">3</div>
                     <div class="kpi-sub">
                       <span class="trend-down">Canada, USA, ME</span>
@@ -1316,10 +1476,15 @@
                       class="kpi-accent"
                       style="background: var(--success)"
                     ></div>
-                    <div class="kpi-label">Avg Regional Utilization</div>
+                    <div class="kpi-label" data-i18n="kpi-avg-regional-util">
+                      Avg Regional Utilization
+                    </div>
                     <div class="kpi-value">81%</div>
                     <div class="kpi-sub">
-                      <span class="trend-up">Stable</span> this quarter
+                      <span class="trend-up">Stable</span>
+                      <span data-i18n="trend-stable-this-quarter"
+                        >this quarter</span
+                      >
                     </div>
                     <div class="kpi-icon green">
                       <i class="fa-solid fa-chart-line"></i>
@@ -1330,7 +1495,12 @@
                       class="kpi-accent"
                       style="background: var(--warning)"
                     ></div>
-                    <div class="kpi-label">Total Regional Budget</div>
+                    <div
+                      class="kpi-label"
+                      data-i18n="kpi-total-regional-budget"
+                    >
+                      Total Regional Budget
+                    </div>
                     <div class="kpi-value">$42.6M</div>
                     <div class="kpi-sub">
                       <span class="trend-up">78%</span> allocated
@@ -1345,7 +1515,10 @@
                 <div class="card" style="margin-bottom: 16px">
                   <div class="card-header">
                     <div>
-                      <div class="card-title">
+                      <div
+                        class="card-title"
+                        data-i18n="card-region-project-summary"
+                      >
                         Region-wise Project &amp; Resource Summary
                       </div>
                       <div class="card-subtitle">
@@ -2043,7 +2216,7 @@
           <section class="screen" id="create-project">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Create New Project</h1>
+                <h1 data-i18n="h1-create-project">Create New Project</h1>
                 <p>
                   Capture the essential planning inputs first, then let AI
                   recommend a scalable resource plan.
@@ -2051,10 +2224,12 @@
               </div>
               <div class="page-header-actions">
                 <button class="btn btn-outline">
-                  <i class="fa-regular fa-floppy-disk"></i> Save Draft
+                  <i class="fa-regular fa-floppy-disk"></i>
+                  <span data-i18n="btn-save-draft">Save Draft</span>
                 </button>
                 <button class="btn btn-primary" data-goto="ai-planner">
-                  <i class="fa-solid fa-robot"></i> Run AI Plan
+                  <i class="fa-solid fa-robot"></i>
+                  <span data-i18n="btn-run-ai-plan">Run AI Plan</span>
                 </button>
               </div>
             </div>
@@ -2063,7 +2238,9 @@
               <div class="card">
                 <div class="card-header">
                   <div>
-                    <div class="card-title">Project Input Form</div>
+                    <div class="card-title" data-i18n="card-project-input-form">
+                      Project Input Form
+                    </div>
                     <div class="card-subtitle">
                       Fields aligned to AI planning inputs and manual planning
                       needs
@@ -2073,7 +2250,7 @@
                 <div class="card-body">
                   <div class="form-row">
                     <div class="form-group">
-                      <label class="form-label"
+                      <label class="form-label" data-i18n="lbl-project-name"
                         >Project Name <span class="req">*</span></label
                       >
                       <input
@@ -2082,14 +2259,18 @@
                       />
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Client Name</label>
+                      <label class="form-label" data-i18n="lbl-client-name"
+                        >Client Name</label
+                      >
                       <input class="form-control" value="Aurora Renewables" />
                     </div>
                   </div>
 
                   <div class="form-row-3">
                     <div class="form-group">
-                      <label class="form-label">Project Type</label>
+                      <label class="form-label" data-i18n="lbl-project-type"
+                        >Project Type</label
+                      >
                       <select class="form-control">
                         <option>Solar EPC</option>
                         <option>Water Pipeline</option>
@@ -2097,7 +2278,9 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label class="form-label"
+                      <label
+                        class="form-label"
+                        data-i18n="lbl-industry-category"
                         >Industry Category <span class="req">*</span></label
                       >
                       <select class="form-control">
@@ -2111,7 +2294,7 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label class="form-label"
+                      <label class="form-label" data-i18n="lbl-contract-type"
                         >Contract Type <span class="req">*</span></label
                       >
                       <select class="form-control">
@@ -2127,7 +2310,9 @@
 
                   <div class="form-row-3">
                     <div class="form-group">
-                      <label class="form-label">Country</label>
+                      <label class="form-label" data-i18n="lbl-country"
+                        >Country</label
+                      >
                       <select class="form-control">
                         <option>Canada</option>
                         <option>India</option>
@@ -2135,7 +2320,9 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label class="form-label">State / Province</label>
+                      <label class="form-label" data-i18n="lbl-state-province"
+                        >State / Province</label
+                      >
                       <select class="form-control">
                         <option>Alberta</option>
                         <option>Ontario</option>
@@ -2143,7 +2330,9 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Site Condition</label>
+                      <label class="form-label" data-i18n="lbl-site-condition"
+                        >Site Condition</label
+                      >
                       <select class="form-control">
                         <option>Remote</option>
                         <option>Urban</option>
@@ -2155,11 +2344,15 @@
 
                   <div class="form-row-3">
                     <div class="form-group">
-                      <label class="form-label">Project Size</label>
+                      <label class="form-label" data-i18n="lbl-project-size"
+                        >Project Size</label
+                      >
                       <input class="form-control" value="5" />
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Unit</label>
+                      <label class="form-label" data-i18n="lbl-unit"
+                        >Unit</label
+                      >
                       <select class="form-control">
                         <option>MW</option>
                         <option>km</option>
@@ -2168,7 +2361,9 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Complexity</label>
+                      <label class="form-label" data-i18n="lbl-complexity"
+                        >Complexity</label
+                      >
                       <select class="form-control">
                         <option>High</option>
                         <option>Medium</option>
@@ -2179,7 +2374,7 @@
 
                   <div class="form-row-3">
                     <div class="form-group">
-                      <label class="form-label"
+                      <label class="form-label" data-i18n="lbl-start-date"
                         >Start Date <span class="req">*</span></label
                       >
                       <input
@@ -2189,7 +2384,7 @@
                       />
                     </div>
                     <div class="form-group">
-                      <label class="form-label"
+                      <label class="form-label" data-i18n="lbl-end-date"
                         >End Date <span class="req">*</span></label
                       >
                       <input
@@ -2199,7 +2394,9 @@
                       />
                     </div>
                     <div class="form-group">
-                      <label class="form-label"
+                      <label
+                        class="form-label"
+                        data-i18n="lbl-expected-duration"
                         >Expected Duration <span class="req">*</span></label
                       >
                       <div style="display: flex; gap: 8px">
@@ -2222,15 +2419,27 @@
                   </div>
                   <div class="form-row-3">
                     <div class="form-group">
-                      <label class="form-label">Working Hours / Day</label>
+                      <label
+                        class="form-label"
+                        data-i18n="lbl-working-hours-day"
+                        >Working Hours / Day</label
+                      >
                       <input class="form-control" value="8" />
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Working Days / Week</label>
+                      <label
+                        class="form-label"
+                        data-i18n="lbl-working-days-week"
+                        >Working Days / Week</label
+                      >
                       <input class="form-control" value="5" />
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Total Working Days</label>
+                      <label
+                        class="form-label"
+                        data-i18n="lbl-total-working-days"
+                        >Total Working Days</label
+                      >
                       <input
                         class="form-control"
                         value="120"
@@ -2241,11 +2450,15 @@
 
                   <div class="form-row">
                     <div class="form-group">
-                      <label class="form-label">Project Budget</label>
+                      <label class="form-label" data-i18n="lbl-project-budget"
+                        >Project Budget</label
+                      >
                       <input class="form-control" value="CAD 4,200,000" />
                     </div>
                     <div class="form-group">
-                      <label class="form-label">Priority</label>
+                      <label class="form-label" data-i18n="lbl-priority"
+                        >Priority</label
+                      >
                       <select class="form-control">
                         <option>High</option>
                         <option>Medium</option>
@@ -2255,7 +2468,9 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="form-label">Scope of Work</label>
+                    <label class="form-label" data-i18n="lbl-scope-of-work"
+                      >Scope of Work</label
+                    >
                     <textarea class="form-control">
 Survey, civil works, structure installation, PV module installation, electrical work, testing and commissioning, final handover.</textarea
                     >
@@ -2276,40 +2491,58 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
               <div class="page-header-actions">
                 <button class="btn btn-primary" data-goto="allocation">
-                  <i class="fa-solid fa-people-arrows-left-right"></i> Open
-                  Allocation
+                  <i class="fa-solid fa-people-arrows-left-right"></i>
+                  <span data-i18n="btn-open-allocation">Open Allocation</span>
                 </button>
               </div>
             </div>
 
             <div class="budget-summary-cards">
               <div class="budget-item cap">
-                <div class="bi-label">Project Budget</div>
+                <div class="bi-label" data-i18n="lbl-project-budget">
+                  Project Budget
+                </div>
                 <div class="bi-amount">CAD 4.2M</div>
               </div>
               <div class="budget-item ok">
-                <div class="bi-label">Est. Resource Cost</div>
+                <div class="bi-label" data-i18n="kpi-est-resource-cost">
+                  Est. Resource Cost
+                </div>
                 <div class="bi-amount">CAD 1.48M</div>
               </div>
               <div class="budget-item">
-                <div class="bi-label">Duration</div>
+                <div class="bi-label" data-i18n="lbl-duration">Duration</div>
                 <div class="bi-amount">120 Days</div>
               </div>
               <div class="budget-item warn">
-                <div class="bi-label">Shortages</div>
+                <div class="bi-label" data-i18n="lbl-shortages">Shortages</div>
                 <div class="bi-amount">2 Roles</div>
               </div>
               <div class="budget-item">
-                <div class="bi-label">AI Confidence</div>
+                <div class="bi-label" data-i18n="lbl-ai-confidence">
+                  AI Confidence
+                </div>
                 <div class="bi-amount">82%</div>
               </div>
             </div>
 
             <div class="tabs" data-tab-group="project-tabs">
-              <div class="tab active" data-tab="overview">Overview</div>
-              <div class="tab" data-tab="phases">Phases</div>
-              <div class="tab" data-tab="resources">Resources</div>
-              <div class="tab" data-tab="risks">Risks</div>
+              <div
+                class="tab active"
+                data-tab="overview"
+                data-i18n="tab-overview"
+              >
+                Overview
+              </div>
+              <div class="tab" data-tab="phases" data-i18n="tab-phases">
+                Phases
+              </div>
+              <div class="tab" data-tab="resources" data-i18n="tab-resources">
+                Resources
+              </div>
+              <div class="tab" data-tab="risks" data-i18n="tab-risks">
+                Risks
+              </div>
             </div>
 
             <div class="tab-panel active" id="project-tabs-overview">
@@ -2317,8 +2550,13 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 <div class="card">
                   <div class="card-header">
                     <div>
-                      <div class="card-title">Baseline Summary</div>
-                      <div class="card-subtitle">
+                      <div class="card-title" data-i18n="card-baseline-summary">
+                        Baseline Summary
+                      </div>
+                      <div
+                        class="card-subtitle"
+                        data-i18n="sub-baseline-summary"
+                      >
                         Planned resource mix and timeline
                       </div>
                     </div>
@@ -2342,15 +2580,29 @@ Survey, civil works, structure installation, PV module installation, electrical 
                     </div>
                     <div class="stat-row">
                       <span class="s-label">Benchmark reference</span
-                      ><span class="s-val">14 similar projects</span>
+                      ><span
+                        class="s-val"
+                        data-i18n="stat-similar-projects-count"
+                        >14 similar projects</span
+                      >
                     </div>
                   </div>
                 </div>
                 <div class="card">
                   <div class="card-header">
                     <div>
-                      <div class="card-title">Approval Timeline</div>
-                      <div class="card-subtitle">Current workflow state</div>
+                      <div
+                        class="card-title"
+                        data-i18n="card-approval-timeline"
+                      >
+                        Approval Timeline
+                      </div>
+                      <div
+                        class="card-subtitle"
+                        data-i18n="sub-approval-timeline"
+                      >
+                        Current workflow state
+                      </div>
                     </div>
                   </div>
                   <div class="card-body">
@@ -2359,8 +2611,12 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         <i class="fa-solid fa-check"></i>
                       </div>
                       <div class="alert-content">
-                        <strong>Planning draft approved</strong>
-                        <p>Project Manager approved input assumptions.</p>
+                        <strong data-i18n="alert-planning-draft-title"
+                          >Planning draft approved</strong
+                        >
+                        <p data-i18n="alert-planning-draft-desc">
+                          Project Manager approved input assumptions.
+                        </p>
                       </div>
                     </div>
                     <div class="alert alert-warning mt-12">
@@ -2368,8 +2624,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         <i class="fa-solid fa-clock"></i>
                       </div>
                       <div class="alert-content">
-                        <strong>Budget review pending</strong>
-                        <p>
+                        <strong data-i18n="alert-budget-review-title"
+                          >Budget review pending</strong
+                        >
+                        <p data-i18n="alert-budget-review-desc">
                           Finance review is waiting on subcontract option
                           analysis.
                         </p>
@@ -2384,8 +2642,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="card">
                 <div class="card-header">
                   <div>
-                    <div class="card-title">Phase Timeline</div>
-                    <div class="card-subtitle">
+                    <div class="card-title" data-i18n="card-phase-timeline">
+                      Phase Timeline
+                    </div>
+                    <div class="card-subtitle" data-i18n="sub-phase-timeline">
                       Expected sequencing and peak manpower by phase
                     </div>
                   </div>
@@ -2465,11 +2725,11 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 <table>
                   <thead>
                     <tr>
-                      <th>Resource Group</th>
-                      <th>Planned</th>
-                      <th>Allocated</th>
-                      <th>Availability</th>
-                      <th>Status</th>
+                      <th data-i18n="th-resource-group">Resource Group</th>
+                      <th data-i18n="th-planned">Planned</th>
+                      <th data-i18n="th-allocated">Allocated</th>
+                      <th data-i18n="th-availability">Availability</th>
+                      <th data-i18n="th-status">Status</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -2508,8 +2768,12 @@ Survey, civil works, structure installation, PV module installation, electrical 
                     <i class="fa-solid fa-triangle-exclamation"></i>
                   </div>
                   <div class="alert-content">
-                    <strong>Supervisor shortage</strong>
-                    <p>Need 2 more supervisors for peak August workload.</p>
+                    <strong data-i18n="project-risk-supervisor-shortage"
+                      >Supervisor shortage</strong
+                    >
+                    <p data-i18n="project-risk-supervisor-shortage-desc">
+                      Need 2 more supervisors for peak August workload.
+                    </p>
                   </div>
                 </div>
                 <div class="alert alert-warning">
@@ -2517,8 +2781,12 @@ Survey, civil works, structure installation, PV module installation, electrical 
                     <i class="fa-solid fa-cloud-rain"></i>
                   </div>
                   <div class="alert-content">
-                    <strong>Weather sensitivity</strong>
-                    <p>Productivity may drop further during storm weeks.</p>
+                    <strong data-i18n="project-risk-weather-sensitivity"
+                      >Weather sensitivity</strong
+                    >
+                    <p data-i18n="project-risk-weather-sensitivity-desc">
+                      Productivity may drop further during storm weeks.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -2528,8 +2796,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="ai-planner">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>AI Resource Recommendation</h1>
-                <p>
+                <h1 data-i18n="h1-ai-planner">AI Resource Recommendation</h1>
+                <p data-i18n="sub-ai-planner">
                   Recommendation built from project inputs, regional rules,
                   historical analogs, and current availability.
                 </p>
@@ -2539,21 +2807,31 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-outline"
                   onclick="openModal('modal-scenario-compare')"
                 >
-                  <i class="fa-solid fa-shuffle"></i> Compare Scenarios
+                  <i class="fa-solid fa-shuffle"></i>
+                  <span data-i18n="btn-compare-scenarios"
+                    >Compare Scenarios</span
+                  >
                 </button>
                 <button
                   class="btn btn-success"
                   data-toast="AI plan accepted as baseline"
                 >
-                  <i class="fa-solid fa-check"></i> Accept Plan
+                  <i class="fa-solid fa-check"></i>
+                  <span data-i18n="btn-accept-plan">Accept Plan</span>
                 </button>
               </div>
             </div>
 
             <div class="scenario-bar">
-              <button class="scenario-btn active">Balanced Plan</button>
-              <button class="scenario-btn">Lowest Cost</button>
-              <button class="scenario-btn">Fastest Delivery</button>
+              <button class="scenario-btn active" data-i18n="btn-balanced-plan">
+                Balanced Plan
+              </button>
+              <button class="scenario-btn" data-i18n="btn-lowest-cost">
+                Lowest Cost
+              </button>
+              <button class="scenario-btn" data-i18n="btn-fastest-delivery">
+                Fastest Delivery
+              </button>
             </div>
 
             <div class="ai-layout">
@@ -2567,12 +2845,12 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   <table>
                     <thead>
                       <tr>
-                        <th>Type</th>
-                        <th>Role / Asset</th>
-                        <th>Qty</th>
-                        <th>Estimated Hours</th>
-                        <th>Estimated Cost</th>
-                        <th>Why</th>
+                        <th data-i18n="th-type">Type</th>
+                        <th data-i18n="th-role-asset">Role / Asset</th>
+                        <th data-i18n="th-qty">Qty</th>
+                        <th data-i18n="th-est-hours">Estimated Hours</th>
+                        <th data-i18n="th-est-cost">Estimated Cost</th>
+                        <th data-i18n="th-why">Why</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -2654,8 +2932,16 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   <div class="card">
                     <div class="card-header">
                       <div>
-                        <div class="card-title">Phase-wise Cost Plan</div>
-                        <div class="card-subtitle">
+                        <div
+                          class="card-title"
+                          data-i18n="card-phase-cost-plan"
+                        >
+                          Phase-wise Cost Plan
+                        </div>
+                        <div
+                          class="card-subtitle"
+                          data-i18n="sub-phase-cost-plan"
+                        >
                           Largest consumption comes during core install phases
                         </div>
                       </div>
@@ -2686,8 +2972,13 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   <div class="card">
                     <div class="card-header">
                       <div>
-                        <div class="card-title">AI Explanation Highlights</div>
-                        <div class="card-subtitle">
+                        <div class="card-title" data-i18n="card-ai-explanation">
+                          AI Explanation Highlights
+                        </div>
+                        <div
+                          class="card-subtitle"
+                          data-i18n="sub-ai-explanation"
+                        >
                           Top drivers for the recommendation
                         </div>
                       </div>
@@ -2698,8 +2989,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                           <i class="fa-solid fa-earth-americas"></i>
                         </div>
                         <div class="alert-content">
-                          <strong>Regional productivity adjustment</strong>
-                          <p>
+                          <strong data-i18n="alert-regional-productivity-title"
+                            >Regional productivity adjustment</strong
+                          >
+                          <p data-i18n="alert-regional-productivity-desc">
                             Alberta multiplier reduced productivity and
                             increased crew size.
                           </p>
@@ -2710,8 +3003,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                           <i class="fa-solid fa-scale-balanced"></i>
                         </div>
                         <div class="alert-content">
-                          <strong>Safety staffing rule</strong>
-                          <p>
+                          <strong data-i18n="alert-safety-rule-title"
+                            >Safety staffing rule</strong
+                          >
+                          <p data-i18n="alert-safety-rule-desc">
                             Supervisor and safety coverage increased compared to
                             India benchmark.
                           </p>
@@ -2722,8 +3017,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                           <i class="fa-solid fa-database"></i>
                         </div>
                         <div class="alert-content">
-                          <strong>Historical analog matching</strong>
-                          <p>
+                          <strong data-i18n="alert-historical-analog-title"
+                            >Historical analog matching</strong
+                          >
+                          <p data-i18n="alert-historical-analog-desc">
                             14 comparable 3–8 MW projects were used as benchmark
                             anchors.
                           </p>
@@ -2735,26 +3032,44 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
 
               <aside class="ai-explain-card">
-                <h3>Recommendation Confidence</h3>
+                <h3 data-i18n="lbl-rec-confidence">
+                  Recommendation Confidence
+                </h3>
                 <div class="confidence-label">82%</div>
                 <div class="confidence-bar">
                   <div class="confidence-fill" style="width: 82%"></div>
                 </div>
-                <div class="fs-12" style="color: rgba(255, 255, 255, 0.7)">
+                <div
+                  class="fs-12"
+                  style="color: rgba(255, 255, 255, 0.7)"
+                  data-i18n="sub-rec-confidence"
+                >
                   High confidence due to strong historical similarity and stable
                   input coverage.
                 </div>
 
-                <h4>Top Factors</h4>
+                <h4 data-i18n="lbl-top-factors">Top Factors</h4>
                 <div>
-                  <span class="factor-chip">Weather impact high</span>
-                  <span class="factor-chip">Productivity 0.75</span>
-                  <span class="factor-chip">Remote logistics</span>
-                  <span class="factor-chip">Safety ratio</span>
-                  <span class="factor-chip">5-day work week</span>
+                  <span class="factor-chip" data-i18n="factor-chip-weather-high"
+                    >Weather impact high</span
+                  >
+                  <span class="factor-chip" data-i18n="factor-chip-productivity"
+                    >Productivity 0.75</span
+                  >
+                  <span
+                    class="factor-chip"
+                    data-i18n="factor-chip-remote-logistics"
+                    >Remote logistics</span
+                  >
+                  <span class="factor-chip" data-i18n="factor-chip-safety-ratio"
+                    >Safety ratio</span
+                  >
+                  <span class="factor-chip" data-i18n="factor-chip-work-week"
+                    >5-day work week</span
+                  >
                 </div>
 
-                <h4>Similar Projects</h4>
+                <h4 data-i18n="lbl-similar-projects">Similar Projects</h4>
                 <div class="analog-item">
                   <div class="a-name">Prairie Sun 4.8 MW</div>
                   <div class="a-meta">Alberta • 118 days • 0.87 similarity</div>
@@ -2766,18 +3081,20 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   </div>
                 </div>
 
-                <h4>Risk Flags</h4>
+                <h4 data-i18n="lbl-risk-flags">Risk Flags</h4>
                 <div class="risk-item high">
                   <span class="r-icon"><i class="fa-solid fa-circle"></i></span
-                  ><span>Supervisor shortage in Month 2</span>
+                  ><span data-i18n="risk-month-2"
+                    >Supervisor shortage in Month 2</span
+                  >
                 </div>
                 <div class="risk-item medium">
                   <span class="r-icon"><i class="fa-solid fa-circle"></i></span
-                  ><span>Crane overlap in Week 9</span>
+                  ><span data-i18n="risk-week-9">Crane overlap in Week 9</span>
                 </div>
                 <div class="risk-item medium">
                   <span class="r-icon"><i class="fa-solid fa-circle"></i></span
-                  ><span
+                  ><span data-i18n="risk-weather-buffer"
                     >Weather contingency may require 8% additional buffer</span
                   >
                 </div>
@@ -2788,7 +3105,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="resources">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Resource Master</h1>
+                <h1 data-i18n="h1-resources">Resource Master</h1>
                 <p>
                   Unified registry for all resources used in planning and
                   allocation.
@@ -2796,9 +3113,11 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
               <div class="page-header-actions">
                 <button class="btn btn-outline">
-                  <i class="fa-solid fa-file-import"></i> Import CSV</button
+                  <i class="fa-solid fa-file-import"></i>
+                  <span data-i18n="btn-import-csv">Import CSV</span></button
                 ><button class="btn btn-primary">
-                  <i class="fa-solid fa-plus"></i> Add Resource
+                  <i class="fa-solid fa-plus"></i>
+                  <span data-i18n="btn-add-resource">Add Resource</span>
                 </button>
               </div>
             </div>
@@ -2814,13 +3133,13 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <table>
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Region</th>
-                    <th>Availability</th>
-                    <th>Utilization</th>
-                    <th>Cost Rate</th>
-                    <th>Status</th>
+                    <th data-i18n="th-name">Name</th>
+                    <th data-i18n="th-category">Category</th>
+                    <th data-i18n="th-region">Region</th>
+                    <th data-i18n="th-availability">Availability</th>
+                    <th data-i18n="th-utilization">Utilization</th>
+                    <th data-i18n="th-cost-rate">Cost Rate</th>
+                    <th data-i18n="th-status">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2861,7 +3180,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="manpower">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Manpower Master</h1>
+                <h1 data-i18n="h1-manpower">Manpower Master</h1>
                 <p>
                   Skills, labor availability, certifications, and cost
                   structure.
@@ -2872,7 +3191,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-primary"
                   onclick="openModal('modal-add-person')"
                 >
-                  <i class="fa-solid fa-user-plus"></i> Add Person
+                  <i class="fa-solid fa-user-plus"></i>
+                  <span data-i18n="btn-add-person">Add Person</span>
                 </button>
               </div>
             </div>
@@ -2889,19 +3209,23 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <table>
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>Skill Level</th>
-                    <th>Region</th>
-                    <th>Availability</th>
-                    <th>Cost/hr</th>
-                    <th>Cost/day</th>
-                    <th>Max Hrs/Wk</th>
-                    <th>Current Allocation</th>
-                    <th>Future Availability</th>
-                    <th>Productivity Rate</th>
-                    <th>Utilization</th>
-                    <th>Actions</th>
+                    <th data-i18n="th-name">Name</th>
+                    <th data-i18n="th-role">Role</th>
+                    <th data-i18n="th-skill-level">Skill Level</th>
+                    <th data-i18n="th-region">Region</th>
+                    <th data-i18n="th-availability">Availability</th>
+                    <th data-i18n="th-cost-hr">Cost/hr</th>
+                    <th data-i18n="th-cost-day">Cost/day</th>
+                    <th data-i18n="th-max-hrs-wk">Max Hrs/Wk</th>
+                    <th data-i18n="th-current-allocation">
+                      Current Allocation
+                    </th>
+                    <th data-i18n="th-future-availability">
+                      Future Availability
+                    </th>
+                    <th data-i18n="th-productivity-rate">Productivity Rate</th>
+                    <th data-i18n="th-utilization">Utilization</th>
+                    <th data-i18n="th-actions">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -3185,7 +3509,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="vehicles">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Vehicle Master</h1>
+                <h1 data-i18n="h1-vehicles">Vehicle Master</h1>
                 <p>
                   Fleet ownership, rentals, maintenance windows and allocation
                   readiness.
@@ -3196,7 +3520,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-primary"
                   onclick="openModal('modal-add-vehicle')"
                 >
-                  <i class="fa-solid fa-plus"></i> Add Vehicle
+                  <i class="fa-solid fa-plus"></i>
+                  <span data-i18n="btn-add-vehicle">Add Vehicle</span>
                 </button>
               </div>
             </div>
@@ -3213,20 +3538,24 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <table>
                 <thead>
                   <tr>
-                    <th>Vehicle ID</th>
-                    <th>Type</th>
-                    <th>Region</th>
-                    <th>Ownership</th>
-                    <th>Status</th>
-                    <th>Avail. Date</th>
-                    <th>Cost/Day</th>
-                    <th>Cost/Month</th>
-                    <th>Max Hrs/Day</th>
-                    <th>Current Allocation</th>
-                    <th>Future Availability</th>
-                    <th>Productivity Rate</th>
-                    <th>Utilization</th>
-                    <th>Actions</th>
+                    <th data-i18n="th-vehicle-id">Vehicle ID</th>
+                    <th data-i18n="th-type">Type</th>
+                    <th data-i18n="th-region">Region</th>
+                    <th data-i18n="th-ownership">Ownership</th>
+                    <th data-i18n="th-status">Status</th>
+                    <th data-i18n="th-avail-date">Avail. Date</th>
+                    <th data-i18n="th-cost-day">Cost/Day</th>
+                    <th data-i18n="th-cost-month">Cost/Month</th>
+                    <th data-i18n="th-max-hrs-day">Max Hrs/Day</th>
+                    <th data-i18n="th-current-allocation">
+                      Current Allocation
+                    </th>
+                    <th data-i18n="th-future-availability">
+                      Future Availability
+                    </th>
+                    <th data-i18n="th-productivity-rate">Productivity Rate</th>
+                    <th data-i18n="th-utilization">Utilization</th>
+                    <th data-i18n="th-actions">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -3400,7 +3729,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="equipment">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Equipment Master</h1>
+                <h1 data-i18n="h1-equipment">Equipment Master</h1>
                 <p>
                   Planning-grade visibility into tools, heavy equipment, and
                   calibration status.
@@ -3411,7 +3740,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-primary"
                   onclick="openModal('modal-add-equipment')"
                 >
-                  <i class="fa-solid fa-plus"></i> Add Equipment
+                  <i class="fa-solid fa-plus"></i>
+                  <span data-i18n="btn-add-equipment">Add Equipment</span>
                 </button>
               </div>
             </div>
@@ -3428,20 +3758,24 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <table>
                 <thead>
                   <tr>
-                    <th>Equipment ID</th>
-                    <th>Type</th>
-                    <th>Region</th>
-                    <th>Ownership</th>
-                    <th>Status</th>
-                    <th>Avail. Date</th>
-                    <th>Cost/Day</th>
-                    <th>Max Hrs/Day</th>
-                    <th>Operator Required</th>
-                    <th>Current Allocation</th>
-                    <th>Future Availability</th>
-                    <th>Productivity Rate</th>
-                    <th>Utilization</th>
-                    <th>Actions</th>
+                    <th data-i18n="th-equipment-id">Equipment ID</th>
+                    <th data-i18n="th-type">Type</th>
+                    <th data-i18n="th-region">Region</th>
+                    <th data-i18n="th-ownership">Ownership</th>
+                    <th data-i18n="th-status">Status</th>
+                    <th data-i18n="th-avail-date">Avail. Date</th>
+                    <th data-i18n="th-cost-day">Cost/Day</th>
+                    <th data-i18n="th-max-hrs-day">Max Hrs/Day</th>
+                    <th data-i18n="th-operator-required">Operator Required</th>
+                    <th data-i18n="th-current-allocation">
+                      Current Allocation
+                    </th>
+                    <th data-i18n="th-future-availability">
+                      Future Availability
+                    </th>
+                    <th data-i18n="th-productivity-rate">Productivity Rate</th>
+                    <th data-i18n="th-utilization">Utilization</th>
+                    <th data-i18n="th-actions">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -3597,7 +3931,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="regions">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Region Settings</h1>
+                <h1 data-i18n="h1-regions">Region Settings</h1>
                 <p>
                   Versioned regional planning factors that shape AI and manual
                   estimation.
@@ -3608,7 +3942,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-primary"
                   onclick="openModal('modal-add-region')"
                 >
-                  <i class="fa-solid fa-plus"></i> Add Region Plan
+                  <i class="fa-solid fa-plus"></i>
+                  <span data-i18n="btn-add-region-plan">Add Region Plan</span>
                 </button>
               </div>
             </div>
@@ -3623,27 +3958,39 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 </div>
                 <div class="region-card-body">
                   <div class="factor-row">
-                    <span class="factor-label">Working hours/day</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-working-hours-day-factor"
+                      >Working hours/day</span
                     ><span class="factor-value">8</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Working days/week</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-working-days-week-factor"
+                      >Working days/week</span
                     ><span class="factor-value">5</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Productivity multiplier</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-productivity-multiplier"
+                      >Productivity multiplier</span
                     ><span class="factor-value red">0.75</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Cost multiplier</span
+                    <span class="factor-label" data-i18n="lbl-cost-multiplier"
+                      >Cost multiplier</span
                     ><span class="factor-value">2.5</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Weather impact</span
+                    <span class="factor-label" data-i18n="lbl-weather-impact"
+                      >Weather impact</span
                     ><span class="factor-value red">High</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Contingency</span
+                    <span class="factor-label" data-i18n="lbl-contingency"
+                      >Contingency</span
                     ><span class="factor-value">12%</span>
                   </div>
                 </div>
@@ -3658,27 +4005,39 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 </div>
                 <div class="region-card-body">
                   <div class="factor-row">
-                    <span class="factor-label">Working hours/day</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-working-hours-day-factor"
+                      >Working hours/day</span
                     ><span class="factor-value">9</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Working days/week</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-working-days-week-factor"
+                      >Working days/week</span
                     ><span class="factor-value">6</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Productivity multiplier</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-productivity-multiplier"
+                      >Productivity multiplier</span
                     ><span class="factor-value green">1.0</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Cost multiplier</span
+                    <span class="factor-label" data-i18n="lbl-cost-multiplier"
+                      >Cost multiplier</span
                     ><span class="factor-value">1.0</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Weather impact</span
+                    <span class="factor-label" data-i18n="lbl-weather-impact"
+                      >Weather impact</span
                     ><span class="factor-value orange">Medium</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Contingency</span
+                    <span class="factor-label" data-i18n="lbl-contingency"
+                      >Contingency</span
                     ><span class="factor-value">8%</span>
                   </div>
                 </div>
@@ -3693,27 +4052,39 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 </div>
                 <div class="region-card-body">
                   <div class="factor-row">
-                    <span class="factor-label">Working hours/day</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-working-hours-day-factor"
+                      >Working hours/day</span
                     ><span class="factor-value">8</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Working days/week</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-working-days-week-factor"
+                      >Working days/week</span
                     ><span class="factor-value">5</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Productivity multiplier</span
+                    <span
+                      class="factor-label"
+                      data-i18n="lbl-productivity-multiplier"
+                      >Productivity multiplier</span
                     ><span class="factor-value">0.92</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Cost multiplier</span
+                    <span class="factor-label" data-i18n="lbl-cost-multiplier"
+                      >Cost multiplier</span
                     ><span class="factor-value">1.8</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Logistics factor</span
+                    <span class="factor-label" data-i18n="lbl-logistics-factor"
+                      >Logistics factor</span
                     ><span class="factor-value orange">Medium</span>
                   </div>
                   <div class="factor-row">
-                    <span class="factor-label">Supervisor ratio</span
+                    <span class="factor-label" data-i18n="lbl-supervisor-ratio"
+                      >Supervisor ratio</span
                     ><span class="factor-value">1:8</span>
                   </div>
                 </div>
@@ -3724,7 +4095,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="historical">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Historical Project Learning</h1>
+                <h1 data-i18n="h1-historical">Historical Project Learning</h1>
                 <p>
                   Upload historical projects to improve future AI
                   recommendations and benchmark decisions.
@@ -3735,9 +4106,11 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-outline"
                   onclick="openModal('modal-add-historical')"
                 >
-                  <i class="fa-solid fa-file-circle-plus"></i> Add Entry</button
+                  <i class="fa-solid fa-file-circle-plus"></i>
+                  <span data-i18n="btn-add-entry">Add Entry</span></button
                 ><button class="btn btn-primary">
-                  <i class="fa-solid fa-upload"></i> Import Batch
+                  <i class="fa-solid fa-upload"></i>
+                  <span data-i18n="btn-import-batch">Import Batch</span>
                 </button>
               </div>
             </div>
@@ -3749,7 +4122,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
                     data-toast="Upload design only: map and import flow previewed"
                   >
                     <i class="fa-solid fa-cloud-arrow-up"></i>
-                    <h3>Drop CSV / XLSX files here</h3>
+                    <h3 data-i18n="upload-drop-title">
+                      Drop CSV / XLSX files here
+                    </h3>
                     <p>
                       Map planned vs actual manpower, vehicles, duration, cost,
                       delays, and lessons learned.
@@ -3760,7 +4135,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="card">
                 <div class="card-header">
                   <div>
-                    <div class="card-title">Learning Impact</div>
+                    <div class="card-title" data-i18n="card-learning-impact">
+                      Learning Impact
+                    </div>
                     <div class="card-subtitle">
                       How historical data shapes recommendations
                     </div>
@@ -3900,7 +4277,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="calendar">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Capacity Calendar</h1>
+                <h1 data-i18n="h1-calendar">Capacity Calendar</h1>
                 <p>
                   Resource availability, allocation, shortages, and utilization
                   across your planning period.
@@ -3908,7 +4285,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
               <div class="page-header-actions">
                 <button class="btn btn-outline">
-                  <i class="fa-solid fa-arrow-down-to-line"></i> Export
+                  <i class="fa-solid fa-arrow-down-to-line"></i>
+                  <span data-i18n="btn-export">Export</span>
                 </button>
               </div>
             </div>
@@ -3916,16 +4294,32 @@ Survey, civil works, structure installation, PV module installation, electrical 
             <!-- Filter Bar -->
             <div class="cal-filter-bar">
               <div class="cal-period-group">
-                <button class="cal-period-btn" data-period="3m">
+                <button
+                  class="cal-period-btn"
+                  data-period="3m"
+                  data-i18n="cal-period-3m"
+                >
                   3 Months
                 </button>
-                <button class="cal-period-btn active" data-period="6m">
+                <button
+                  class="cal-period-btn active"
+                  data-period="6m"
+                  data-i18n="cal-period-6m"
+                >
                   6 Months
                 </button>
-                <button class="cal-period-btn" data-period="12m">
+                <button
+                  class="cal-period-btn"
+                  data-period="12m"
+                  data-i18n="cal-period-12m"
+                >
                   12 Months
                 </button>
-                <button class="cal-period-btn" data-period="custom">
+                <button
+                  class="cal-period-btn"
+                  data-period="custom"
+                  data-i18n="cal-period-custom"
+                >
                   Custom
                 </button>
               </div>
@@ -3960,19 +4354,24 @@ Survey, civil works, structure installation, PV module installation, electrical 
               ></div>
               <div class="cal-view-group">
                 <button class="cal-view-btn active" data-view="monthly">
-                  <i class="fa-solid fa-calendar-days"></i> Monthly
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <span data-i18n="cal-view-monthly">Monthly</span>
                 </button>
                 <button class="cal-view-btn" data-view="weekly">
-                  <i class="fa-solid fa-calendar-week"></i> Weekly
+                  <i class="fa-solid fa-calendar-week"></i>
+                  <span data-i18n="cal-view-weekly">Weekly</span>
                 </button>
                 <button class="cal-view-btn" data-view="gantt">
-                  <i class="fa-solid fa-bars-staggered"></i> Gantt
+                  <i class="fa-solid fa-bars-staggered"></i>
+                  <span data-i18n="cal-view-gantt">Gantt</span>
                 </button>
                 <button class="cal-view-btn" data-view="region">
-                  <i class="fa-solid fa-earth-americas"></i> By Region
+                  <i class="fa-solid fa-earth-americas"></i>
+                  <span data-i18n="cal-view-region">By Region</span>
                 </button>
                 <button class="cal-view-btn" data-view="project">
-                  <i class="fa-solid fa-diagram-project"></i> By Project
+                  <i class="fa-solid fa-diagram-project"></i>
+                  <span data-i18n="cal-view-project">By Project</span>
                 </button>
               </div>
               <div style="display: flex; gap: 8px; margin-left: auto">
@@ -4002,27 +4401,39 @@ Survey, civil works, structure installation, PV module installation, electrical 
             <div class="cal-kpi-strip">
               <div class="cal-kpi">
                 <div class="cal-kpi-val">47</div>
-                <div class="cal-kpi-label">Total Resources</div>
+                <div class="cal-kpi-label" data-i18n="kpi-total-resources">
+                  Total Resources
+                </div>
               </div>
               <div class="cal-kpi cal-kpi--danger">
                 <div class="cal-kpi-val">3</div>
-                <div class="cal-kpi-label">Overallocated</div>
+                <div class="cal-kpi-label" data-i18n="kpi-overallocated">
+                  Overallocated
+                </div>
               </div>
               <div class="cal-kpi cal-kpi--success">
                 <div class="cal-kpi-val">18</div>
-                <div class="cal-kpi-label">Free Resources</div>
+                <div class="cal-kpi-label" data-i18n="kpi-free-resources">
+                  Free Resources
+                </div>
               </div>
               <div class="cal-kpi cal-kpi--warning">
                 <div class="cal-kpi-val">5</div>
-                <div class="cal-kpi-label">Upcoming Shortages</div>
+                <div class="cal-kpi-label" data-i18n="kpi-upcoming-shortages">
+                  Upcoming Shortages
+                </div>
               </div>
               <div class="cal-kpi">
                 <div class="cal-kpi-val">74%</div>
-                <div class="cal-kpi-label">Avg Utilization</div>
+                <div class="cal-kpi-label" data-i18n="kpi-avg-utilization">
+                  Avg Utilization
+                </div>
               </div>
               <div class="cal-kpi cal-kpi--purple">
                 <div class="cal-kpi-val">6</div>
-                <div class="cal-kpi-label">Active Projects</div>
+                <div class="cal-kpi-label" data-i18n="kpi-active-projects">
+                  Active Projects
+                </div>
               </div>
             </div>
 
@@ -4284,7 +4695,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 </div>
                 <!-- VEHICLES -->
                 <div class="cal-group-header">
-                  <i class="fa-solid fa-truck"></i> Vehicles
+                  <i class="fa-solid fa-truck"></i>
+                  <span data-i18n="group-vehicles">Vehicles</span>
                 </div>
                 <div class="cal-row cal-monthly-grid-row">
                   <div class="cal-resource-cell">
@@ -4382,7 +4794,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 </div>
                 <!-- EQUIPMENT -->
                 <div class="cal-group-header">
-                  <i class="fa-solid fa-screwdriver-wrench"></i> Equipment
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <span data-i18n="group-equipment">Equipment</span>
                 </div>
                 <div class="cal-row cal-monthly-grid-row">
                   <div class="cal-resource-cell">
@@ -4584,7 +4997,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   </div>
                 </div>
                 <div class="cal-group-header">
-                  <i class="fa-solid fa-users"></i> Manpower
+                  <i class="fa-solid fa-users"></i>
+                  <span data-i18n="group-manpower">Manpower</span>
                 </div>
                 <div
                   class="cal-row"
@@ -4703,7 +5117,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   </div>
                 </div>
                 <div class="cal-group-header">
-                  <i class="fa-solid fa-truck"></i> Vehicles
+                  <i class="fa-solid fa-truck"></i>
+                  <span data-i18n="group-vehicles">Vehicles</span>
                 </div>
                 <div
                   class="cal-row"
@@ -5277,7 +5692,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="allocation">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Resource Allocation</h1>
+                <h1 data-i18n="h1-allocation">Resource Allocation</h1>
                 <p>
                   Assign actual people, vehicles, and equipment to planned
                   demand — resolve all conflicts before approving the plan.
@@ -5288,13 +5703,17 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-outline"
                   data-toast="Auto-assigning available resources based on skill match and availability…"
                 >
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Auto Assign
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <span data-i18n="btn-auto-assign">Auto Assign</span>
                 </button>
                 <button
                   class="btn btn-primary"
                   data-toast="Allocation plan approved and locked — notifying project managers"
                 >
-                  <i class="fa-solid fa-check"></i> Approve Final Plan
+                  <i class="fa-solid fa-check"></i>
+                  <span data-i18n="btn-approve-final-plan"
+                    >Approve Final Plan</span
+                  >
                 </button>
               </div>
             </div>
@@ -5479,25 +5898,27 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="tabs">
                 <div class="tab active" data-tab="people">
                   <i class="fa-solid fa-users" style="margin-right: 6px"></i
-                  >People
+                  ><span data-i18n="tab-alloc-people">People</span>
                 </div>
                 <div class="tab" data-tab="vehicles">
                   <i class="fa-solid fa-truck" style="margin-right: 6px"></i
-                  >Vehicles &amp; Equipment
+                  ><span data-i18n="tab-alloc-vehicles"
+                    >Vehicles &amp; Equipment</span
+                  >
                 </div>
                 <div class="tab" data-tab="phases">
                   <i
                     class="fa-solid fa-layer-group"
                     style="margin-right: 6px"
                   ></i
-                  >By Phase
+                  ><span data-i18n="tab-alloc-phases">By Phase</span>
                 </div>
                 <div class="tab" data-tab="move">
                   <i
                     class="fa-solid fa-arrow-right-arrow-left"
                     style="margin-right: 6px"
                   ></i
-                  >Move Resources
+                  ><span data-i18n="tab-alloc-move">Move Resources</span>
                 </div>
                 <div
                   class="tab"
@@ -5508,7 +5929,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
                     class="fa-solid fa-triangle-exclamation"
                     style="margin-right: 6px"
                   ></i
-                  >Conflicts &amp; Alerts
+                  ><span data-i18n="tab-alloc-conflicts"
+                    >Conflicts &amp; Alerts</span
+                  >
                   <span
                     style="
                       background: #dc2626;
@@ -7923,7 +8346,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="budget">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Budget Planning</h1>
+                <h1 data-i18n="h1-budget">Budget Planning</h1>
                 <p>
                   Connect resource planning with cost forecasting, variance
                   analysis, and approval workflow.
@@ -7934,13 +8357,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   class="btn btn-outline"
                   onclick="openModal('modal-scenario-compare')"
                 >
-                  <i class="fa-solid fa-shuffle"></i> Scenario Compare
+                  <i class="fa-solid fa-shuffle"></i>
+                  <span data-i18n="btn-scenario-compare">Scenario Compare</span>
                 </button>
                 <button
                   class="btn btn-primary"
                   data-toast="Budget sent for approval"
                 >
-                  <i class="fa-solid fa-paper-plane"></i> Send for Approval
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span data-i18n="btn-send-approval">Send for Approval</span>
                 </button>
               </div>
             </div>
@@ -8119,32 +8544,44 @@ Survey, civil works, structure installation, PV module installation, electrical 
             <!-- KPI Summary Cards -->
             <div class="budget-summary-cards">
               <div class="budget-item cap">
-                <div class="bi-label">Project Budget</div>
+                <div class="bi-label" data-i18n="lbl-project-budget">
+                  Project Budget
+                </div>
                 <div class="bi-amount" id="bkpi-budget">CAD 5.00M</div>
                 <div class="bi-pct">100% cap</div>
               </div>
               <div class="budget-item ok">
-                <div class="bi-label">Manpower Cost</div>
+                <div class="bi-label" data-i18n="kpi-manpower-cost">
+                  Manpower Cost
+                </div>
                 <div class="bi-amount" id="bkpi-manpower">CAD 1.20M</div>
                 <div class="bi-pct" id="bkpi-manpower-pct">24% of budget</div>
               </div>
               <div class="budget-item">
-                <div class="bi-label">Vehicle Cost</div>
+                <div class="bi-label" data-i18n="kpi-vehicle-cost">
+                  Vehicle Cost
+                </div>
                 <div class="bi-amount" id="bkpi-vehicle">CAD 200K</div>
                 <div class="bi-pct" id="bkpi-vehicle-pct">4% of budget</div>
               </div>
               <div class="budget-item">
-                <div class="bi-label">Equipment Cost</div>
+                <div class="bi-label" data-i18n="kpi-equipment-cost">
+                  Equipment Cost
+                </div>
                 <div class="bi-amount" id="bkpi-equipment">CAD 350K</div>
                 <div class="bi-pct" id="bkpi-equipment-pct">7% of budget</div>
               </div>
               <div class="budget-item">
-                <div class="bi-label">Contingency</div>
+                <div class="bi-label" data-i18n="kpi-contingency">
+                  Contingency
+                </div>
                 <div class="bi-amount" id="bkpi-contingency">CAD 150K</div>
                 <div class="bi-pct" id="bkpi-contingency-pct">3% of budget</div>
               </div>
               <div class="budget-item ok" id="bkpi-total-card">
-                <div class="bi-label">Total Resource Cost</div>
+                <div class="bi-label" data-i18n="kpi-total-resource-cost">
+                  Total Resource Cost
+                </div>
                 <div class="bi-amount" id="bkpi-total">CAD 1.90M</div>
                 <div class="bi-pct" id="bkpi-total-pct">38% of budget</div>
               </div>
@@ -8183,12 +8620,12 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 <table>
                   <thead>
                     <tr>
-                      <th>Cost Component</th>
-                      <th>Estimated</th>
-                      <th>Revised</th>
-                      <th>% of Budget</th>
-                      <th>Variance</th>
-                      <th>Status</th>
+                      <th data-i18n="th-cost-component">Cost Component</th>
+                      <th data-i18n="th-estimated">Estimated</th>
+                      <th data-i18n="th-revised">Revised</th>
+                      <th data-i18n="th-pct-budget">% of Budget</th>
+                      <th data-i18n="th-variance">Variance</th>
+                      <th data-i18n="th-status">Status</th>
                     </tr>
                   </thead>
                   <tbody id="budget-table-body">
@@ -8293,7 +8730,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 <div class="card">
                   <div class="card-header">
                     <div>
-                      <div class="card-title">Budget Insights</div>
+                      <div class="card-title" data-i18n="card-budget-insights">
+                        Budget Insights
+                      </div>
                       <div class="card-subtitle">
                         Drivers behind cost changes
                       </div>
@@ -8340,7 +8779,12 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 <div class="card">
                   <div class="card-header">
                     <div>
-                      <div class="card-title">Regional Cost Impact</div>
+                      <div
+                        class="card-title"
+                        data-i18n="card-regional-cost-impact"
+                      >
+                        Regional Cost Impact
+                      </div>
                       <div class="card-subtitle">
                         Resource cost by deployment region
                       </div>
@@ -8468,7 +8912,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="reports">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Reports</h1>
+                <h1 data-i18n="h1-reports">Reports</h1>
                 <p>
                   Prebuilt operational, financial, and AI explainability reports
                   for project and management stakeholders.
@@ -8476,7 +8920,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
               <div class="page-header-actions">
                 <button class="btn btn-primary">
-                  <i class="fa-solid fa-download"></i> Export Bundle
+                  <i class="fa-solid fa-download"></i>
+                  <span data-i18n="btn-export-bundle">Export Bundle</span>
                 </button>
               </div>
             </div>
@@ -8491,7 +8936,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 >
                   <i class="fa-solid fa-users"></i>
                 </div>
-                <h4>Manpower Requirement</h4>
+                <h4 data-i18n="report-manpower">Manpower Requirement</h4>
                 <p>Role-wise manpower demand by project, phase, and region.</p>
                 <div class="report-meta">
                   <span>PDF / XLSX</span><span>Updated daily</span>
@@ -8507,7 +8952,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 >
                   <i class="fa-solid fa-chart-column"></i>
                 </div>
-                <h4>Utilization Report</h4>
+                <h4 data-i18n="report-utilization">Utilization Report</h4>
                 <p>
                   Availability, allocation, and overbooking trend across the
                   planning horizon.
@@ -8526,7 +8971,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 >
                   <i class="fa-solid fa-wallet"></i>
                 </div>
-                <h4>Budget Variance</h4>
+                <h4 data-i18n="report-budget-variance">Budget Variance</h4>
                 <p>
                   Budget cap, estimated resource cost, variance, and contingency
                   details.
@@ -8542,7 +8987,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 >
                   <i class="fa-solid fa-robot"></i>
                 </div>
-                <h4>AI Recommendation</h4>
+                <h4 data-i18n="report-ai-recommendation">AI Recommendation</h4>
                 <p>
                   Explainable AI output, assumptions, risk flags, and historical
                   analogs.
@@ -8558,7 +9003,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
                 >
                   <i class="fa-solid fa-scale-balanced"></i>
                 </div>
-                <h4>Historical Comparison</h4>
+                <h4 data-i18n="report-historical-comparison">
+                  Historical Comparison
+                </h4>
                 <p>
                   Benchmark new project against similar closed projects and
                   actual outcomes.
@@ -8589,7 +9036,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <section class="screen" id="admin">
             <div class="page-header">
               <div class="page-header-left">
-                <h1>Admin Settings</h1>
+                <h1 data-i18n="h1-admin">Admin Settings</h1>
                 <p>
                   Control user roles, workflow approvals, and the policy surface
                   for the planning workspace.
@@ -8597,7 +9044,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
               <div class="page-header-actions">
                 <button class="btn btn-primary">
-                  <i class="fa-solid fa-user-shield"></i> Add Role
+                  <i class="fa-solid fa-user-shield"></i>
+                  <span data-i18n="btn-add-role">Add Role</span>
                 </button>
               </div>
             </div>
@@ -8712,7 +9160,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="card">
                 <div class="card-header">
                   <div>
-                    <div class="card-title">Approval Workflow</div>
+                    <div class="card-title" data-i18n="card-approval-workflow">
+                      Approval Workflow
+                    </div>
                     <div class="card-subtitle">
                       Default baseline approval path
                     </div>
@@ -8760,8 +9210,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
       <div class="modal">
         <div class="modal-header">
           <h3 class="modal-title">
-            <i class="fa-solid fa-clock-rotate-left"></i> Add Historical Project
-            Entry
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span data-i18n="modal-historical-title"
+              >Add Historical Project Entry</span
+            >
           </h3>
           <button
             class="modal-close"
@@ -8781,13 +9233,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin-bottom: 12px;
             "
+            data-i18n="modal-historical-section-info"
           >
             Project Information
           </div>
           <div class="form-row-3">
             <div class="form-group">
               <label class="form-label"
-                >Project Name <span class="req">*</span></label
+                ><span data-i18n="lbl-project-name">Project Name</span>
+                <span class="req">*</span></label
               >
               <input
                 class="form-control"
@@ -8796,7 +9250,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Project Type <span class="req">*</span></label
+                ><span data-i18n="lbl-project-type">Project Type</span>
+                <span class="req">*</span></label
               >
               <select class="form-control">
                 <option value="">Select type…</option>
@@ -8811,7 +9266,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Region <span class="req">*</span></label
+                ><span data-i18n="th-region">Region</span>
+                <span class="req">*</span></label
               >
               <select class="form-control">
                 <option value="">Select region…</option>
@@ -8825,7 +9281,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Project Size</label>
+              <label class="form-label" data-i18n="lbl-project-size"
+                >Project Size</label
+              >
               <input
                 class="form-control"
                 placeholder="e.g. 4.8 MW, 36 km, 12 pumps"
@@ -8835,7 +9293,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label">Contract Type</label>
+              <label class="form-label" data-i18n="lbl-contract-type"
+                >Contract Type</label
+              >
               <select class="form-control">
                 <option value="">Select…</option>
                 <option>EPC</option>
@@ -8858,13 +9318,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-historical-section-duration"
           >
             Duration
           </div>
           <div class="form-row-2">
             <div class="form-group">
               <label class="form-label"
-                >Planned Duration (days) <span class="req">*</span></label
+                ><span data-i18n="lbl-planned-duration">Planned Duration</span>
+                (days) <span class="req">*</span></label
               >
               <input
                 class="form-control"
@@ -8875,7 +9337,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Actual Duration (days) <span class="req">*</span></label
+                ><span data-i18n="lbl-actual-duration">Actual Duration</span>
+                (days) <span class="req">*</span></label
               >
               <input
                 class="form-control"
@@ -8896,12 +9359,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-historical-section-manpower"
           >
             Manpower
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Planned Manpower (head count)</label>
+              <label class="form-label" data-i18n="lbl-planned-manpower"
+                >Planned Manpower (head count)</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -8910,7 +9376,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               />
             </div>
             <div class="form-group">
-              <label class="form-label">Actual Manpower Used</label>
+              <label class="form-label" data-i18n="lbl-actual-manpower"
+                >Actual Manpower Used</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -8930,12 +9398,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-historical-section-vehicles"
           >
             Vehicles
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Planned Vehicles</label>
+              <label class="form-label" data-i18n="lbl-planned-vehicles"
+                >Planned Vehicles</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -8944,7 +9415,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               />
             </div>
             <div class="form-group">
-              <label class="form-label">Actual Vehicles Used</label>
+              <label class="form-label" data-i18n="lbl-actual-vehicles"
+                >Actual Vehicles Used</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -8964,20 +9437,27 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-historical-section-cost"
           >
             Cost
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Planned Cost</label>
+              <label class="form-label" data-i18n="lbl-planned-cost"
+                >Planned Cost</label
+              >
               <input class="form-control" placeholder="e.g. CAD 2.1M" />
             </div>
             <div class="form-group">
-              <label class="form-label">Actual Cost</label>
+              <label class="form-label" data-i18n="lbl-actual-cost"
+                >Actual Cost</label
+              >
               <input class="form-control" placeholder="e.g. CAD 2.3M" />
             </div>
             <div class="form-group">
-              <label class="form-label">Budget Overrun (%)</label>
+              <label class="form-label" data-i18n="lbl-budget-overrun-pct"
+                >Budget Overrun (%)</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9000,19 +9480,24 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-historical-section-delays"
           >
             Delays &amp; Issues
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Delays Occurred</label>
+              <label class="form-label" data-i18n="lbl-delays-occurred"
+                >Delays Occurred</label
+              >
               <select class="form-control">
                 <option>No</option>
                 <option>Yes</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Reason for Delay</label>
+              <label class="form-label" data-i18n="lbl-reason-for-delay"
+                >Reason for Delay</label
+              >
               <select class="form-control">
                 <option value="">Select reason…</option>
                 <option>Weather</option>
@@ -9027,7 +9512,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Productivity Achieved (%)</label>
+              <label class="form-label" data-i18n="lbl-productivity-achieved"
+                >Productivity Achieved (%)</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9043,14 +9530,18 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Resource Shortage Issues</label>
+              <label class="form-label" data-i18n="lbl-resource-shortage-issues"
+                >Resource Shortage Issues</label
+              >
               <input
                 class="form-control"
                 placeholder="e.g. Welder shortage in week 8"
               />
             </div>
             <div class="form-group">
-              <label class="form-label">Lessons Learned</label>
+              <label class="form-label" data-i18n="lbl-lessons-learned"
+                >Lessons Learned</label
+              >
               <input
                 class="form-control"
                 placeholder="e.g. Pre-mobilise welders 3 weeks early"
@@ -9063,13 +9554,14 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-add-historical')"
           >
-            Cancel
+            <span data-i18n="cancel">Cancel</span>
           </button>
           <button
             class="btn btn-primary"
             data-toast="Historical entry saved and added to learning model"
           >
-            <i class="fa-solid fa-check"></i> Save Entry
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="btn-save-entry">Save Entry</span>
           </button>
         </div>
       </div>
@@ -9080,7 +9572,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
       <div class="modal">
         <div class="modal-header">
           <h3 class="modal-title">
-            <i class="fa-solid fa-earth-americas"></i> Add Region Plan
+            <i class="fa-solid fa-earth-americas"></i>
+            <span data-i18n="modal-region-title">Add Region Plan</span>
           </h3>
           <button class="modal-close" onclick="closeModal('modal-add-region')">
             <i class="fa-solid fa-xmark"></i>
@@ -9098,25 +9591,29 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin-bottom: 12px;
             "
+            data-i18n="modal-region-section-location"
           >
             Location
           </div>
           <div class="form-row-3">
             <div class="form-group">
               <label class="form-label"
-                >Country <span class="req">*</span></label
+                ><span data-i18n="lbl-country">Country</span>
+                <span class="req">*</span></label
               >
               <input class="form-control" placeholder="e.g. Canada" />
             </div>
             <div class="form-group">
               <label class="form-label"
-                >State / Province <span class="req">*</span></label
+                ><span data-i18n="lbl-state-province">State / Province</span>
+                <span class="req">*</span></label
               >
               <input class="form-control" placeholder="e.g. Alberta" />
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Region Name <span class="req">*</span></label
+                ><span data-i18n="lbl-region-name">Region Name</span>
+                <span class="req">*</span></label
               >
               <input class="form-control" placeholder="e.g. North Alberta" />
             </div>
@@ -9132,13 +9629,17 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-region-section-schedule"
           >
             Working Schedule
           </div>
           <div class="form-row-2">
             <div class="form-group">
               <label class="form-label"
-                >Standard Working Hours / Day <span class="req">*</span></label
+                ><span data-i18n="lbl-std-working-hours"
+                  >Standard Working Hours / Day</span
+                >
+                <span class="req">*</span></label
               >
               <input
                 class="form-control"
@@ -9150,7 +9651,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Standard Working Days / Week <span class="req">*</span></label
+                ><span data-i18n="lbl-std-working-days"
+                  >Standard Working Days / Week</span
+                >
+                <span class="req">*</span></label
               >
               <input
                 class="form-control"
@@ -9172,12 +9676,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-region-section-multipliers"
           >
             Planning Multipliers
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Productivity Multiplier</label>
+              <label class="form-label" data-i18n="lbl-productivity-multiplier"
+                >Productivity Multiplier</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9189,7 +9696,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">e.g. 0.75 = 25% slower than baseline</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Labour Availability Factor</label>
+              <label class="form-label" data-i18n="lbl-labour-availability"
+                >Labour Availability Factor</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9201,7 +9710,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">Skilled labour supply ratio</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Cost Multiplier</label>
+              <label class="form-label" data-i18n="lbl-cost-multiplier"
+                >Cost Multiplier</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9215,7 +9726,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Weather Impact Factor</label>
+              <label class="form-label" data-i18n="lbl-weather-impact-factor"
+                >Weather Impact Factor</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9229,7 +9742,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label">Travel / Logistics Factor</label>
+              <label class="form-label" data-i18n="lbl-travel-logistics"
+                >Travel / Logistics Factor</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9241,7 +9756,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">Site access and mobilisation cost</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Safety Compliance Factor</label>
+              <label class="form-label" data-i18n="lbl-safety-compliance"
+                >Safety Compliance Factor</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9255,7 +9772,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Local Regulation Factor</label>
+              <label class="form-label" data-i18n="lbl-local-regulation"
+                >Local Regulation Factor</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9267,7 +9786,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">Permit complexity and restrictions</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Vehicle Requirement Multiplier</label>
+              <label class="form-label" data-i18n="lbl-vehicle-req-multiplier"
+                >Vehicle Requirement Multiplier</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9290,17 +9811,22 @@ Survey, civil works, structure installation, PV module installation, electrical 
               color: var(--text-muted);
               margin: 16px 0 12px;
             "
+            data-i18n="modal-region-section-safety"
           >
             Safety &amp; Staffing Minimums
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Min. Required Safety Staff</label>
+              <label class="form-label" data-i18n="lbl-min-safety-staff"
+                >Min. Required Safety Staff</label
+              >
               <input class="form-control" type="number" value="1" min="0" />
               <div class="form-hint">Per active site</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Min. Supervisor-to-Worker Ratio</label>
+              <label class="form-label" data-i18n="lbl-min-supervisor-ratio"
+                >Min. Supervisor-to-Worker Ratio</label
+              >
               <input
                 class="form-control"
                 placeholder="e.g. 1:10"
@@ -9309,7 +9835,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">1 supervisor per N workers</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Contingency Percentage</label>
+              <label class="form-label" data-i18n="lbl-contingency-pct"
+                >Contingency Percentage</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9327,13 +9855,14 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-add-region')"
           >
-            Cancel
+            <span data-i18n="cancel">Cancel</span>
           </button>
           <button
             class="btn btn-primary"
             data-toast="Region plan saved successfully"
           >
-            <i class="fa-solid fa-check"></i> Save Region Plan
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="btn-save-region">Save Region Plan</span>
           </button>
         </div>
       </div>
@@ -9344,7 +9873,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
       <div class="modal">
         <div class="modal-header">
           <h3 class="modal-title">
-            <i class="fa-solid fa-user-plus"></i> Add Person to Resource Master
+            <i class="fa-solid fa-user-plus"></i>
+            <span data-i18n="modal-person-title"
+              >Add Person to Resource Master</span
+            >
           </h3>
           <button class="modal-close" onclick="closeModal('modal-add-person')">
             <i class="fa-solid fa-xmark"></i>
@@ -9354,7 +9886,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <div class="form-row-2">
             <div class="form-group">
               <label class="form-label"
-                >Resource Name <span class="req">*</span></label
+                ><span data-i18n="lbl-resource-name">Resource Name</span>
+                <span class="req">*</span></label
               >
               <input class="form-control" placeholder="Full name" />
             </div>
@@ -9384,7 +9917,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <div class="form-row-3">
             <div class="form-group">
               <label class="form-label"
-                >Skill Level <span class="req">*</span></label
+                ><span data-i18n="th-skill-level">Skill Level</span>
+                <span class="req">*</span></label
               >
               <select class="form-control">
                 <option>L1 — Entry Level</option>
@@ -9395,7 +9929,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Region <span class="req">*</span></label
+                ><span data-i18n="th-region">Region</span>
+                <span class="req">*</span></label
               >
               <select class="form-control">
                 <option>Alberta</option>
@@ -9407,32 +9942,45 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Availability Date <span class="req">*</span></label
+                ><span data-i18n="lbl-availability-date"
+                  >Availability Date</span
+                >
+                <span class="req">*</span></label
               >
               <input type="date" class="form-control" />
             </div>
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Cost per Hour</label>
+              <label class="form-label" data-i18n="lbl-cost-per-hour"
+                >Cost per Hour</label
+              >
               <input class="form-control" placeholder="e.g. CAD 65" />
             </div>
             <div class="form-group">
-              <label class="form-label">Cost per Day</label>
+              <label class="form-label" data-i18n="lbl-cost-per-day"
+                >Cost per Day</label
+              >
               <input class="form-control" placeholder="e.g. CAD 520" />
             </div>
             <div class="form-group">
-              <label class="form-label">Cost per Month</label>
+              <label class="form-label" data-i18n="lbl-cost-per-month"
+                >Cost per Month</label
+              >
               <input class="form-control" placeholder="e.g. CAD 11,000" />
             </div>
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Max Working Hours/Week</label>
+              <label class="form-label" data-i18n="lbl-max-working-hrs-wk"
+                >Max Working Hours/Week</label
+              >
               <input class="form-control" value="40" />
             </div>
             <div class="form-group">
-              <label class="form-label">Productivity Rate</label>
+              <label class="form-label" data-i18n="th-productivity-rate"
+                >Productivity Rate</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9444,7 +9992,11 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">Range: 0.50 – 1.50</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Current Allocation Status</label>
+              <label
+                class="form-label"
+                data-i18n="lbl-current-allocation-status"
+                >Current Allocation Status</label
+              >
               <select class="form-control">
                 <option>Available</option>
                 <option>Allocated</option>
@@ -9455,11 +10007,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Future Availability Date</label>
+              <label class="form-label" data-i18n="lbl-future-availability-date"
+                >Future Availability Date</label
+              >
               <input type="date" class="form-control" />
             </div>
             <div class="form-group">
-              <label class="form-label">Certifications</label>
+              <label class="form-label" data-i18n="lbl-certifications"
+                >Certifications</label
+              >
               <input
                 class="form-control"
                 placeholder="e.g. HSE, Solar QA, PMP"
@@ -9467,7 +10023,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Notes</label>
+            <label class="form-label" data-i18n="lbl-notes">Notes</label>
             <textarea
               class="form-control"
               rows="2"
@@ -9480,13 +10036,14 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-add-person')"
           >
-            Cancel
+            <span data-i18n="cancel">Cancel</span>
           </button>
           <button
             class="btn btn-primary"
             data-toast="Person added to Resource Master"
           >
-            <i class="fa-solid fa-check"></i> Save Person
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="btn-save-person">Save Person</span>
           </button>
         </div>
       </div>
@@ -9497,7 +10054,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
       <div class="modal">
         <div class="modal-header">
           <h3 class="modal-title">
-            <i class="fa-solid fa-truck"></i> Add Vehicle to Resource Master
+            <i class="fa-solid fa-truck"></i>
+            <span data-i18n="modal-vehicle-title"
+              >Add Vehicle to Resource Master</span
+            >
           </h3>
           <button class="modal-close" onclick="closeModal('modal-add-vehicle')">
             <i class="fa-solid fa-xmark"></i>
@@ -9507,13 +10067,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <div class="form-row-2">
             <div class="form-group">
               <label class="form-label"
-                >Vehicle ID <span class="req">*</span></label
+                ><span data-i18n="lbl-vehicle-id">Vehicle ID</span>
+                <span class="req">*</span></label
               >
               <input class="form-control" placeholder="e.g. V-104" />
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Vehicle Type <span class="req">*</span></label
+                ><span data-i18n="lbl-vehicle-type">Vehicle Type</span>
+                <span class="req">*</span></label
               >
               <select class="form-control">
                 <option value="">Select type…</option>
@@ -9543,14 +10105,16 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Ownership</label>
+              <label class="form-label" data-i18n="lbl-ownership"
+                >Ownership</label
+              >
               <select class="form-control">
                 <option>Owned</option>
                 <option>Rented</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Status</label>
+              <label class="form-label" data-i18n="th-status">Status</label>
               <select class="form-control">
                 <option>Available</option>
                 <option>Booked</option>
@@ -9561,26 +10125,35 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <div class="form-row-3">
             <div class="form-group">
               <label class="form-label"
-                >Available Date <span class="req">*</span></label
+                ><span data-i18n="lbl-available-date">Available Date</span>
+                <span class="req">*</span></label
               >
               <input type="date" class="form-control" />
             </div>
             <div class="form-group">
-              <label class="form-label">Cost per Day</label>
+              <label class="form-label" data-i18n="lbl-cost-per-day"
+                >Cost per Day</label
+              >
               <input class="form-control" placeholder="e.g. CAD 130" />
             </div>
             <div class="form-group">
-              <label class="form-label">Cost per Month</label>
+              <label class="form-label" data-i18n="lbl-cost-per-month"
+                >Cost per Month</label
+              >
               <input class="form-control" placeholder="e.g. CAD 2,600" />
             </div>
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Max Hours/Day</label>
+              <label class="form-label" data-i18n="lbl-max-hours-day"
+                >Max Hours/Day</label
+              >
               <input class="form-control" value="10" />
             </div>
             <div class="form-group">
-              <label class="form-label">Productivity Rate</label>
+              <label class="form-label" data-i18n="th-productivity-rate"
+                >Productivity Rate</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9592,7 +10165,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">Range: 0.50 – 1.50</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Driver Required</label>
+              <label class="form-label" data-i18n="lbl-driver-required"
+                >Driver Required</label
+              >
               <select class="form-control">
                 <option>Yes</option>
                 <option>No</option>
@@ -9601,16 +10176,20 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Current Allocation</label>
+              <label class="form-label" data-i18n="th-current-allocation"
+                >Current Allocation</label
+              >
               <input class="form-control" placeholder="Project or — if none" />
             </div>
             <div class="form-group">
-              <label class="form-label">Future Availability Date</label>
+              <label class="form-label" data-i18n="lbl-future-availability-date"
+                >Future Availability Date</label
+              >
               <input type="date" class="form-control" />
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Notes</label>
+            <label class="form-label" data-i18n="lbl-notes">Notes</label>
             <textarea
               class="form-control"
               rows="2"
@@ -9623,13 +10202,14 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-add-vehicle')"
           >
-            Cancel
+            <span data-i18n="cancel">Cancel</span>
           </button>
           <button
             class="btn btn-primary"
             data-toast="Vehicle added to Resource Master"
           >
-            <i class="fa-solid fa-check"></i> Save Vehicle
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="btn-save-vehicle">Save Vehicle</span>
           </button>
         </div>
       </div>
@@ -9640,8 +10220,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
       <div class="modal">
         <div class="modal-header">
           <h3 class="modal-title">
-            <i class="fa-solid fa-screwdriver-wrench"></i> Add Equipment to
-            Resource Master
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span data-i18n="modal-equipment-title"
+              >Add Equipment to Resource Master</span
+            >
           </h3>
           <button
             class="modal-close"
@@ -9654,13 +10236,15 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <div class="form-row-2">
             <div class="form-group">
               <label class="form-label"
-                >Equipment ID <span class="req">*</span></label
+                ><span data-i18n="lbl-equipment-id">Equipment ID</span>
+                <span class="req">*</span></label
               >
               <input class="form-control" placeholder="e.g. EQ-012" />
             </div>
             <div class="form-group">
               <label class="form-label"
-                >Equipment Type <span class="req">*</span></label
+                ><span data-i18n="lbl-equipment-type">Equipment Type</span>
+                <span class="req">*</span></label
               >
               <select class="form-control">
                 <option value="">Select type…</option>
@@ -9689,14 +10273,16 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Ownership</label>
+              <label class="form-label" data-i18n="lbl-ownership"
+                >Ownership</label
+              >
               <select class="form-control">
                 <option>Owned</option>
                 <option>Rented</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Status</label>
+              <label class="form-label" data-i18n="th-status">Status</label>
               <select class="form-control">
                 <option>Ready</option>
                 <option>Booked</option>
@@ -9708,29 +10294,38 @@ Survey, civil works, structure installation, PV module installation, electrical 
           <div class="form-row-3">
             <div class="form-group">
               <label class="form-label"
-                >Available Date <span class="req">*</span></label
+                ><span data-i18n="lbl-available-date">Available Date</span>
+                <span class="req">*</span></label
               >
               <input type="date" class="form-control" />
             </div>
             <div class="form-group">
-              <label class="form-label">Cost per Day</label>
+              <label class="form-label" data-i18n="lbl-cost-per-day"
+                >Cost per Day</label
+              >
               <input class="form-control" placeholder="e.g. CAD 80" />
             </div>
             <div class="form-group">
-              <label class="form-label">Max Hours/Day</label>
+              <label class="form-label" data-i18n="lbl-max-hours-day"
+                >Max Hours/Day</label
+              >
               <input class="form-control" value="8" />
             </div>
           </div>
           <div class="form-row-3">
             <div class="form-group">
-              <label class="form-label">Operator Required</label>
+              <label class="form-label" data-i18n="lbl-operator-required"
+                >Operator Required</label
+              >
               <select class="form-control">
                 <option>Yes</option>
                 <option>No</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Productivity Rate</label>
+              <label class="form-label" data-i18n="th-productivity-rate"
+                >Productivity Rate</label
+              >
               <input
                 class="form-control"
                 type="number"
@@ -9742,22 +10337,28 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <div class="form-hint">Range: 0.50 – 1.50</div>
             </div>
             <div class="form-group">
-              <label class="form-label">Calibration Due Date</label>
+              <label class="form-label" data-i18n="lbl-calibration-due"
+                >Calibration Due Date</label
+              >
               <input type="date" class="form-control" />
             </div>
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Current Allocation</label>
+              <label class="form-label" data-i18n="th-current-allocation"
+                >Current Allocation</label
+              >
               <input class="form-control" placeholder="Project or — if none" />
             </div>
             <div class="form-group">
-              <label class="form-label">Future Availability Date</label>
+              <label class="form-label" data-i18n="lbl-future-availability-date"
+                >Future Availability Date</label
+              >
               <input type="date" class="form-control" />
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Notes</label>
+            <label class="form-label" data-i18n="lbl-notes">Notes</label>
             <textarea
               class="form-control"
               rows="2"
@@ -9770,13 +10371,14 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-add-equipment')"
           >
-            Cancel
+            <span data-i18n="cancel">Cancel</span>
           </button>
           <button
             class="btn btn-primary"
             data-toast="Equipment added to Resource Master"
           >
-            <i class="fa-solid fa-check"></i> Save Equipment
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="btn-save-equipment">Save Equipment</span>
           </button>
         </div>
       </div>
@@ -9787,7 +10389,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
       <div class="modal" style="max-width: 860px; width: 95%">
         <div class="modal-header">
           <h3 class="modal-title">
-            <i class="fa-solid fa-shuffle"></i> Compare AI Scenarios
+            <i class="fa-solid fa-shuffle"></i>
+            <span data-i18n="modal-compare-title">Compare AI Scenarios</span>
           </h3>
           <button
             class="modal-close"
@@ -9804,15 +10407,21 @@ Survey, civil works, structure installation, PV module installation, electrical 
               margin-bottom: 16px;
             "
           >
-            Side-by-side comparison of AI-generated resource plans for
-            <strong>North Ridge 5 MW — Alberta</strong>. Select a scenario to
-            apply it.
+            <span data-i18n="modal-compare-subtitle"
+              >Side-by-side comparison of AI-generated resource plans for your
+              project.</span
+            >
           </p>
           <div class="table-wrapper" style="margin: 0">
             <table>
               <thead>
                 <tr>
-                  <th style="text-align: left; min-width: 160px">Metric</th>
+                  <th
+                    style="text-align: left; min-width: 160px"
+                    data-i18n="th-metric"
+                  >
+                    Metric
+                  </th>
                   <th
                     style="
                       text-align: center;
@@ -10046,7 +10655,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-scenario-compare')"
           >
-            Close
+            <span data-i18n="btn-close">Close</span>
           </button>
           <button
             class="btn btn-outline"
@@ -10055,7 +10664,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
               showToast('Lowest Cost scenario applied', 'info');
             "
           >
-            Apply Lowest Cost
+            <span data-i18n="btn-apply-lowest-cost">Apply Lowest Cost</span>
           </button>
           <button
             class="btn btn-primary"
@@ -10064,7 +10673,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
               showToast('Balanced Plan applied as active scenario', 'success');
             "
           >
-            <i class="fa-solid fa-check"></i> Apply Balanced Plan
+            <i class="fa-solid fa-check"></i>
+            <span data-i18n="btn-apply-balanced">Apply Balanced Plan</span>
           </button>
         </div>
       </div>
@@ -10083,7 +10693,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               class="fa-solid fa-pen"
               style="color: var(--primary); margin-right: 8px"
             ></i
-            >Edit AI Plan Parameters
+            ><span data-i18n="modal-edit-plan-title"
+              >Edit AI Plan Parameters</span
+            >
           </h2>
           <button class="modal-close" onclick="closeModal('modal-edit-plan')">
             <i class="fa-solid fa-xmark"></i>
@@ -10100,7 +10712,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
           </div>
           <div class="form-row-2">
             <div class="form-group">
-              <label class="form-label">Optimization Goal</label>
+              <label class="form-label" data-i18n="lbl-optimization-goal"
+                >Optimization Goal</label
+              >
               <select class="form-control">
                 <option selected>Balanced (Cost + Time)</option>
                 <option>Lowest Cost</option>
@@ -10109,7 +10723,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Max Team Size</label>
+              <label class="form-label" data-i18n="lbl-max-team-size"
+                >Max Team Size</label
+              >
               <input class="form-control" type="number" value="22" />
             </div>
           </div>
@@ -10119,16 +10735,22 @@ Survey, civil works, structure installation, PV module installation, electrical 
               <input class="form-control" type="date" value="2026-07-01" />
             </div>
             <div class="form-group">
-              <label class="form-label">Target End Date</label>
+              <label class="form-label" data-i18n="lbl-target-end-date"
+                >Target End Date</label
+              >
               <input class="form-control" type="date" value="2026-12-31" />
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Budget Cap (CAD Lakhs)</label>
+            <label class="form-label" data-i18n="lbl-budget-cap"
+              >Budget Cap (CAD Lakhs)</label
+            >
             <input class="form-control" type="number" value="190" />
           </div>
           <div class="form-group">
-            <label class="form-label">Constraints</label>
+            <label class="form-label" data-i18n="lbl-constraints"
+              >Constraints</label
+            >
             <div
               style="
                 display: flex;
@@ -10144,8 +10766,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   gap: 8px;
                   cursor: pointer;
                 "
-                ><input type="checkbox" checked /> Allow subcontractors when
-                needed</label
+                ><input type="checkbox" checked />
+                <span data-i18n="chk-allow-subcontractors"
+                  >Allow subcontractors when needed</span
+                ></label
               >
               <label
                 style="
@@ -10154,8 +10778,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   gap: 8px;
                   cursor: pointer;
                 "
-                ><input type="checkbox" checked /> Enforce certification
-                requirements</label
+                ><input type="checkbox" checked />
+                <span data-i18n="chk-enforce-certifications"
+                  >Enforce certification requirements</span
+                ></label
               >
               <label
                 style="
@@ -10164,8 +10790,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   gap: 8px;
                   cursor: pointer;
                 "
-                ><input type="checkbox" /> Allow cross-project resource
-                sharing</label
+                ><input type="checkbox" />
+                <span data-i18n="chk-allow-cross-project"
+                  >Allow cross-project resource sharing</span
+                ></label
               >
               <label
                 style="
@@ -10174,8 +10802,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   gap: 8px;
                   cursor: pointer;
                 "
-                ><input type="checkbox" checked /> Respect max 100% utilization
-                per resource</label
+                ><input type="checkbox" checked />
+                <span data-i18n="chk-respect-max-util"
+                  >Respect max 100% utilization per resource</span
+                ></label
               >
             </div>
           </div>
@@ -10185,7 +10815,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
             class="btn btn-outline"
             onclick="closeModal('modal-edit-plan')"
           >
-            Cancel
+            <span data-i18n="cancel">Cancel</span>
           </button>
           <button
             class="btn btn-primary"
@@ -10197,7 +10827,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
               );
             "
           >
-            <i class="fa-solid fa-rotate"></i> Re-run AI Plan
+            <i class="fa-solid fa-rotate"></i>
+            <span data-i18n="btn-rerun-ai">Re-run AI Plan</span>
           </button>
         </div>
       </div>
