@@ -139,11 +139,11 @@ const translations = {
     "nav-manpower": "Manpower",
     "nav-vehicles": "Vehicles",
     "nav-equipment": "Equipment",
-    "nav-regions": "Region Settings",
+    //    "nav-regions": "Region Settings",
     "nav-historical": "Historical Data",
     "nav-calendar": "Capacity Calendar",
     "nav-allocation": "Allocation",
-    "nav-budget": "Budget",
+    //    "nav-budget": "Budget",
     "nav-reports": "Reports",
     "nav-admin": "Admin",
     // Screen breadcrumb titles
@@ -163,16 +163,16 @@ const translations = {
     "subtitle-vehicles": "Manage vehicle fleet and assignments",
     "title-equipment": "Equipment",
     "subtitle-equipment": "Manage equipment inventory and allocation",
-    "title-regions": "Region Settings",
-    "subtitle-regions": "Configure region-specific planning factors",
+    //    "title-regions": "Region Settings",
+    //    "subtitle-regions": "Configure region-specific planning factors",
     "title-historical": "Historical Data",
     "subtitle-historical": "Learn from past project performance",
     "title-calendar": "Capacity Calendar",
     "subtitle-calendar": "View resource availability over time",
     "title-allocation": "Allocation",
     "subtitle-allocation": "Assign resources to projects and phases",
-    "title-budget": "Budget",
-    "subtitle-budget": "Track cost estimates and budget health",
+    //    "title-budget": "Budget",
+    //    "subtitle-budget": "Track cost estimates and budget health",
     "title-reports": "Reports",
     "subtitle-reports": "Generate and export planning reports",
     "title-admin": "Admin",
@@ -406,7 +406,7 @@ const translations = {
     "th-equipment-id": "Equipment ID",
     "th-operator-required": "Operator Required",
     // Region Settings
-    "h1-regions": "Region Settings",
+    //    "h1-regions": "Region Settings",
     "btn-add-region": "Add Region Plan",
     "lbl-working-hours-day-factor": "Working hours/day",
     "lbl-working-days-week-factor": "Working days/week",
@@ -523,7 +523,7 @@ const translations = {
       "All conflicts must be resolved before approving the plan.",
     "btn-auto-resolve": "Auto-Resolve All",
     // Budget
-    "h1-budget": "Budget Planning",
+    //    "h1-budget": "Budget Planning",
     "btn-scenario-compare": "Scenario Compare",
     "btn-send-approval": "Send for Approval",
     "lbl-project-colon": "Project:",
@@ -531,7 +531,7 @@ const translations = {
     "opt-full-project": "Full Project",
     "budget-warning-text": "Resource cost exceeds budget cap!",
     "budget-ok-text": "Budget Status: Within Budget",
-    "lbl-budget-utilization": "Budget Utilization",
+    //    "lbl-budget-utilization": "Budget Utilization",
     "kpi-project-budget": "Project Budget",
     "kpi-manpower-cost": "Manpower Cost",
     "kpi-vehicle-cost": "Vehicle Cost",
@@ -599,7 +599,7 @@ const translations = {
     "lbl-actual-vehicles": "Actual Vehicles Used",
     "lbl-planned-cost": "Planned Cost",
     "lbl-actual-cost": "Actual Cost",
-    "lbl-budget-overrun-pct": "Budget Overrun (%)",
+    //    "lbl-budget-overrun-pct": "Budget Overrun (%)",
     "lbl-delays-occurred": "Delays Occurred",
     "lbl-reason-for-delay": "Reason for Delay",
     "lbl-productivity-achieved": "Productivity Achieved (%)",
@@ -683,7 +683,7 @@ const translations = {
     "lbl-optimization-goal": "Optimization Goal",
     "lbl-max-team-size": "Max Team Size",
     "lbl-target-end-date": "Target End Date",
-    "lbl-budget-cap": "Budget Cap",
+    //    "lbl-budget-cap": "Budget Cap",
     "lbl-constraints": "Constraints",
     "chk-allow-subcontractors": "Allow subcontractors when needed",
     "chk-enforce-certifications": "Enforce certification requirements",
@@ -692,6 +692,27 @@ const translations = {
     "opt-balanced": "Balanced (Cost + Time)",
     "opt-minimize-conflicts": "Minimize Conflicts",
     "btn-rerun-ai": "Re-run AI Plan",
+    // Tender Pipeline / Activity Planning / Dept. Coordination (new screens)
+    "nav-tender-pipeline": "Tender Pipeline",
+    "nav-activity-planning": "Activity Planning",
+    "nav-dept-coordination": "Dept. Coordination",
+    "title-tender-pipeline": "Tender Pipeline",
+    "subtitle-tender-pipeline": "Track open, won and lost proposals",
+    "title-activity-planning": "Activity Planning",
+    "subtitle-activity-planning":
+      "Plan hours by discipline against FocusGP guardrails",
+    "title-dept-coordination": "Dept. Coordination",
+    "subtitle-dept-coordination":
+      "Weekly capacity heatmap across engineering disciplines",
+    "btn-new-tender": "New Tender",
+    //    "lbl-budget-fees": "Budget Fees",
+    //    "lbl-budget-hours": "Budget Hours",
+    "lbl-target-rate": "Target Rate",
+    "lbl-guardrails": "FocusGP Guardrails",
+    //    "lbl-budget-honoraires": "BudgetHonoraires",
+    //    "lbl-budget-heures": "BudgetHeures",
+    "lbl-target-avg-rate": "Target Avg Rate",
+    "lbl-rate-variance": "Rate Variance",
   },
   fr: {
     searchPlaceholder: "Rechercher projet, rôle, véhicule...",
@@ -708,11 +729,11 @@ const translations = {
     "nav-manpower": "Main-d'œuvre",
     "nav-vehicles": "Véhicules",
     "nav-equipment": "Équipement",
-    "nav-regions": "Paramètres régionaux",
+    //    "nav-regions": "Paramètres régionaux",
     "nav-historical": "Données historiques",
     "nav-calendar": "Calendrier de capacité",
     "nav-allocation": "Allocation",
-    "nav-budget": "Budget",
+    //    "nav-budget": "Budget",
     "nav-reports": "Rapports",
     "nav-admin": "Administration",
     // Screen breadcrumb titles
@@ -734,16 +755,16 @@ const translations = {
     "subtitle-vehicles": "Gérer la flotte de véhicules et les attributions",
     "title-equipment": "Équipement",
     "subtitle-equipment": "Gérer l'inventaire et l'allocation des équipements",
-    "title-regions": "Paramètres régionaux",
-    "subtitle-regions": "Configurer les facteurs de planification par région",
+    //    "title-regions": "Paramètres régionaux",
+    //    "subtitle-regions": "Configurer les facteurs de planification par région",
     "title-historical": "Données historiques",
     "subtitle-historical": "Apprendre des performances passées des projets",
     "title-calendar": "Calendrier de capacité",
     "subtitle-calendar": "Voir la disponibilité des ressources dans le temps",
     "title-allocation": "Allocation",
     "subtitle-allocation": "Assigner des ressources aux projets et aux phases",
-    "title-budget": "Budget",
-    "subtitle-budget": "Suivre les estimations de coûts et la santé budgétaire",
+    //    "title-budget": "Budget",
+    //    "subtitle-budget": "Suivre les estimations de coûts et la santé budgétaire",
     "title-reports": "Rapports",
     "subtitle-reports": "Générer et exporter des rapports de planification",
     "title-admin": "Administration",
@@ -979,7 +1000,7 @@ const translations = {
     "th-equipment-id": "ID équipement",
     "th-operator-required": "Opérateur requis",
     // Region Settings
-    "h1-regions": "Paramètres régionaux",
+    //    "h1-regions": "Paramètres régionaux",
     "btn-add-region": "Ajouter un plan régional",
     "lbl-working-hours-day-factor": "Heures de travail/jour",
     "lbl-working-days-week-factor": "Jours ouvrables/semaine",
@@ -1098,7 +1119,7 @@ const translations = {
       "Tous les conflits doivent être résolus avant d'approuver le plan.",
     "btn-auto-resolve": "Résoudre tout automatiquement",
     // Budget
-    "h1-budget": "Planification budgétaire",
+    //    "h1-budget": "Planification budgétaire",
     "btn-scenario-compare": "Comparer les scénarios",
     "btn-send-approval": "Envoyer pour approbation",
     "lbl-project-colon": "Projet :",
@@ -1107,7 +1128,7 @@ const translations = {
     "budget-warning-text":
       "Le coût des ressources dépasse le plafond budgétaire !",
     "budget-ok-text": "Statut budget : Dans le budget",
-    "lbl-budget-utilization": "Utilisation du budget",
+    //    "lbl-budget-utilization": "Utilisation du budget",
     "kpi-project-budget": "Budget du projet",
     "kpi-manpower-cost": "Coût main-d'œuvre",
     "kpi-vehicle-cost": "Coût véhicules",
@@ -1176,7 +1197,7 @@ const translations = {
     "lbl-actual-vehicles": "Véhicules réels",
     "lbl-planned-cost": "Coût prévu",
     "lbl-actual-cost": "Coût réel",
-    "lbl-budget-overrun-pct": "Dépassement budgétaire (%)",
+    //    "lbl-budget-overrun-pct": "Dépassement budgétaire (%)",
     "lbl-delays-occurred": "Retards survenus",
     "lbl-reason-for-delay": "Raison du retard",
     "lbl-productivity-achieved": "Productivité atteinte (%)",
@@ -1261,7 +1282,7 @@ const translations = {
     "lbl-optimization-goal": "Objectif d'optimisation",
     "lbl-max-team-size": "Taille maximale de l'équipe",
     "lbl-target-end-date": "Date de fin cible",
-    "lbl-budget-cap": "Plafond budgétaire",
+    //    "lbl-budget-cap": "Plafond budgétaire",
     "lbl-constraints": "Contraintes",
     "chk-allow-subcontractors": "Autoriser les sous-traitants si nécessaire",
     "chk-enforce-certifications": "Appliquer les exigences de certification",
@@ -1272,6 +1293,28 @@ const translations = {
     "opt-balanced": "Équilibré (Coût + Délai)",
     "opt-minimize-conflicts": "Minimiser les conflits",
     "btn-rerun-ai": "Relancer le plan IA",
+    // Tender Pipeline / Activity Planning / Dept. Coordination (new screens)
+    "nav-tender-pipeline": "Appels d'offres",
+    "nav-activity-planning": "Plan d'activités",
+    "nav-dept-coordination": "Coord. département",
+    "title-tender-pipeline": "Appels d'offres",
+    "subtitle-tender-pipeline":
+      "Suivre les propositions ouvertes, gagnées et perdues",
+    "title-activity-planning": "Plan d'activités",
+    "subtitle-activity-planning":
+      "Planifier les heures par discipline selon les gardes-fous FocusGP",
+    "title-dept-coordination": "Coord. département",
+    "subtitle-dept-coordination":
+      "Heatmap de capacité hebdomadaire par discipline",
+    "btn-new-tender": "Nouvel appel d'offres",
+    //    "lbl-budget-fees": "Budget honoraires",
+    //    "lbl-budget-hours": "Budget heures",
+    "lbl-target-rate": "Taux cible",
+    "lbl-guardrails": "Gardes-fous FocusGP",
+    //    "lbl-budget-honoraires": "BudgetHonoraires",
+    //    "lbl-budget-heures": "BudgetHeures",
+    "lbl-target-avg-rate": "Taux horaire moyen cible",
+    "lbl-rate-variance": "Écart de taux",
   },
 };
 
@@ -1382,7 +1425,7 @@ const budgetProjects = {
     barColor: "linear-gradient(90deg,var(--primary),var(--success))",
     barLabel: "CAD 1.90M / CAD 5.00M (38%)",
     barLegend:
-      "🔵 Manpower: CAD 1.20M (24%)&nbsp;&nbsp;🟡 Vehicles: CAD 200K (4%)&nbsp;&nbsp;🟠 Equipment: CAD 350K (7%)&nbsp;&nbsp;⚪ Regional: CAD 200K (4%)&nbsp;&nbsp;⚪ Contingency: CAD 150K (3%)",
+      "🔵 Fees (Honoraires): CAD 1.20M (24%)&nbsp;&nbsp;⚪ Regional: CAD 200K (4%)&nbsp;&nbsp;⚪ Contingency: CAD 150K (3%)",
     variance: "Budget Variance: CAD 3.10M remaining",
     varianceColor: "#dcfce7",
     varianceTextColor: "#15803d",
@@ -1436,7 +1479,7 @@ const budgetProjects = {
     barColor: "linear-gradient(90deg,var(--primary),var(--success))",
     barLabel: "CAD 3.06M / CAD 8.50M (36%)",
     barLegend:
-      "🔵 Manpower: CAD 2.10M (25%)&nbsp;&nbsp;🟡 Vehicles: CAD 350K (4%)&nbsp;&nbsp;🟠 Equipment: CAD 280K (3%)&nbsp;&nbsp;⚪ Regional: CAD 80K (1%)&nbsp;&nbsp;⚪ Contingency: CAD 250K (3%)",
+      "🔵 Fees (Honoraires): CAD 2.10M (25%)&nbsp;&nbsp;⚪ Regional: CAD 80K (1%)&nbsp;&nbsp;⚪ Contingency: CAD 250K (3%)",
     variance: "Budget Variance: CAD 5.44M remaining",
     varianceColor: "#dcfce7",
     varianceTextColor: "#15803d",
@@ -1487,7 +1530,7 @@ const budgetProjects = {
     barColor: "linear-gradient(90deg,#f59e0b,#d97706)",
     barLabel: "CAD 1.06M / CAD 2.00M (53%)",
     barLegend:
-      "🔵 Manpower: CAD 720K (36%)&nbsp;&nbsp;🟡 Vehicles: CAD 80K (4%)&nbsp;&nbsp;🟠 Equipment: CAD 120K (6%)&nbsp;&nbsp;⚪ Regional: CAD 60K (3%)&nbsp;&nbsp;⚪ Contingency: CAD 80K (4%)",
+      "🔵 Fees (Honoraires): CAD 720K (36%)&nbsp;&nbsp;⚪ Regional: CAD 60K (3%)&nbsp;&nbsp;⚪ Contingency: CAD 80K (4%)",
     variance: "Budget Variance: CAD 940K remaining",
     varianceColor: "#fef9c3",
     varianceTextColor: "#92400e",
@@ -1536,7 +1579,7 @@ const budgetProjects = {
     barColor: "linear-gradient(90deg,var(--danger),#b91c1c)",
     barLabel: "CAD 4.27M / CAD 3.50M (122%) ⚠ OVER BUDGET",
     barLegend:
-      "🔴 Manpower: CAD 2.80M (80%)&nbsp;&nbsp;🔴 Vehicles: CAD 450K (13%)&nbsp;&nbsp;🔴 Equipment: CAD 520K (15%)&nbsp;&nbsp;🔴 Regional: CAD 280K (8%)&nbsp;&nbsp;🔴 Contingency: CAD 220K (6%)",
+      "🔴 Fees (Honoraires): CAD 2.80M (80%)&nbsp;&nbsp;🔴 Regional: CAD 280K (8%)&nbsp;&nbsp;🔴 Contingency: CAD 220K (6%)",
     variance: "⚠ OVER BUDGET by CAD 770K — Action Required",
     varianceColor: "#fee2e2",
     varianceTextColor: "#b91c1c",
@@ -1701,3 +1744,95 @@ showScreen("dashboard");
 })();
 
 showScreen("dashboard");
+
+/* ============================================================
+   ACTIVITY PLANNING — discipline accordion toggle
+   ============================================================ */
+function toggleDiscipline(id) {
+  const body = document.getElementById(id);
+  const chevron = document.querySelector(`[data-disc-chevron="${id}"]`);
+  if (!body) return;
+  const collapsed = body.classList.toggle("collapsed");
+  if (chevron) chevron.classList.toggle("rotated", !collapsed);
+}
+
+/* ============================================================
+   ACTIVITY PLANNING — project selector guardrails update
+   ============================================================ */
+const _apProjects = {
+  "ap-proj1": {
+    name: "Beaumont Substation Upgrade",
+    start: "01 Aug 2026",
+    end: "31 Mar 2027",
+    hours: "8,800 h",
+    fees: "CAD 1,240,000",
+    rate: "CAD 140.9 / h",
+    planned: "6,680 h",
+    utilPct: 76,
+  },
+  "ap-proj2": {
+    name: "Laval Water Treatment Ph.2",
+    start: "15 Sep 2026",
+    end: "30 Jun 2027",
+    hours: "6,400 h",
+    fees: "CAD 880,000",
+    rate: "CAD 137.5 / h",
+    planned: "5,120 h",
+    utilPct: 80,
+  },
+  "ap-proj3": {
+    name: "Côte-Nord Transmission Study",
+    start: "01 Jun 2026",
+    end: "30 Nov 2026",
+    hours: "3,200 h",
+    fees: "CAD 420,000",
+    rate: "CAD 131.3 / h",
+    planned: "2,480 h",
+    utilPct: 78,
+  },
+  "ap-proj4": {
+    name: "Montréal-Nord HVAC Retrofit",
+    start: "01 Jul 2026",
+    end: "28 Feb 2027",
+    hours: "4,800 h",
+    fees: "CAD 650,000",
+    rate: "CAD 135.4 / h",
+    planned: "3,600 h",
+    utilPct: 75,
+  },
+  "ap-proj5": {
+    name: "Jonquière Pipeline Study",
+    start: "01 Sep 2026",
+    end: "31 Jan 2027",
+    hours: "2,400 h",
+    fees: "CAD 310,000",
+    rate: "CAD 129.2 / h",
+    planned: "1,760 h",
+    utilPct: 73,
+  },
+};
+
+function updateActivityGuardrails() {
+  const sel = document.getElementById("ap-project-select");
+  if (!sel) return;
+  const d = _apProjects[sel.value] || _apProjects["ap-proj1"];
+  const set = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  };
+  set("gr-start", d.start);
+  set("gr-end", d.end);
+  set("gr-hours", d.hours);
+  set("gr-fees", d.fees);
+  set("gr-rate", d.rate);
+  set("gr-planned-hours", d.planned);
+  const label = document.getElementById("ap-util-label");
+  if (label)
+    label.textContent = `${d.planned} planned of ${d.hours} budget (${d.utilPct}%)`;
+  const bar = document.getElementById("ap-util-bar");
+  if (bar) {
+    bar.style.width = d.utilPct + "%";
+    bar.style.background =
+      d.utilPct > 90 ? "#ef4444" : d.utilPct > 75 ? "#f59e0b" : "#10b981";
+  }
+}
