@@ -1764,75 +1764,172 @@ const _apProjects = {
     name: "Beaumont Substation Upgrade",
     start: "01 Aug 2026",
     end: "31 Mar 2027",
-    hours: "8,800 h",
-    fees: "CAD 1,240,000",
-    rate: "CAD 140.9 / h",
-    planned: "6,680 h",
+    hours: 8800,
+    fees: 1240000,
+    planned: 6680,
     utilPct: 76,
   },
   "ap-proj2": {
     name: "Laval Water Treatment Ph.2",
     start: "15 Sep 2026",
     end: "30 Jun 2027",
-    hours: "6,400 h",
-    fees: "CAD 880,000",
-    rate: "CAD 137.5 / h",
-    planned: "5,120 h",
+    hours: 6400,
+    fees: 880000,
+    planned: 5120,
     utilPct: 80,
   },
   "ap-proj3": {
     name: "Côte-Nord Transmission Study",
     start: "01 Jun 2026",
     end: "30 Nov 2026",
-    hours: "3,200 h",
-    fees: "CAD 420,000",
-    rate: "CAD 131.3 / h",
-    planned: "2,480 h",
+    hours: 3200,
+    fees: 420000,
+    planned: 2480,
     utilPct: 78,
   },
   "ap-proj4": {
     name: "Montréal-Nord HVAC Retrofit",
     start: "01 Jul 2026",
     end: "28 Feb 2027",
-    hours: "4,800 h",
-    fees: "CAD 650,000",
-    rate: "CAD 135.4 / h",
-    planned: "3,600 h",
+    hours: 4800,
+    fees: 650000,
+    planned: 3600,
     utilPct: 75,
   },
   "ap-proj5": {
     name: "Jonquière Pipeline Study",
     start: "01 Sep 2026",
     end: "31 Jan 2027",
-    hours: "2,400 h",
-    fees: "CAD 310,000",
-    rate: "CAD 129.2 / h",
-    planned: "1,760 h",
+    hours: 2400,
+    fees: 310000,
+    planned: 1760,
     utilPct: 73,
   },
 };
+
+const overloadLedger = [
+  {
+    engineer: "Sophie Tremblay",
+    department: "Mechanical",
+    overloadWeeks: ["W24", "W25"],
+    peak: 110,
+  },
+  {
+    engineer: "Denis Laberge",
+    department: "Electrical",
+    overloadWeeks: ["W24", "W25"],
+    peak: 120,
+  },
+  {
+    engineer: "Yannick Proulx",
+    department: "Electrical",
+    overloadWeeks: ["W22"],
+    peak: 105,
+  },
+];
+
+function formatCurrency(value) {
+  return new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+function computeTargetAvgRate(hours, fees) {
+  if (!hours || !fees) return 0;
+  return fees / hours;
+}
+
+function summarizeOverload() {
+  const overloadedCount = overloadLedger.length;
+  const overloadedNames = overloadLedger
+    .map((item) => item.engineer)
+    .join(", ");
+  const highestPeak = overloadLedger.reduce(
+    (max, item) => Math.max(max, item.peak),
+    0,
+  );
+  return { overloadedCount, overloadedNames, highestPeak };
+}
 
 function updateActivityGuardrails() {
   const sel = document.getElementById("ap-project-select");
   if (!sel) return;
   const d = _apProjects[sel.value] || _apProjects["ap-proj1"];
+  const avgRate = computeTargetAvgRate(d.hours, d.fees);
   const set = (id, val) => {
     const el = document.getElementById(id);
     if (el) el.textContent = val;
   };
   set("gr-start", d.start);
   set("gr-end", d.end);
-  set("gr-hours", d.hours);
-  set("gr-fees", d.fees);
-  set("gr-rate", d.rate);
-  set("gr-planned-hours", d.planned);
+  set("gr-hours", `${d.hours.toLocaleString("en-CA")} h`);
+  set("gr-fees", formatCurrency(d.fees));
+  set("gr-rate", `CAD ${avgRate.toFixed(1)} / h`);
+  set("gr-planned-hours", `${d.planned.toLocaleString("en-CA")} h`);
   const label = document.getElementById("ap-util-label");
   if (label)
-    label.textContent = `${d.planned} planned of ${d.hours} budget (${d.utilPct}%)`;
+    label.textContent = `${d.planned.toLocaleString("en-CA")} planned of ${d.hours.toLocaleString("en-CA")} budget (${d.utilPct}%)`;
   const bar = document.getElementById("ap-util-bar");
   if (bar) {
     bar.style.width = d.utilPct + "%";
     bar.style.background =
       d.utilPct > 90 ? "#ef4444" : d.utilPct > 75 ? "#f59e0b" : "#10b981";
   }
+
+  const handoff = document.getElementById("handoff-summary");
+  if (handoff) {
+    handoff.textContent = `PhaseOffre → PhaseProjet carry-over: ${d.planned.toLocaleString("en-CA")} h remain active after award, with a derived target avg rate of CAD ${avgRate.toFixed(1)}/h.`;
+  }
+}
+
+function syncSharedPlanningSignals() {
+  const metrics = summarizeOverload();
+  const overloadedEl = document.getElementById("coord-overloaded-count");
+  if (overloadedEl) overloadedEl.textContent = String(metrics.overloadedCount);
+
+  const gapEl = document.getElementById("coord-gap-count");
+  if (gapEl)
+    gapEl.textContent = String(Math.max(1, metrics.overloadedCount - 1));
+
+  const allocationOverloadEl = document.getElementById(
+    "allocation-overload-chip",
+  );
+  if (allocationOverloadEl) {
+    allocationOverloadEl.textContent = `${metrics.overloadedCount} Overloaded Resources`;
+  }
+
+  const allocationConflictEl = document.getElementById(
+    "allocation-conflict-chip",
+  );
+  if (allocationConflictEl) {
+    allocationConflictEl.textContent = `${metrics.highestPeak}% Peak Overload`;
+  }
+
+  const alertEl = document.getElementById("shared-overload-alert");
+  if (alertEl) {
+    alertEl.textContent = `Shared overload rule: ${metrics.overloadedNames} are flagged from the same capacity ledger used by Dept. Coordination and Allocation.`;
+  }
+}
+
+function initActivityPlanningSignals() {
+  const apProjectSelect = document.getElementById("ap-project-select");
+  if (!apProjectSelect) return;
+
+  if (!apProjectSelect.dataset.guardrailsBound) {
+    apProjectSelect.addEventListener("change", updateActivityGuardrails);
+    apProjectSelect.dataset.guardrailsBound = "true";
+  }
+
+  updateActivityGuardrails();
+  syncSharedPlanningSignals();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initActivityPlanningSignals, {
+    once: true,
+  });
+} else {
+  initActivityPlanningSignals();
 }

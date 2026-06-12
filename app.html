@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
         <div class="sidebar-logo">
           <div class="logo-icon"><i class="fa-solid fa-layer-group"></i></div>
           <div>
-            <div class="logo-text">Cap<span>Plan</span></div>
+            <div class="logo-text">FNX Cap<span>Plan</span></div>
           </div>
           <span class="version">MVP</span>
         </div>
@@ -28,7 +28,7 @@
           <div
             class="nav-item active"
             data-screen="dashboard"
-            data-title="CapPlan"
+            data-title="FNX CapPlan"
             data-subtitle="Dashboards &amp; Reports"
           >
             <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
@@ -87,40 +87,20 @@
           </div>
           <div
             class="nav-item"
-            data-screen="resources"
-            data-title="Resource Master"
-            data-subtitle="Unified manpower and discipline registry"
-          >
-            <span class="nav-icon"><i class="fa-solid fa-cubes"></i></span>
-            <span class="nav-label" data-i18n="nav-resources">Resources</span>
-          </div>
-          <div
-            class="nav-item"
-            data-screen="manpower"
-            data-title="Manpower Master"
-            data-subtitle="Workforce and skill capacity"
+            data-screen="allocation"
+            data-title="Manpower & Allocation"
+            data-subtitle="People, capacity, and conflict resolution in one view"
           >
             <span class="nav-icon"
-              ><i class="fa-solid fa-helmet-safety"></i
+              ><i class="fa-solid fa-people-arrows-left-right"></i
             ></span>
-            <span class="nav-label" data-i18n="nav-manpower">Manpower</span>
+            <span class="nav-label" data-i18n="nav-allocation"
+              >Manpower & Allocation</span
+            >
           </div>
 
           <div class="nav-section-label" data-i18n="nav-section-planning">
             Planning
-          </div>
-          <div
-            class="nav-item"
-            data-screen="calendar"
-            data-title="Capacity Calendar"
-            data-subtitle="6-month allocation and shortage view"
-          >
-            <span class="nav-icon"
-              ><i class="fa-solid fa-calendar-days"></i
-            ></span>
-            <span class="nav-label" data-i18n="nav-calendar"
-              >Capacity Calendar</span
-            >
           </div>
           <div
             class="nav-item"
@@ -135,17 +115,6 @@
               >Dept. Coordination</span
             >
             <span class="nav-badge" style="background: #10b981">NEW</span>
-          </div>
-          <div
-            class="nav-item"
-            data-screen="allocation"
-            data-title="Resource Allocation"
-            data-subtitle="Resolve conflicts and assign actual resources"
-          >
-            <span class="nav-icon"
-              ><i class="fa-solid fa-people-arrows-left-right"></i
-            ></span>
-            <span class="nav-label" data-i18n="nav-allocation">Allocation</span>
           </div>
           <div
             class="nav-item"
@@ -175,7 +144,7 @@
       <main class="main-content">
         <header class="topbar">
           <div class="topbar-breadcrumb">
-            <span class="page-title" id="page-title">CapPlan</span>
+            <span class="page-title" id="page-title">FNX CapPlan</span>
             <span class="breadcrumb-sep" id="breadcrumb-sep">/</span>
             <span class="breadcrumb-sub" id="page-subtitle"
               >Dashboards &amp; Reports</span
@@ -183,12 +152,15 @@
           </div>
           <div class="topbar-search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search project, role, discipline..." />
+            <input
+              type="text"
+              placeholder="Search project, role, discipline..."
+            />
           </div>
           <div
             class="region-pill"
             id="region-pill-trigger"
-            style="display:none"
+            style="display: none"
           >
             <div class="region-dropdown" id="region-dropdown">
               <div
@@ -286,9 +258,11 @@
           <section class="screen active" id="dashboard">
             <div class="page-header" style="padding-bottom: 0">
               <div class="page-header-actions">
-                <button class="btn btn-outline" data-goto="calendar">
-                  <i class="fa-solid fa-calendar"></i>
-                  <span data-i18n="btn-open-calendar">Open Calendar</span>
+                <button class="btn btn-outline" data-goto="dept-coordination">
+                  <i class="fa-solid fa-people-group"></i>
+                  <span data-i18n="btn-open-calendar"
+                    >Open Dept. Coordination</span
+                  >
                 </button>
                 <button class="btn btn-primary" data-goto="create-project">
                   <i class="fa-solid fa-plus"></i>
@@ -668,63 +642,6 @@
                               class="progress-fill"
                               style="width: 81%; background: #7c3aed"
                             ></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-header">
-                          <div>
-                            <div
-                              class="card-title"
-                              data-i18n="card-regional-load"
-                            >
-                              Regional Load
-                            </div>
-                            <div
-                              class="card-subtitle"
-                              data-i18n="sub-regional-load"
-                            >
-                              Utilization heat by region
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <div class="stat-row">
-                            <span class="s-label">Canada</span
-                            ><span class="badge badge-danger"
-                              >91% utilized</span
-                            >
-                          </div>
-                          <div class="stat-row">
-                            <span class="s-label">India</span
-                            ><span class="badge badge-success"
-                              >74% utilized</span
-                            >
-                          </div>
-                          <div class="stat-row">
-                            <span class="s-label">USA</span
-                            ><span class="badge badge-warning"
-                              >86% utilized</span
-                            >
-                          </div>
-                          <div class="stat-row">
-                            <span class="s-label">Middle East</span
-                            ><span class="badge badge-primary"
-                              >69% utilized</span
-                            >
-                          </div>
-                          <div class="mt-16">
-                            <div class="mini-bar-chart">
-                              <div class="mini-bar" style="height: 40%"></div>
-                              <div class="mini-bar" style="height: 58%"></div>
-                              <div class="mini-bar" style="height: 68%"></div>
-                              <div class="mini-bar" style="height: 72%"></div>
-                              <div class="mini-bar" style="height: 83%"></div>
-                              <div class="mini-bar" style="height: 91%"></div>
-                              <div class="mini-bar" style="height: 76%"></div>
-                              <div class="mini-bar" style="height: 66%"></div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -2092,19 +2009,20 @@
                 class="form-control"
                 style="width: 320px; font-size: 13px"
                 id="ap-project-select"
-                onchange="updateActivityGuardrails()"
               >
-                <option value="p1">
+                <option value="ap-proj1">
                   Beaumont Substation Upgrade — Hydro-Québec
                 </option>
-                <option value="p2">
+                <option value="ap-proj2">
                   Laval Water Treatment Phase 2 — Ville de Laval
                 </option>
-                <option value="p3">
+                <option value="ap-proj3">
                   Côte-Nord Transmission Line Study — TransÉnergie
                 </option>
-                <option value="p4">Montréal-Nord HVAC Retrofit — STM</option>
-                <option value="p5">
+                <option value="ap-proj4">
+                  Montréal-Nord HVAC Retrofit — STM
+                </option>
+                <option value="ap-proj5">
                   Jonquière Pipeline Integrity — Gaz Métro
                 </option>
               </select>
@@ -2115,6 +2033,30 @@
 
             <!-- FocusGP Guardrails Banner -->
             <div class="guardrails-banner" id="ap-guardrails">
+              <div
+                class="guardrail-item guardrail-rate"
+                style="flex: 1 1 320px; min-width: 320px"
+              >
+                <div class="gr-icon" style="background: #ecfdf5">
+                  <i
+                    class="fa-solid fa-arrow-right-arrow-left"
+                    style="color: #059669"
+                  ></i>
+                </div>
+                <div>
+                  <div class="gr-label">
+                    PhaseOffre → PhaseProjet carry-over
+                  </div>
+                  <div
+                    class="gr-value"
+                    id="handoff-summary"
+                    style="font-size: 12px; line-height: 1.4; color: #065f46"
+                  >
+                    Shared rate and hour carry-over from proposal to project
+                    planning.
+                  </div>
+                </div>
+              </div>
               <div class="guardrail-item">
                 <div class="gr-icon" style="background: #eff6ff">
                   <i
@@ -2738,7 +2680,7 @@
               <div class="kpi-card">
                 <div class="kpi-accent" style="background: #ef4444"></div>
                 <div class="kpi-label">Overloaded</div>
-                <div class="kpi-value">4</div>
+                <div class="kpi-value" id="coord-overloaded-count">4</div>
                 <div class="kpi-sub">
                   <span class="trend-down">Over 100% capacity</span>
                 </div>
@@ -2749,7 +2691,7 @@
               <div class="kpi-card">
                 <div class="kpi-accent" style="background: #6366f1"></div>
                 <div class="kpi-label">Coordination Gaps</div>
-                <div class="kpi-value">3</div>
+                <div class="kpi-value" id="coord-gap-count">3</div>
                 <div class="kpi-sub">
                   <span class="trend-down">Needs alignment</span>
                 </div>
@@ -3822,7 +3764,6 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         <td>CAD 720,000</td>
                         <td>Higher headcount offsets shorter work week</td>
                       </tr>
-
                     </tbody>
                   </table>
                 </div>
@@ -4014,7 +3955,6 @@ Survey, civil works, structure installation, PV module installation, electrical 
                     <td>CAD 65/hr</td>
                     <td><span class="badge badge-success">Active</span></td>
                   </tr>
-
                 </tbody>
               </table>
             </div>
@@ -5467,9 +5407,10 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   font-size: 12px;
                   font-weight: 700;
                 "
+                id="allocation-overload-chip"
               >
-                <i class="fa-solid fa-triangle-exclamation"></i> 3 Critical
-                Conflicts
+                <i class="fa-solid fa-triangle-exclamation"></i> 3 Overloaded
+                Resources
               </div>
               <div
                 style="
@@ -5484,8 +5425,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   font-size: 12px;
                   font-weight: 700;
                 "
+                id="allocation-conflict-chip"
               >
-                <i class="fa-solid fa-battery-full"></i> 1 Overbooked Resource
+                <i class="fa-solid fa-battery-full"></i> 120% Peak Overload
               </div>
               <div
                 style="
@@ -6294,7 +6236,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         border-radius: 4px;
                         font-weight: 600;
                       "
-                      >Ph 1: Foundation (Jul)</span
+                      >PhaseOffre (Jul)</span
                     >
                     <span
                       style="
@@ -6305,29 +6247,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         border-radius: 4px;
                         font-weight: 600;
                       "
-                      >Ph 2: Structure (Aug–Sep)</span
-                    >
-                    <span
-                      style="
-                        font-size: 12px;
-                        padding: 4px 10px;
-                        background: #fef3c7;
-                        color: #92400e;
-                        border-radius: 4px;
-                        font-weight: 600;
-                      "
-                      >Ph 3: Electrical (Sep–Nov)</span
-                    >
-                    <span
-                      style="
-                        font-size: 12px;
-                        padding: 4px 10px;
-                        background: #fdf4ff;
-                        color: #6b21a8;
-                        border-radius: 4px;
-                        font-weight: 600;
-                      "
-                      >Ph 4: Commissioning (Oct–Dec)</span
+                      >PhaseProjet (Aug–Dec)</span
                     >
                   </div>
                 </div>
@@ -6343,7 +6263,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                             text-align: center;
                           "
                         >
-                          Ph 1 — Foundation<br /><span
+                          PhaseOffre<br /><span
                             style="font-weight: 400; font-size: 11px"
                             >Jul 2026</span
                           >
@@ -6355,33 +6275,9 @@ Survey, civil works, structure installation, PV module installation, electrical 
                             text-align: center;
                           "
                         >
-                          Ph 2 — Structure<br /><span
+                          PhaseProjet<br /><span
                             style="font-weight: 400; font-size: 11px"
-                            >Aug–Sep 2026</span
-                          >
-                        </th>
-                        <th
-                          style="
-                            background: #fef3c7;
-                            color: #92400e;
-                            text-align: center;
-                          "
-                        >
-                          Ph 3 — Electrical<br /><span
-                            style="font-weight: 400; font-size: 11px"
-                            >Sep–Nov 2026</span
-                          >
-                        </th>
-                        <th
-                          style="
-                            background: #fdf4ff;
-                            color: #6b21a8;
-                            text-align: center;
-                          "
-                        >
-                          Ph 4 — Commissioning<br /><span
-                            style="font-weight: 400; font-size: 11px"
-                            >Oct–Dec 2026</span
+                            >Aug–Dec 2026</span
                           >
                         </th>
                         <th>Total Days</th>
@@ -6413,15 +6309,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                           <span class="badge badge-primary">Active · 22d</span>
                         </td>
                         <td style="text-align: center">
-                          <span class="badge badge-primary">Active · 45d</span>
-                        </td>
-                        <td style="text-align: center">
-                          <span class="badge badge-primary">Active · 35d</span>
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
+                          <span class="badge badge-primary">Active · 80d</span>
                         </td>
                         <td><strong>102 days</strong></td>
                       </tr>
@@ -6434,15 +6322,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                           <span class="badge badge-primary">Active · 22d</span>
                         </td>
                         <td style="text-align: center">
-                          <span class="badge badge-primary">Active · 45d</span>
-                        </td>
-                        <td style="text-align: center">
-                          <span class="badge badge-success">Active · 20d</span>
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
+                          <span class="badge badge-primary">Active · 65d</span>
                         </td>
                         <td><strong>87 days</strong></td>
                       </tr>
@@ -6527,144 +6407,6 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         <td style="color: #dc2626">
                           <strong>0 / 152d needed</strong>
                         </td>
-                      </tr>
-                      <tr>
-                        <td
-                          colspan="6"
-                          style="
-                            padding: 6px 14px;
-                            background: #f1f5f9;
-                            font-size: 11px;
-                            font-weight: 800;
-                            text-transform: uppercase;
-                            color: var(--text-muted);
-                            letter-spacing: 0.5px;
-                          "
-                        >
-                          Vehicles
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="fw-700">Crane CR-014</div>
-                          <div class="fs-12 text-muted">50T Crane</div>
-                        </td>
-                        <td
-                          style="
-                            text-align: center;
-                            background: #eff6ff;
-                            color: var(--text-muted);
-                          "
-                        >
-                          —
-                        </td>
-                        <td style="text-align: center">
-                          <span class="badge badge-primary">Active · 47d</span>
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td><strong>47 days</strong></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="fw-700">Flatbed TK-022</div>
-                          <div class="fs-12 text-muted">Truck</div>
-                        </td>
-                        <td style="text-align: center; background: #eff6ff">
-                          <span class="badge badge-success">Active · 22d</span>
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td><strong>22 days</strong></td>
-                      </tr>
-                      <tr>
-                        <td
-                          colspan="6"
-                          style="
-                            padding: 6px 14px;
-                            background: #f1f5f9;
-                            font-size: 11px;
-                            font-weight: 800;
-                            text-transform: uppercase;
-                            color: var(--text-muted);
-                            letter-spacing: 0.5px;
-                          "
-                        >
-                          Equipment
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="fw-700">Generator GN-003</div>
-                          <div class="fs-12 text-muted">50kVA Generator</div>
-                        </td>
-                        <td style="text-align: center; background: #eff6ff">
-                          <span class="badge badge-success">Active · 22d</span>
-                        </td>
-                        <td style="text-align: center">
-                          <span class="badge badge-success">Active · 61d</span>
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td><strong>83 days</strong></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="fw-700">Solar Test Kit TS-011</div>
-                          <div class="fs-12 text-muted">Testing Equipment</div>
-                        </td>
-                        <td
-                          style="
-                            text-align: center;
-                            background: #eff6ff;
-                            color: var(--text-muted);
-                          "
-                        >
-                          —
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td
-                          style="text-align: center; color: var(--text-muted)"
-                        >
-                          —
-                        </td>
-                        <td style="text-align: center">
-                          <span class="badge badge-primary">Active · 55d</span>
-                        </td>
-                        <td><strong>55 days</strong></td>
                       </tr>
                     </tbody>
                   </table>
@@ -7044,7 +6786,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                         color: var(--text-primary);
                       "
                     >
-                      6 issues detected
+                      4 issues detected
                     </div>
                     <div style="font-size: 12px; color: var(--text-muted)">
                       All conflicts must be resolved or acknowledged before the
@@ -7054,7 +6796,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                   <button
                     class="btn btn-outline"
                     style="font-size: 12px"
-                    data-toast="Auto-resolving conflicts where possible — 2 resolved, 4 require manual action"
+                    data-toast="Auto-resolving conflicts where possible — 2 resolved, 2 require manual action"
                   >
                     <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Resolve
                     All
@@ -7154,182 +6896,6 @@ Survey, civil works, structure installation, PV module installation, electrical 
                             "
                           >
                             Acknowledge
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Conflict 2: Vehicle unavailable -->
-                  <div
-                    style="
-                      background: #fff;
-                      border: 1px solid #fca5a5;
-                      border-left: 4px solid #dc2626;
-                      border-radius: var(--r-md);
-                      padding: 16px;
-                    "
-                  >
-                    <div
-                      style="display: flex; align-items: flex-start; gap: 12px"
-                    >
-                      <div
-                        style="
-                          width: 38px;
-                          height: 38px;
-                          border-radius: 50%;
-                          background: #fee2e2;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          flex-shrink: 0;
-                        "
-                      >
-                        <i class="fa-solid fa-truck" style="color: #dc2626"></i>
-                      </div>
-                      <div style="flex: 1">
-                        <div
-                          style="
-                            display: flex;
-                            align-items: center;
-                            gap: 8px;
-                            margin-bottom: 5px;
-                            flex-wrap: wrap;
-                          "
-                        >
-                          <strong style="font-size: 14px"
-                            >Vehicle unavailable on required dates</strong
-                          >
-                          <span class="badge badge-danger">Critical</span>
-                        </div>
-                        <p
-                          style="
-                            font-size: 13px;
-                            color: var(--text-secondary);
-                            margin: 0 0 10px;
-                            line-height: 1.5;
-                          "
-                        >
-                          Crane <strong>CR-009</strong> is already committed to
-                          Wind Service Pack project Aug 1–20. North Ridge
-                          requires crane coverage Aug 10–18 — an 8-day overlap
-                          that blocks structural work.
-                        </p>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap">
-                          <button
-                            class="btn-xs btn-primary"
-                            onclick="
-                              showToast(
-                                'External crane rental request created for Aug 10–18 — CAD 14K estimated',
-                                'success',
-                              )
-                            "
-                          >
-                            Request Rental
-                          </button>
-                          <button
-                            class="btn-xs btn-outline"
-                            onclick="
-                              showToast(
-                                'Checking if CR-014 can cover the Aug overlap period…',
-                                'info',
-                              )
-                            "
-                          >
-                            Extend CR-014
-                          </button>
-                          <button
-                            class="btn-xs btn-outline"
-                            style="color: var(--text-muted)"
-                            onclick="showToast('Conflict acknowledged', 'info')"
-                          >
-                            Acknowledge
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Conflict 3: Equipment assigned elsewhere -->
-                  <div
-                    style="
-                      background: #fff;
-                      border: 1px solid #fca5a5;
-                      border-left: 4px solid #dc2626;
-                      border-radius: var(--r-md);
-                      padding: 16px;
-                    "
-                  >
-                    <div
-                      style="display: flex; align-items: flex-start; gap: 12px"
-                    >
-                      <div
-                        style="
-                          width: 38px;
-                          height: 38px;
-                          border-radius: 50%;
-                          background: #fee2e2;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          flex-shrink: 0;
-                        "
-                      >
-                        <i
-                          class="fa-solid fa-screwdriver-wrench"
-                          style="color: #dc2626"
-                        ></i>
-                      </div>
-                      <div style="flex: 1">
-                        <div
-                          style="
-                            display: flex;
-                            align-items: center;
-                            gap: 8px;
-                            margin-bottom: 5px;
-                            flex-wrap: wrap;
-                          "
-                        >
-                          <strong style="font-size: 14px"
-                            >Equipment double-assigned to two projects</strong
-                          >
-                          <span class="badge badge-danger">Critical</span>
-                        </div>
-                        <p
-                          style="
-                            font-size: 13px;
-                            color: var(--text-secondary);
-                            margin: 0 0 10px;
-                            line-height: 1.5;
-                          "
-                        >
-                          Excavator <strong>EX-001</strong> (CAT 320) is
-                          assigned to East Loop Pipeline Foundation and also
-                          requested for North Ridge 5MW Foundation Jul 1–Aug 31.
-                          Only one unit exists.
-                        </p>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap">
-                          <button
-                            class="btn-xs btn-primary"
-                            onclick="
-                              showToast(
-                                'EX-001 kept for East Loop — EX-002 (JCB 3CX) assigned to North Ridge instead',
-                                'success',
-                              )
-                            "
-                          >
-                            Use EX-002 for North Ridge
-                          </button>
-                          <button
-                            class="btn-xs btn-outline"
-                            onclick="
-                              showToast(
-                                'Rental request for CAT 320 created for Jul–Aug',
-                                'info',
-                              )
-                            "
-                          >
-                            Rent External
                           </button>
                         </div>
                       </div>
@@ -7485,18 +7051,19 @@ Survey, civil works, structure installation, PV module installation, electrical 
                             line-height: 1.5;
                           "
                         >
-                          North Ridge 5MW requires an
-                          <strong>OSHA-certified Safety Officer</strong> for all
-                          phases (Jul–Nov). No available safety officer in the
-                          Alberta region holds this certification. This is a
-                          compliance requirement — work cannot start without it.
+                          North Ridge 5MW requires a
+                          <strong>P.Eng certified Electrical Engineer</strong>
+                          for PhaseProjet (Aug–Dec). No available engineer in
+                          the region holds this specific certification. This is
+                          a compliance requirement — work cannot start without
+                          it.
                         </p>
                         <div style="display: flex; gap: 8px; flex-wrap: wrap">
                           <button
                             class="btn-xs btn-primary"
                             onclick="
                               showToast(
-                                'HR notified to source OSHA-certified Safety Officer',
+                                'HR notified to source P.Eng certified Engineer',
                                 'success',
                               )
                             "
@@ -7507,7 +7074,7 @@ Survey, civil works, structure installation, PV module installation, electrical 
                             class="btn-xs btn-outline"
                             onclick="
                               showToast(
-                                'Searching subcontractor database for OSHA-certified SO…',
+                                'Searching subcontractor database for P.Eng certified Engineer…',
                                 'info',
                               )
                             "
@@ -7587,8 +7154,8 @@ Survey, civil works, structure installation, PV module installation, electrical 
                           conflicts, AI estimates
                           <strong>North Ridge 5MW</strong> has only a
                           <strong>68% probability</strong> of completing by Dec
-                          31, 2026. The Foundation phase (Jul) is at highest
-                          risk due to Safety Officer gap and supervisor
+                          31, 2026. The PhaseOffre phase (Jul) is at highest
+                          risk due to P.Eng Engineer gap and Sr. Engineer
                           overallocation. Recommended buffer: +30 days.
                         </p>
                         <div style="display: flex; gap: 8px; flex-wrap: wrap">
@@ -8698,6 +8265,6 @@ Survey, civil works, structure installation, PV module installation, electrical 
     </div>
 
     <div class="toast-container" id="toast-container"></div>
-    <script src="app.js"></script>
+    <script src="app.js?v=20260612"></script>
   </body>
 </html>
