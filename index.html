@@ -59,6 +59,18 @@
           #4c1d95 100%
         );
       }
+      .import-data-btn {
+        margin-left: 800px;
+        padding: 8px 16px;
+        background: var(--purple);
+        color: #fff;
+        border: none;
+        border-radius: var(--r);
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
       .login-card {
         background: var(--surface);
         border-radius: 16px;
@@ -1222,1934 +1234,1986 @@
       </aside>
 
       <main class="main-content">
-      <div class="page">
-        <!-- ══════════════════════════════════
+        <div class="page">
+          <!-- ══════════════════════════════════
     STEP 1: TENDER PIPELINE
     ══════════════════════════════════ -->
-        <section class="screen active" id="tender-pipeline">
-          <div class="flow-summary">
-            <h2>
-              <span
-                class="tag-bid"
-                style="vertical-align: middle; margin-right: 8px"
-                >Bid</span
-              >
-              Step 1 — Tender Pipeline
-            </h2>
-            <p>
-              New tender received. PhaseOffre created in FocusGP. Review all
-              active bids before moving to activity breakdown.
-            </p>
-          </div>
-          <div class="kpi-row kpi-4">
-            <div class="kpi">
-              <div class="kpi-accent" style="background: #6d28d9"></div>
-              <div class="kpi-label">Total pipeline</div>
-              <div class="kpi-val">6</div>
-              <div class="kpi-sub">Active tenders</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--amber)"></div>
-              <div class="kpi-label">Open / Review</div>
-              <div class="kpi-val">2</div>
-              <div class="kpi-sub">Tentative demand</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--teal)"></div>
-              <div class="kpi-label">Won</div>
-              <div class="kpi-val">3</div>
-              <div class="kpi-sub">Committed demand</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--text3)"></div>
-              <div class="kpi-label">Lost</div>
-              <div class="kpi-val">1</div>
-              <div class="kpi-sub">Capacity released</div>
-            </div>
-          </div>
-          <div class="tender-grid">
-            <div class="tc tc-won">
-              <div class="tc-top">
-                <div class="tc-status">
-                  <span class="badge b-green"
-                    ><i class="fa-solid fa-trophy"></i> Won</span
-                  ><span class="badge b-blue">Mech + Elec</span>
-                </div>
-                <div class="tc-name">Beaumont Substation Upgrade</div>
-                <div class="tc-client">Hydro-Québec</div>
-              </div>
-              <div class="tc-body">
-                <div class="tc-row">
-                  <span class="tc-key">Budget fees</span
-                  ><span class="tc-val">CAD 1,240,000</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Budget hours</span
-                  ><span class="tc-val">8,800 h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Avg rate</span
-                  ><span class="tc-val rate">CAD 140.9 / h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Start</span
-                  ><span class="tc-val">01 Aug 2026</span>
-                </div>
-              </div>
-              <div class="tc-footer">
-                <button
-                  class="btn sm primary"
-                  onclick="goScreen('activity-planning')"
+          <section class="screen active" id="tender-pipeline">
+            <div class="flow-summary">
+              <h2>
+                <span
+                  class="tag-bid"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Bid</span
                 >
-                  <i class="fa-solid fa-arrow-right"></i> Plan Activities
-                </button>
+                Step 1 — Tender Pipeline
+              </h2>
+              <p>
+                New tender received. PhaseOffre created in FocusGP. Review all
+                active bids before moving to activity breakdown.
+              </p>
+            </div>
+            <div class="kpi-row kpi-4">
+              <div class="kpi">
+                <div class="kpi-accent" style="background: #6d28d9"></div>
+                <div class="kpi-label">Total pipeline</div>
+                <div class="kpi-val">6</div>
+                <div class="kpi-sub">Active tenders</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--amber)"></div>
+                <div class="kpi-label">Open / Review</div>
+                <div class="kpi-val">2</div>
+                <div class="kpi-sub">Tentative demand</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--teal)"></div>
+                <div class="kpi-label">Won</div>
+                <div class="kpi-val">3</div>
+                <div class="kpi-sub">Committed demand</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--text3)"></div>
+                <div class="kpi-label">Lost</div>
+                <div class="kpi-val">1</div>
+                <div class="kpi-sub">Capacity released</div>
               </div>
             </div>
-            <div class="tc tc-won">
-              <div class="tc-top">
-                <div class="tc-status">
-                  <span class="badge b-green"
-                    ><i class="fa-solid fa-trophy"></i> Won</span
-                  ><span class="badge b-blue">Mech</span>
+            <div class="tender-grid">
+              <div class="tc tc-won">
+                <div class="tc-top">
+                  <div class="tc-status">
+                    <span class="badge b-green"
+                      ><i class="fa-solid fa-trophy"></i> Won</span
+                    ><span class="badge b-blue">Mech + Elec</span>
+                  </div>
+                  <div class="tc-name">Beaumont Substation Upgrade</div>
+                  <div class="tc-client">Hydro-Québec</div>
                 </div>
-                <div class="tc-name">Laval Water Treatment Ph.2</div>
-                <div class="tc-client">Ville de Laval</div>
-              </div>
-              <div class="tc-body">
-                <div class="tc-row">
-                  <span class="tc-key">Budget fees</span
-                  ><span class="tc-val">CAD 880,000</span>
+                <div class="tc-body">
+                  <div class="tc-row">
+                    <span class="tc-key">Budget fees</span
+                    ><span class="tc-val">CAD 1,240,000</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Budget hours</span
+                    ><span class="tc-val">8,800 h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Avg rate</span
+                    ><span class="tc-val rate">CAD 140.9 / h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Start</span
+                    ><span class="tc-val">01 Aug 2026</span>
+                  </div>
                 </div>
-                <div class="tc-row">
-                  <span class="tc-key">Budget hours</span
-                  ><span class="tc-val">6,400 h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Avg rate</span
-                  ><span class="tc-val rate">CAD 137.5 / h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Start</span
-                  ><span class="tc-val">15 Sep 2026</span>
-                </div>
-              </div>
-              <div class="tc-footer">
-                <button
-                  class="btn sm primary"
-                  onclick="goScreen('activity-planning')"
-                >
-                  <i class="fa-solid fa-arrow-right"></i> Plan Activities
-                </button>
-              </div>
-            </div>
-            <div class="tc tc-won">
-              <div class="tc-top">
-                <div class="tc-status">
-                  <span class="badge b-green"
-                    ><i class="fa-solid fa-trophy"></i> Won</span
-                  ><span class="badge b-purple">Elec</span>
-                </div>
-                <div class="tc-name">Côte-Nord Transmission Study</div>
-                <div class="tc-client">TransÉnergie</div>
-              </div>
-              <div class="tc-body">
-                <div class="tc-row">
-                  <span class="tc-key">Budget fees</span
-                  ><span class="tc-val">CAD 620,000</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Budget hours</span
-                  ><span class="tc-val">4,200 h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Avg rate</span
-                  ><span class="tc-val rate">CAD 147.6 / h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Start</span
-                  ><span class="tc-val">01 Oct 2026</span>
-                </div>
-              </div>
-              <div class="tc-footer">
-                <button
-                  class="btn sm primary"
-                  onclick="goScreen('activity-planning')"
-                >
-                  <i class="fa-solid fa-arrow-right"></i> Plan Activities
-                </button>
-              </div>
-            </div>
-            <div class="tc tc-open">
-              <div class="tc-top">
-                <div class="tc-status">
-                  <span class="badge b-amber"
-                    ><i class="fa-solid fa-hourglass-half"></i> Open</span
-                  ><span class="badge b-blue">Mech + Elec</span>
-                </div>
-                <div class="tc-name">Gatineau Industrial Zone EPC</div>
-                <div class="tc-client">Investissement Québec</div>
-              </div>
-              <div class="tc-body">
-                <div class="tc-row">
-                  <span class="tc-key">Proposal budget</span
-                  ><span class="tc-val">CAD 1,900,000</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Est. hours</span
-                  ><span class="tc-val">13,500 h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Avg rate</span
-                  ><span class="tc-val rate">CAD 140.7 / h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Submission</span
-                  ><span class="tc-val">30 Jun 2026</span>
-                </div>
-              </div>
-              <div class="tc-footer">
-                <button class="btn sm" onclick="goScreen('activity-planning')">
-                  <i class="fa-solid fa-pencil"></i> Edit Plan
-                </button>
-              </div>
-            </div>
-            <div class="tc tc-open">
-              <div class="tc-top">
-                <div class="tc-status">
-                  <span class="badge b-amber"
-                    ><i class="fa-solid fa-hourglass-half"></i> Open</span
-                  ><span class="badge b-purple">Elec</span>
-                </div>
-                <div class="tc-name">Sherbrooke Smart Grid Pilot</div>
-                <div class="tc-client">Hydro-Sherbrooke</div>
-              </div>
-              <div class="tc-body">
-                <div class="tc-row">
-                  <span class="tc-key">Proposal budget</span
-                  ><span class="tc-val">CAD 560,000</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Est. hours</span
-                  ><span class="tc-val">4,000 h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Avg rate</span
-                  ><span class="tc-val rate">CAD 140.0 / h</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Submission</span
-                  ><span class="tc-val">15 Jun 2026</span>
-                </div>
-              </div>
-              <div class="tc-footer">
-                <button class="btn sm" onclick="goScreen('activity-planning')">
-                  <i class="fa-solid fa-pencil"></i> Edit Plan
-                </button>
-              </div>
-            </div>
-            <div class="tc tc-lost">
-              <div class="tc-top">
-                <div class="tc-status">
-                  <span class="badge b-gray"
-                    ><i class="fa-solid fa-xmark"></i> Lost</span
-                  ><span class="badge b-purple">Elec</span>
-                </div>
-                <div class="tc-name">Québec City Port Electrification</div>
-                <div class="tc-client">Port de Québec</div>
-              </div>
-              <div class="tc-body">
-                <div class="tc-row">
-                  <span class="tc-key">Proposal budget</span
-                  ><span class="tc-val">CAD 2,100,000</span>
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Lost reason</span
-                  ><span class="tc-val" style="color: var(--red)"
-                    >Rate too high</span
+                <div class="tc-footer">
+                  <button
+                    class="btn sm primary"
+                    onclick="goScreen('activity-planning')"
                   >
-                </div>
-                <div class="tc-row">
-                  <span class="tc-key">Decision</span
-                  ><span class="tc-val">15 May 2026</span>
+                    <i class="fa-solid fa-arrow-right"></i> Plan Activities
+                  </button>
                 </div>
               </div>
-              <div class="tc-footer">
-                <button class="btn sm" onclick="goScreen('review-learning')">
-                  <i class="fa-solid fa-book-open"></i> Post-mortem
-                </button>
+              <div class="tc tc-won">
+                <div class="tc-top">
+                  <div class="tc-status">
+                    <span class="badge b-green"
+                      ><i class="fa-solid fa-trophy"></i> Won</span
+                    ><span class="badge b-blue">Mech</span>
+                  </div>
+                  <div class="tc-name">Laval Water Treatment Ph.2</div>
+                  <div class="tc-client">Ville de Laval</div>
+                </div>
+                <div class="tc-body">
+                  <div class="tc-row">
+                    <span class="tc-key">Budget fees</span
+                    ><span class="tc-val">CAD 880,000</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Budget hours</span
+                    ><span class="tc-val">6,400 h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Avg rate</span
+                    ><span class="tc-val rate">CAD 137.5 / h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Start</span
+                    ><span class="tc-val">15 Sep 2026</span>
+                  </div>
+                </div>
+                <div class="tc-footer">
+                  <button
+                    class="btn sm primary"
+                    onclick="goScreen('activity-planning')"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i> Plan Activities
+                  </button>
+                </div>
+              </div>
+              <div class="tc tc-won">
+                <div class="tc-top">
+                  <div class="tc-status">
+                    <span class="badge b-green"
+                      ><i class="fa-solid fa-trophy"></i> Won</span
+                    ><span class="badge b-purple">Elec</span>
+                  </div>
+                  <div class="tc-name">Côte-Nord Transmission Study</div>
+                  <div class="tc-client">TransÉnergie</div>
+                </div>
+                <div class="tc-body">
+                  <div class="tc-row">
+                    <span class="tc-key">Budget fees</span
+                    ><span class="tc-val">CAD 620,000</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Budget hours</span
+                    ><span class="tc-val">4,200 h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Avg rate</span
+                    ><span class="tc-val rate">CAD 147.6 / h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Start</span
+                    ><span class="tc-val">01 Oct 2026</span>
+                  </div>
+                </div>
+                <div class="tc-footer">
+                  <button
+                    class="btn sm primary"
+                    onclick="goScreen('activity-planning')"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i> Plan Activities
+                  </button>
+                </div>
+              </div>
+              <div class="tc tc-open">
+                <div class="tc-top">
+                  <div class="tc-status">
+                    <span class="badge b-amber"
+                      ><i class="fa-solid fa-hourglass-half"></i> Open</span
+                    ><span class="badge b-blue">Mech + Elec</span>
+                  </div>
+                  <div class="tc-name">Gatineau Industrial Zone EPC</div>
+                  <div class="tc-client">Investissement Québec</div>
+                </div>
+                <div class="tc-body">
+                  <div class="tc-row">
+                    <span class="tc-key">Proposal budget</span
+                    ><span class="tc-val">CAD 1,900,000</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Est. hours</span
+                    ><span class="tc-val">13,500 h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Avg rate</span
+                    ><span class="tc-val rate">CAD 140.7 / h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Submission</span
+                    ><span class="tc-val">30 Jun 2026</span>
+                  </div>
+                </div>
+                <div class="tc-footer">
+                  <button
+                    class="btn sm"
+                    onclick="goScreen('activity-planning')"
+                  >
+                    <i class="fa-solid fa-pencil"></i> Edit Plan
+                  </button>
+                </div>
+              </div>
+              <div class="tc tc-open">
+                <div class="tc-top">
+                  <div class="tc-status">
+                    <span class="badge b-amber"
+                      ><i class="fa-solid fa-hourglass-half"></i> Open</span
+                    ><span class="badge b-purple">Elec</span>
+                  </div>
+                  <div class="tc-name">Sherbrooke Smart Grid Pilot</div>
+                  <div class="tc-client">Hydro-Sherbrooke</div>
+                </div>
+                <div class="tc-body">
+                  <div class="tc-row">
+                    <span class="tc-key">Proposal budget</span
+                    ><span class="tc-val">CAD 560,000</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Est. hours</span
+                    ><span class="tc-val">4,000 h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Avg rate</span
+                    ><span class="tc-val rate">CAD 140.0 / h</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Submission</span
+                    ><span class="tc-val">15 Jun 2026</span>
+                  </div>
+                </div>
+                <div class="tc-footer">
+                  <button
+                    class="btn sm"
+                    onclick="goScreen('activity-planning')"
+                  >
+                    <i class="fa-solid fa-pencil"></i> Edit Plan
+                  </button>
+                </div>
+              </div>
+              <div class="tc tc-lost">
+                <div class="tc-top">
+                  <div class="tc-status">
+                    <span class="badge b-gray"
+                      ><i class="fa-solid fa-xmark"></i> Lost</span
+                    ><span class="badge b-purple">Elec</span>
+                  </div>
+                  <div class="tc-name">Québec City Port Electrification</div>
+                  <div class="tc-client">Port de Québec</div>
+                </div>
+                <div class="tc-body">
+                  <div class="tc-row">
+                    <span class="tc-key">Proposal budget</span
+                    ><span class="tc-val">CAD 2,100,000</span>
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Lost reason</span
+                    ><span class="tc-val" style="color: var(--red)"
+                      >Rate too high</span
+                    >
+                  </div>
+                  <div class="tc-row">
+                    <span class="tc-key">Decision</span
+                    ><span class="tc-val">15 May 2026</span>
+                  </div>
+                </div>
+                <div class="tc-footer">
+                  <button class="btn sm" onclick="goScreen('review-learning')">
+                    <i class="fa-solid fa-book-open"></i> Post-mortem
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="next-btn-row">
-            <button class="btn primary" onclick="goScreen('activity-planning')">
-              Next: Activity Planning <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
+            <div class="next-btn-row">
+              <button
+                class="btn primary"
+                onclick="goScreen('activity-planning')"
+              >
+                Next: Activity Planning <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </section>
 
-        <!-- ══════════════════════════════════
+          <!-- ══════════════════════════════════
     STEP 2: ACTIVITY PLANNING
     ══════════════════════════════════ -->
-        <section class="screen" id="activity-planning">
-          <div class="flow-summary">
-            <h2>
-              <span
-                class="tag-bid"
-                style="vertical-align: middle; margin-right: 8px"
-                >Bid</span
-              >
-              Step 2 — Activity Planning
-            </h2>
-            <p>
-              Break down the tender into discipline → activity → role → hours.
-              This replaces Excel sheets and anchors to FocusGP budgets.
-            </p>
-          </div>
+          <section class="screen" id="activity-planning">
+            <div class="flow-summary">
+              <h2>
+                <span
+                  class="tag-bid"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Bid</span
+                >
+                Step 2 — Activity Planning
+              </h2>
+              <p>
+                Break down the tender into discipline → activity → role → hours.
+                This replaces Excel sheets and anchors to FocusGP budgets.
+              </p>
+            </div>
 
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              gap: 12px;
-              margin-bottom: 14px;
-              flex-wrap: wrap;
-            "
-          >
-            <span
-              style="
-                font-size: 11px;
-                font-weight: 600;
-                color: var(--text3);
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-              "
-              ><i
-                class="fa-solid fa-link"
-                style="color: var(--purple); margin-right: 4px"
-              ></i
-              >FocusGP Project</span
-            >
-            <select class="form-control" style="width: 300px">
-              <option>Beaumont Substation Upgrade — Hydro-Québec</option>
-              <option>Laval Water Treatment Ph.2 — Ville de Laval</option>
-              <option>Côte-Nord Transmission Study — TransÉnergie</option>
-            </select>
-            <span class="badge b-green"
-              ><i class="fa-solid fa-circle-check"></i> Awarded</span
-            >
-          </div>
-
-          <div class="card" style="margin-bottom: 12px">
             <div
-              class="card-body"
               style="
                 display: flex;
-                gap: 24px;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 14px;
                 flex-wrap: wrap;
-                padding: 14px 18px;
               "
             >
-              <div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: var(--text3);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 3px;
-                  "
-                >
-                  Start date
-                </div>
-                <div style="font-size: 14px; font-weight: 700">01 Aug 2026</div>
-              </div>
-              <div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: var(--text3);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 3px;
-                  "
-                >
-                  End date
-                </div>
-                <div style="font-size: 14px; font-weight: 700">31 Mar 2027</div>
-              </div>
-              <div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: var(--text3);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 3px;
-                  "
-                >
-                  Budget hours
-                </div>
-                <div style="font-size: 14px; font-weight: 700">8,800 h</div>
-              </div>
-              <div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: var(--text3);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 3px;
-                  "
-                >
-                  Budget fees
-                </div>
-                <div style="font-size: 14px; font-weight: 700">
-                  CAD 1,240,000
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: var(--text3);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 3px;
-                  "
-                >
-                  Target avg rate
-                </div>
-                <div
-                  style="font-size: 14px; font-weight: 700; color: var(--amber)"
-                >
-                  CAD 140.9 / h
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: var(--text3);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 3px;
-                  "
-                >
-                  Hours planned
-                </div>
-                <div
-                  style="font-size: 14px; font-weight: 700; color: var(--teal)"
-                >
-                  6,680 / 8,800 h
-                </div>
-              </div>
-            </div>
-            <div style="padding: 0 18px 14px">
-              <div
+              <span
                 style="
-                  display: flex;
-                  justify-content: space-between;
-                  margin-bottom: 5px;
                   font-size: 11px;
+                  font-weight: 600;
+                  color: var(--text3);
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
                 "
+                ><i
+                  class="fa-solid fa-link"
+                  style="color: var(--purple); margin-right: 4px"
+                ></i
+                >FocusGP Project</span
               >
-                <span style="font-weight: 600">Hours utilisation</span
-                ><span style="color: var(--purple); font-weight: 700"
-                  >75.9%</span
-                >
-              </div>
-              <div class="progress-bar" style="height: 7px">
-                <div
-                  class="progress-fill"
-                  style="
-                    width: 75.9%;
-                    background: linear-gradient(
-                      90deg,
-                      var(--purple),
-                      var(--teal)
-                    );
-                  "
-                ></div>
-              </div>
+              <select class="form-control" style="width: 300px">
+                <option>Beaumont Substation Upgrade — Hydro-Québec</option>
+                <option>Laval Water Treatment Ph.2 — Ville de Laval</option>
+                <option>Côte-Nord Transmission Study — TransÉnergie</option>
+              </select>
+              <span class="badge b-green"
+                ><i class="fa-solid fa-circle-check"></i> Awarded</span
+              >
             </div>
-          </div>
 
-          <!-- MECHANICAL -->
-          <div class="disc-block">
-            <div class="disc-header" onclick="toggleDisc('disc-mech', this)">
+            <div class="card" style="margin-bottom: 12px">
               <div
+                class="card-body"
                 style="
                   display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  font-size: 13px;
-                  font-weight: 600;
+                  gap: 24px;
+                  flex-wrap: wrap;
+                  padding: 14px 18px;
                 "
               >
-                <i class="fa-solid fa-gear" style="color: #3b82f6"></i>
-                Mechanical
-                <span class="badge b-blue">3,680 h · 5 activities</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 10px">
-                <span style="font-size: 11px; color: var(--text2)"
-                  >Sr: 2,040h · Jr: 1,200h · Tech: 440h</span
-                ><i
-                  class="fa-solid fa-chevron-down"
-                  style="color: var(--text3); font-size: 11px"
-                ></i>
-              </div>
-            </div>
-            <div id="disc-mech">
-              <div style="overflow-x: auto">
-                <table>
-                  <thead>
-                    <tr>
-                      <th style="width: 30%">Activity</th>
-                      <th>Sr. Eng (h)</th>
-                      <th>Jr. Eng (h)</th>
-                      <th>Technologist (h)</th>
-                      <th>Total (h)</th>
-                      <th>% Budget</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Preliminary Design</td>
-                      <td><input class="act-input" value="480" /></td>
-                      <td><input class="act-input" value="240" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td style="font-weight: 700">800</td>
-                      <td>9.1%</td>
-                      <td><span class="badge b-green">Confirmed</span></td>
-                    </tr>
-                    <tr>
-                      <td>Detailed Engineering</td>
-                      <td><input class="act-input" value="640" /></td>
-                      <td><input class="act-input" value="480" /></td>
-                      <td><input class="act-input" value="160" /></td>
-                      <td style="font-weight: 700">1,280</td>
-                      <td>14.5%</td>
-                      <td><span class="badge b-green">Confirmed</span></td>
-                    </tr>
-                    <tr>
-                      <td>Procurement Support</td>
-                      <td><input class="act-input" value="320" /></td>
-                      <td><input class="act-input" value="160" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td style="font-weight: 700">560</td>
-                      <td>6.4%</td>
-                      <td><span class="badge b-amber">Provisional</span></td>
-                    </tr>
-                    <tr>
-                      <td>Construction Supervision</td>
-                      <td><input class="act-input" value="440" /></td>
-                      <td><input class="act-input" value="240" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td style="font-weight: 700">760</td>
-                      <td>8.6%</td>
-                      <td><span class="badge b-green">Confirmed</span></td>
-                    </tr>
-                    <tr>
-                      <td>Commissioning & Testing</td>
-                      <td><input class="act-input" value="160" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td><input class="act-input" value="40" /></td>
-                      <td style="font-weight: 700">280</td>
-                      <td>3.2%</td>
-                      <td><span class="badge b-amber">Provisional</span></td>
-                    </tr>
-                    <tr style="background: var(--surface2)">
-                      <td><strong>Subtotal</strong></td>
-                      <td><strong>2,040 h</strong></td>
-                      <td><strong>1,200 h</strong></td>
-                      <td><strong>440 h</strong></td>
-                      <td><strong>3,680 h</strong></td>
-                      <td><strong>41.8%</strong></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- ELECTRICAL -->
-          <div class="disc-block">
-            <div class="disc-header" onclick="toggleDisc('disc-elec', this)">
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  font-size: 13px;
-                  font-weight: 600;
-                "
-              >
-                <i class="fa-solid fa-bolt" style="color: #8b5cf6"></i>
-                Electrical
-                <span class="badge b-purple">3,000 h · 4 activities</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 10px">
-                <span style="font-size: 11px; color: var(--text2)"
-                  >Sr: 1,560h · Jr: 1,040h · Tech: 400h</span
-                ><i
-                  class="fa-solid fa-chevron-down"
-                  style="color: var(--text3); font-size: 11px"
-                ></i>
-              </div>
-            </div>
-            <div id="disc-elec">
-              <div style="overflow-x: auto">
-                <table>
-                  <thead>
-                    <tr>
-                      <th style="width: 30%">Activity</th>
-                      <th>Sr. Eng (h)</th>
-                      <th>Jr. Eng (h)</th>
-                      <th>Technologist (h)</th>
-                      <th>Total (h)</th>
-                      <th>% Budget</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Power System Studies</td>
-                      <td><input class="act-input" value="480" /></td>
-                      <td><input class="act-input" value="320" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td style="font-weight: 700">880</td>
-                      <td>10.0%</td>
-                      <td><span class="badge b-green">Confirmed</span></td>
-                    </tr>
-                    <tr>
-                      <td>Protection & Control Design</td>
-                      <td><input class="act-input" value="560" /></td>
-                      <td><input class="act-input" value="400" /></td>
-                      <td><input class="act-input" value="160" /></td>
-                      <td style="font-weight: 700">1,120</td>
-                      <td>12.7%</td>
-                      <td><span class="badge b-green">Confirmed</span></td>
-                    </tr>
-                    <tr>
-                      <td>Cable & Raceway Design</td>
-                      <td><input class="act-input" value="320" /></td>
-                      <td><input class="act-input" value="240" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td style="font-weight: 700">640</td>
-                      <td>7.3%</td>
-                      <td><span class="badge b-amber">Provisional</span></td>
-                    </tr>
-                    <tr>
-                      <td>Site Commissioning</td>
-                      <td><input class="act-input" value="200" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td><input class="act-input" value="80" /></td>
-                      <td style="font-weight: 700">360</td>
-                      <td>4.1%</td>
-                      <td><span class="badge b-amber">Provisional</span></td>
-                    </tr>
-                    <tr style="background: var(--surface2)">
-                      <td><strong>Subtotal</strong></td>
-                      <td><strong>1,560 h</strong></td>
-                      <td><strong>1,040 h</strong></td>
-                      <td><strong>400 h</strong></td>
-                      <td><strong>3,000 h</strong></td>
-                      <td><strong>34.1%</strong></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="grand-total">
-            <div style="font-size: 13px; font-weight: 600">
-              Grand total — all disciplines
-            </div>
-            <div class="gt-stats">
-              <div class="gt-stat">
-                <div class="gt-stat-label">Sr. Engineer</div>
-                <div class="gt-stat-val">3,600 h</div>
-              </div>
-              <div class="gt-stat">
-                <div class="gt-stat-label">Jr. Engineer</div>
-                <div class="gt-stat-val">2,240 h</div>
-              </div>
-              <div class="gt-stat">
-                <div class="gt-stat-label">Technologist</div>
-                <div class="gt-stat-val">840 h</div>
-              </div>
-              <div class="gt-stat">
-                <div class="gt-stat-label">Total planned</div>
-                <div class="gt-stat-val total">6,680 h</div>
-              </div>
-              <div class="gt-stat">
-                <div class="gt-stat-label">Budget</div>
-                <div class="gt-stat-val">8,800 h</div>
-              </div>
-              <div class="gt-stat">
-                <div class="gt-stat-label">Remaining</div>
-                <div class="gt-stat-val remain">2,120 h</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="next-btn-row">
-            <button class="btn" onclick="goScreen('tender-pipeline')">
-              <i class="fa-solid fa-arrow-left"></i> Back
-            </button>
-            <button class="btn primary" onclick="goScreen('rate-review')">
-              Next: Rate & Dept. Review <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- ══════════════════════════════════
-    STEP 3: RATE & DEPT REVIEW
-    ══════════════════════════════════ -->
-        <section class="screen" id="rate-review">
-          <div class="flow-summary">
-            <h2>
-              <span
-                class="tag-bid"
-                style="vertical-align: middle; margin-right: 8px"
-                >Bid</span
-              >
-              Step 3 — Rate Guidance & Dept. Review
-            </h2>
-            <p>
-              Check the target avg rate and variance. Mech + Elec heads must
-              align before submitting the tender.
-            </p>
-          </div>
-
-          <div class="grid-2" style="margin-bottom: 16px">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Rate guidance</div>
-                <div class="card-sub">Target avg rate + variance</div>
-              </div>
-              <div class="card-body">
-                <div class="review-row">
-                  <span class="review-label">Budget fees</span
-                  ><span class="review-val">CAD 1,240,000</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Budget hours</span
-                  ><span class="review-val">8,800 h</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Target avg rate</span
-                  ><span class="review-val" style="color: var(--amber)"
-                    >CAD 140.9 / h</span
-                  >
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Planned avg rate</span
-                  ><span class="review-val good">CAD 141.2 / h</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Variance</span
-                  ><span class="review-val good"
-                    >+0.3 / h ✓ within tolerance</span
-                  >
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Sr. Engineer rate</span
-                  ><span class="review-val">CAD 115 / h</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Jr. Engineer rate</span
-                  ><span class="review-val">CAD 78 / h</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Technologist rate</span
-                  ><span class="review-val">CAD 68 / h</span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Capacity check</div>
-                <div class="card-sub">Tentative demand vs available</div>
-              </div>
-              <div class="card-body">
-                <div class="progress-row">
-                  <div class="progress-meta">
-                    <span
-                      ><i
-                        class="fa-solid fa-gear"
-                        style="color: #3b82f6; margin-right: 4px"
-                      ></i
-                      >Mech — Sr. Engineer</span
-                    ><span>2,040 / 2,400h</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div
-                      class="progress-fill"
-                      style="width: 85%; background: #3b82f6"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-row">
-                  <div class="progress-meta">
-                    <span
-                      ><i
-                        class="fa-solid fa-gear"
-                        style="color: #3b82f6; margin-right: 4px"
-                      ></i
-                      >Mech — Jr. Engineer</span
-                    ><span>1,200 / 1,600h</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div
-                      class="progress-fill"
-                      style="width: 75%; background: var(--teal)"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-row">
-                  <div class="progress-meta">
-                    <span
-                      ><i
-                        class="fa-solid fa-bolt"
-                        style="color: #8b5cf6; margin-right: 4px"
-                      ></i
-                      >Elec — Sr. Engineer</span
-                    ><span style="color: var(--red)">1,560 / 1,600h ⚠</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div
-                      class="progress-fill"
-                      style="width: 97%; background: var(--amber)"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-row" style="margin-bottom: 0">
-                  <div class="progress-meta">
-                    <span
-                      ><i
-                        class="fa-solid fa-bolt"
-                        style="color: #8b5cf6; margin-right: 4px"
-                      ></i
-                      >Elec — Jr. Engineer</span
-                    ><span>1,040 / 1,280h</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div
-                      class="progress-fill"
-                      style="width: 81%; background: #8b5cf6"
-                    ></div>
-                  </div>
-                </div>
-                <div class="alert a-amber" style="margin-top: 12px">
-                  <div class="alert-icon">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                  </div>
-                  <div class="alert-content">
-                    <strong>Sr. Electrical near capacity</strong>
-                    <p>
-                      Consider redistributing or sub-contracting before
-                      submission.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">Dept. heads sign-off</div>
-              <div class="card-sub">
-                Both must approve before submitting the tender
-              </div>
-            </div>
-            <div class="card-body">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Department</th>
-                    <th>Head</th>
-                    <th>Activity hours reviewed</th>
-                    <th>Rate sign-off</th>
-                    <th>Capacity sign-off</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <i
-                        class="fa-solid fa-gear"
-                        style="color: #3b82f6; margin-right: 6px"
-                      ></i
-                      >Mechanical
-                    </td>
-                    <td>Marc Pelletier</td>
-                    <td>3,680 h ✓</td>
-                    <td><span class="badge b-green">Approved</span></td>
-                    <td><span class="badge b-green">Approved</span></td>
-                    <td><span class="badge b-green">Ready</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i
-                        class="fa-solid fa-bolt"
-                        style="color: #8b5cf6; margin-right: 6px"
-                      ></i
-                      >Electrical
-                    </td>
-                    <td>Denis Laberge</td>
-                    <td>3,000 h ✓</td>
-                    <td><span class="badge b-green">Approved</span></td>
-                    <td><span class="badge b-amber">Conditional</span></td>
-                    <td><span class="badge b-amber">Pending note</span></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="alert a-blue" style="margin-top: 12px">
-                <div class="alert-icon">
-                  <i class="fa-solid fa-comment"></i>
-                </div>
-                <div class="alert-content">
-                  <strong>Denis Laberge note</strong>
-                  <p>
-                    "Approved conditionally — Sr. Elec overload in W24–W25 must
-                    be resolved post-award before delivery starts."
-                  </p>
-                </div>
-              </div>
-              <div style="margin-top: 14px; display: flex; gap: 8px">
-                <button
-                  class="btn success"
-                  onclick="toast('Tender submitted to client', 'success')"
-                >
-                  <i class="fa-solid fa-paper-plane"></i> Submit Tender
-                </button>
-                <button class="btn" onclick="toast('Version saved', 'success')">
-                  <i class="fa-solid fa-floppy-disk"></i> Save Draft
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="next-btn-row">
-            <button class="btn" onclick="goScreen('activity-planning')">
-              <i class="fa-solid fa-arrow-left"></i> Back
-            </button>
-            <button class="btn primary" onclick="goScreen('award-decision')">
-              Next: Award Decision <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- ══════════════════════════════════
-    STEP 4: AWARD DECISION
-    ══════════════════════════════════ -->
-        <section class="screen" id="award-decision">
-          <div class="flow-summary">
-            <h2>
-              <span
-                class="tag-award"
-                style="vertical-align: middle; margin-right: 8px"
-                >Award</span
-              >
-              Step 4 — Award Decision
-            </h2>
-            <p>
-              Won tenders convert to a project (PhaseProjet). Lost tenders log a
-              post-mortem. Still open tenders stay in the pipeline.
-            </p>
-          </div>
-
-          <div class="card" style="margin-bottom: 16px">
-            <div class="card-header">
-              <div class="card-title">
-                Beaumont Substation Upgrade — Hydro-Québec
-              </div>
-              <div class="card-sub">Tender submitted 28 May 2026</div>
-            </div>
-            <div class="card-body">
-              <div class="award-gate">
-                <div class="gate-icon">🏆</div>
-                <h2>Tender won!</h2>
-                <p>
-                  Hydro-Québec has awarded the contract. CAD 1,240,000 · 8,800 h
-                  · Start 01 Aug 2026. Convert to a project to begin delivery.
-                </p>
-                <div class="gate-btns">
-                  <button
-                    class="btn success"
-                    onclick="
-                      toast(
-                        'PhaseProjet created — Beaumont Substation Upgrade',
-                        'success',
-                      );
-                      goScreen('assign-resources');
+                <div>
+                  <div
+                    style="
+                      font-size: 10px;
+                      color: var(--text3);
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      margin-bottom: 3px;
                     "
                   >
-                    <i class="fa-solid fa-rocket"></i> Convert to Project
-                  </button>
-                  <button
-                    class="btn"
-                    onclick="toast('Tender kept open for negotiation', 'info')"
+                    Start date
+                  </div>
+                  <div style="font-size: 14px; font-weight: 700">
+                    01 Aug 2026
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 10px;
+                      color: var(--text3);
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      margin-bottom: 3px;
+                    "
                   >
-                    <i class="fa-solid fa-hourglass-half"></i> Still Negotiating
-                  </button>
+                    End date
+                  </div>
+                  <div style="font-size: 14px; font-weight: 700">
+                    31 Mar 2027
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 10px;
+                      color: var(--text3);
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      margin-bottom: 3px;
+                    "
+                  >
+                    Budget hours
+                  </div>
+                  <div style="font-size: 14px; font-weight: 700">8,800 h</div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 10px;
+                      color: var(--text3);
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      margin-bottom: 3px;
+                    "
+                  >
+                    Budget fees
+                  </div>
+                  <div style="font-size: 14px; font-weight: 700">
+                    CAD 1,240,000
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 10px;
+                      color: var(--text3);
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      margin-bottom: 3px;
+                    "
+                  >
+                    Target avg rate
+                  </div>
+                  <div
+                    style="
+                      font-size: 14px;
+                      font-weight: 700;
+                      color: var(--amber);
+                    "
+                  >
+                    CAD 140.9 / h
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 10px;
+                      color: var(--text3);
+                      font-weight: 600;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      margin-bottom: 3px;
+                    "
+                  >
+                    Hours planned
+                  </div>
+                  <div
+                    style="
+                      font-size: 14px;
+                      font-weight: 700;
+                      color: var(--teal);
+                    "
+                  >
+                    6,680 / 8,800 h
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 0 18px 14px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    font-size: 11px;
+                  "
+                >
+                  <span style="font-weight: 600">Hours utilisation</span
+                  ><span style="color: var(--purple); font-weight: 700"
+                    >75.9%</span
+                  >
+                </div>
+                <div class="progress-bar" style="height: 7px">
+                  <div
+                    class="progress-fill"
+                    style="
+                      width: 75.9%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--purple),
+                        var(--teal)
+                      );
+                    "
+                  ></div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">
-                Québec City Port Electrification — Port de Québec
-              </div>
-              <div class="card-sub">Tender submitted 02 May 2026</div>
-            </div>
-            <div class="card-body">
-              <div class="postmortem-form">
+            <!-- MECHANICAL -->
+            <div class="disc-block">
+              <div class="disc-header" onclick="toggleDisc('disc-mech', this)">
                 <div
                   style="
                     display: flex;
                     align-items: center;
                     gap: 10px;
-                    margin-bottom: 12px;
+                    font-size: 13px;
+                    font-weight: 600;
                   "
                 >
-                  <i
-                    class="fa-solid fa-xmark"
-                    style="color: var(--red); font-size: 18px"
-                  ></i
-                  ><strong style="font-size: 14px; color: var(--red)"
-                    >Tender lost</strong
-                  >
+                  <i class="fa-solid fa-gear" style="color: #3b82f6"></i>
+                  Mechanical
+                  <span class="badge b-blue">3,680 h · 5 activities</span>
                 </div>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span style="font-size: 11px; color: var(--text2)"
+                    >Sr: 2,040h · Jr: 1,200h · Tech: 440h</span
+                  ><i
+                    class="fa-solid fa-chevron-down"
+                    style="color: var(--text3); font-size: 11px"
+                  ></i>
+                </div>
+              </div>
+              <div id="disc-mech">
+                <div style="overflow-x: auto">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="width: 30%">Activity</th>
+                        <th>Sr. Eng (h)</th>
+                        <th>Jr. Eng (h)</th>
+                        <th>Technologist (h)</th>
+                        <th>Total (h)</th>
+                        <th>% Budget</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Preliminary Design</td>
+                        <td><input class="act-input" value="480" /></td>
+                        <td><input class="act-input" value="240" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td style="font-weight: 700">800</td>
+                        <td>9.1%</td>
+                        <td><span class="badge b-green">Confirmed</span></td>
+                      </tr>
+                      <tr>
+                        <td>Detailed Engineering</td>
+                        <td><input class="act-input" value="640" /></td>
+                        <td><input class="act-input" value="480" /></td>
+                        <td><input class="act-input" value="160" /></td>
+                        <td style="font-weight: 700">1,280</td>
+                        <td>14.5%</td>
+                        <td><span class="badge b-green">Confirmed</span></td>
+                      </tr>
+                      <tr>
+                        <td>Procurement Support</td>
+                        <td><input class="act-input" value="320" /></td>
+                        <td><input class="act-input" value="160" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td style="font-weight: 700">560</td>
+                        <td>6.4%</td>
+                        <td><span class="badge b-amber">Provisional</span></td>
+                      </tr>
+                      <tr>
+                        <td>Construction Supervision</td>
+                        <td><input class="act-input" value="440" /></td>
+                        <td><input class="act-input" value="240" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td style="font-weight: 700">760</td>
+                        <td>8.6%</td>
+                        <td><span class="badge b-green">Confirmed</span></td>
+                      </tr>
+                      <tr>
+                        <td>Commissioning & Testing</td>
+                        <td><input class="act-input" value="160" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td><input class="act-input" value="40" /></td>
+                        <td style="font-weight: 700">280</td>
+                        <td>3.2%</td>
+                        <td><span class="badge b-amber">Provisional</span></td>
+                      </tr>
+                      <tr style="background: var(--surface2)">
+                        <td><strong>Subtotal</strong></td>
+                        <td><strong>2,040 h</strong></td>
+                        <td><strong>1,200 h</strong></td>
+                        <td><strong>440 h</strong></td>
+                        <td><strong>3,680 h</strong></td>
+                        <td><strong>41.8%</strong></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- ELECTRICAL -->
+            <div class="disc-block">
+              <div class="disc-header" onclick="toggleDisc('disc-elec', this)">
                 <div
                   style="
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 12px;
-                    margin-bottom: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 13px;
+                    font-weight: 600;
                   "
                 >
-                  <div>
-                    <label class="form-label">Lost reason</label>
-                    <select class="form-control">
-                      <option selected>Rate too high</option>
-                      <option>Scope mismatch</option>
-                      <option>Competition</option>
-                      <option>Client budget cut</option>
-                    </select>
+                  <i class="fa-solid fa-bolt" style="color: #8b5cf6"></i>
+                  Electrical
+                  <span class="badge b-purple">3,000 h · 4 activities</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span style="font-size: 11px; color: var(--text2)"
+                    >Sr: 1,560h · Jr: 1,040h · Tech: 400h</span
+                  ><i
+                    class="fa-solid fa-chevron-down"
+                    style="color: var(--text3); font-size: 11px"
+                  ></i>
+                </div>
+              </div>
+              <div id="disc-elec">
+                <div style="overflow-x: auto">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="width: 30%">Activity</th>
+                        <th>Sr. Eng (h)</th>
+                        <th>Jr. Eng (h)</th>
+                        <th>Technologist (h)</th>
+                        <th>Total (h)</th>
+                        <th>% Budget</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Power System Studies</td>
+                        <td><input class="act-input" value="480" /></td>
+                        <td><input class="act-input" value="320" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td style="font-weight: 700">880</td>
+                        <td>10.0%</td>
+                        <td><span class="badge b-green">Confirmed</span></td>
+                      </tr>
+                      <tr>
+                        <td>Protection & Control Design</td>
+                        <td><input class="act-input" value="560" /></td>
+                        <td><input class="act-input" value="400" /></td>
+                        <td><input class="act-input" value="160" /></td>
+                        <td style="font-weight: 700">1,120</td>
+                        <td>12.7%</td>
+                        <td><span class="badge b-green">Confirmed</span></td>
+                      </tr>
+                      <tr>
+                        <td>Cable & Raceway Design</td>
+                        <td><input class="act-input" value="320" /></td>
+                        <td><input class="act-input" value="240" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td style="font-weight: 700">640</td>
+                        <td>7.3%</td>
+                        <td><span class="badge b-amber">Provisional</span></td>
+                      </tr>
+                      <tr>
+                        <td>Site Commissioning</td>
+                        <td><input class="act-input" value="200" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td><input class="act-input" value="80" /></td>
+                        <td style="font-weight: 700">360</td>
+                        <td>4.1%</td>
+                        <td><span class="badge b-amber">Provisional</span></td>
+                      </tr>
+                      <tr style="background: var(--surface2)">
+                        <td><strong>Subtotal</strong></td>
+                        <td><strong>1,560 h</strong></td>
+                        <td><strong>1,040 h</strong></td>
+                        <td><strong>400 h</strong></td>
+                        <td><strong>3,000 h</strong></td>
+                        <td><strong>34.1%</strong></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="grand-total">
+              <div style="font-size: 13px; font-weight: 600">
+                Grand total — all disciplines
+              </div>
+              <div class="gt-stats">
+                <div class="gt-stat">
+                  <div class="gt-stat-label">Sr. Engineer</div>
+                  <div class="gt-stat-val">3,600 h</div>
+                </div>
+                <div class="gt-stat">
+                  <div class="gt-stat-label">Jr. Engineer</div>
+                  <div class="gt-stat-val">2,240 h</div>
+                </div>
+                <div class="gt-stat">
+                  <div class="gt-stat-label">Technologist</div>
+                  <div class="gt-stat-val">840 h</div>
+                </div>
+                <div class="gt-stat">
+                  <div class="gt-stat-label">Total planned</div>
+                  <div class="gt-stat-val total">6,680 h</div>
+                </div>
+                <div class="gt-stat">
+                  <div class="gt-stat-label">Budget</div>
+                  <div class="gt-stat-val">8,800 h</div>
+                </div>
+                <div class="gt-stat">
+                  <div class="gt-stat-label">Remaining</div>
+                  <div class="gt-stat-val remain">2,120 h</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="next-btn-row">
+              <button class="btn" onclick="goScreen('tender-pipeline')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button class="btn primary" onclick="goScreen('rate-review')">
+                Next: Rate & Dept. Review
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- ══════════════════════════════════
+    STEP 3: RATE & DEPT REVIEW
+    ══════════════════════════════════ -->
+          <section class="screen" id="rate-review">
+            <div class="flow-summary">
+              <h2>
+                <span
+                  class="tag-bid"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Bid</span
+                >
+                Step 3 — Rate Guidance & Dept. Review
+              </h2>
+              <p>
+                Check the target avg rate and variance. Mech + Elec heads must
+                align before submitting the tender.
+              </p>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 16px">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Rate guidance</div>
+                  <div class="card-sub">Target avg rate + variance</div>
+                </div>
+                <div class="card-body">
+                  <div class="review-row">
+                    <span class="review-label">Budget fees</span
+                    ><span class="review-val">CAD 1,240,000</span>
                   </div>
-                  <div>
-                    <label class="form-label"
-                      >Competitor avg rate (if known)</label
+                  <div class="review-row">
+                    <span class="review-label">Budget hours</span
+                    ><span class="review-val">8,800 h</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Target avg rate</span
+                    ><span class="review-val" style="color: var(--amber)"
+                      >CAD 140.9 / h</span
                     >
-                    <input class="form-control" value="CAD 128 / h" />
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Planned avg rate</span
+                    ><span class="review-val good">CAD 141.2 / h</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Variance</span
+                    ><span class="review-val good"
+                      >+0.3 / h ✓ within tolerance</span
+                    >
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Sr. Engineer rate</span
+                    ><span class="review-val">CAD 115 / h</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Jr. Engineer rate</span
+                    ><span class="review-val">CAD 78 / h</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Technologist rate</span
+                    ><span class="review-val">CAD 68 / h</span>
                   </div>
                 </div>
-                <div style="margin-bottom: 12px">
-                  <label class="form-label">Lessons learned</label>
-                  <textarea class="form-control">
-Rate delta of ~13/h vs competitor. Need to review Sr. Electrical cost structure for port-type projects. Consider using more Jr. engineers for cable work.</textarea
-                  >
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Capacity check</div>
+                  <div class="card-sub">Tentative demand vs available</div>
                 </div>
-                <button
-                  class="btn"
-                  onclick="toast('Post-mortem saved', 'success')"
-                >
-                  <i class="fa-solid fa-floppy-disk"></i> Save Post-mortem
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="next-btn-row">
-            <button class="btn" onclick="goScreen('rate-review')">
-              <i class="fa-solid fa-arrow-left"></i> Back
-            </button>
-            <button class="btn primary" onclick="goScreen('assign-resources')">
-              Next: Assign Resources <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- ══════════════════════════════════
-    STEP 5: ASSIGN RESOURCES
-    ══════════════════════════════════ -->
-        <section class="screen" id="assign-resources">
-          <div class="flow-summary">
-            <h2>
-              <span
-                class="tag-delivery"
-                style="vertical-align: middle; margin-right: 8px"
-                >Delivery</span
-              >
-              Step 5 — Assign Resources
-            </h2>
-            <p>
-              Assign people to phases and dates. The capacity heatmap shows
-              weekly overloads before they become problems.
-            </p>
-          </div>
-
-          <div class="kpi-row kpi-4">
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--teal)"></div>
-              <div class="kpi-label">Available now</div>
-              <div class="kpi-val">14</div>
-              <div class="kpi-sub">All disciplines</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--amber)"></div>
-              <div class="kpi-label">Partially booked</div>
-              <div class="kpi-val">9</div>
-              <div class="kpi-sub">50–90% allocated</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--red)"></div>
-              <div class="kpi-label">Overloaded</div>
-              <div class="kpi-val">4</div>
-              <div class="kpi-sub">Over 100% capacity</div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-accent" style="background: var(--purple)"></div>
-              <div class="kpi-label">Assignments</div>
-              <div class="kpi-val">14</div>
-              <div class="kpi-sub">Clean · 3 conflicted</div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-bottom: 16px">
-            <div class="card-header">
-              <div class="card-title">
-                People assignments — Beaumont Substation Upgrade
-              </div>
-            </div>
-            <div style="overflow-x: auto">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Role</th>
-                    <th>Person</th>
-                    <th>Skill match</th>
-                    <th>Phase</th>
-                    <th>From</th>
-                    <th>To</th>
-                    <th>Workload</th>
-                    <th>Status</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Site Engineer</strong></td>
-                    <td>Maria Chen</td>
-                    <td style="color: var(--teal); font-weight: 700">96%</td>
-                    <td>Structure</td>
-                    <td>Jul 1 2026</td>
-                    <td>Sep 30 2026</td>
-                    <td>
-                      <div class="workload-bar">
-                        <div class="workload-track">
-                          <div
-                            class="workload-fill"
-                            style="width: 72%; background: var(--blue)"
-                          ></div>
-                        </div>
-                        <span style="font-size: 11px">72%</span>
-                      </div>
-                    </td>
-                    <td><span class="badge b-green">Assigned</span></td>
-                    <td><button class="btn sm">Edit</button></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Site Engineer</strong></td>
-                    <td>Amir Nassar</td>
-                    <td style="color: var(--teal); font-weight: 700">92%</td>
-                    <td>Structure</td>
-                    <td>Jul 1 2026</td>
-                    <td>Sep 30 2026</td>
-                    <td>
-                      <div class="workload-bar">
-                        <div class="workload-track">
-                          <div
-                            class="workload-fill"
-                            style="width: 68%; background: var(--blue)"
-                          ></div>
-                        </div>
-                        <span style="font-size: 11px">68%</span>
-                      </div>
-                    </td>
-                    <td><span class="badge b-green">Assigned</span></td>
-                    <td><button class="btn sm">Edit</button></td>
-                  </tr>
-                  <tr style="background: var(--red-dim)">
-                    <td><strong>Sr. Electrical</strong></td>
-                    <td style="color: var(--red); font-weight: 600">
-                      <i
-                        class="fa-solid fa-triangle-exclamation"
-                        style="margin-right: 4px"
-                      ></i
-                      >Denis Laberge
-                    </td>
-                    <td style="color: var(--teal); font-weight: 700">91%</td>
-                    <td style="color: var(--red)">Beaumont + Côte-Nord</td>
-                    <td>Aug 1 2026</td>
-                    <td>Oct 31 2026</td>
-                    <td>
-                      <div class="workload-bar">
-                        <div class="workload-track">
-                          <div
-                            class="workload-fill"
-                            style="width: 100%; background: var(--red)"
-                          ></div>
-                        </div>
-                        <span style="font-size: 11px; color: var(--red)"
-                          >115%</span
-                        >
-                      </div>
-                    </td>
-                    <td><span class="badge b-red">Conflict</span></td>
-                    <td><button class="btn sm danger">Resolve</button></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Technician</strong></td>
-                    <td>Julia Santos</td>
-                    <td style="color: var(--teal); font-weight: 700">95%</td>
-                    <td>Electrical</td>
-                    <td>Sep 1 2026</td>
-                    <td>Nov 30 2026</td>
-                    <td>
-                      <div class="workload-bar">
-                        <div class="workload-track">
-                          <div
-                            class="workload-fill"
-                            style="width: 60%; background: var(--blue)"
-                          ></div>
-                        </div>
-                        <span style="font-size: 11px">60%</span>
-                      </div>
-                    </td>
-                    <td><span class="badge b-green">Assigned</span></td>
-                    <td><button class="btn sm">Edit</button></td>
-                  </tr>
-                  <tr style="background: var(--red-dim)">
-                    <td><strong>Safety Officer</strong></td>
-                    <td style="color: var(--text3)">— Unassigned</td>
-                    <td style="color: var(--red)">—</td>
-                    <td>All phases</td>
-                    <td>Jul 1 2026</td>
-                    <td>Nov 30 2026</td>
-                    <td>—</td>
-                    <td><span class="badge b-red">Skill gap</span></td>
-                    <td><button class="btn sm primary">Assign</button></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">
-                Weekly availability heatmap — W22 to W29
-              </div>
-              <div class="card-sub">
-                <span class="hm-cell hm-avail" style="margin-right: 6px"
-                  >Free</span
-                ><span class="hm-cell hm-partial" style="margin-right: 6px"
-                  >Partial</span
-                ><span class="hm-cell hm-over" style="margin-right: 6px"
-                  >Overload</span
-                ><span class="hm-cell hm-leave">Leave</span>
-              </div>
-            </div>
-            <div style="overflow-x: auto">
-              <table class="heatmap-table">
-                <thead>
-                  <tr>
-                    <th style="min-width: 130px">Engineer</th>
-                    <th style="min-width: 120px">Role</th>
-                    <th>W22</th>
-                    <th>W23</th>
-                    <th>W24</th>
-                    <th>W25</th>
-                    <th>W26</th>
-                    <th>W27</th>
-                    <th>W28</th>
-                    <th>W29</th>
-                    <th>Avg</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="hm-dept-row">
-                    <td colspan="11">
-                      <i
-                        class="fa-solid fa-gear"
-                        style="color: #3b82f6; margin-right: 6px"
-                      ></i
-                      >Mechanical
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sophie Tremblay</td>
-                    <td>Sr. Mechanical</td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-over">110%</span></td>
-                    <td><span class="hm-cell hm-over">105%</span></td>
-                    <td><span class="hm-cell hm-partial">75%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-avail">40%</span></td>
-                    <td><span class="hm-cell hm-avail">30%</span></td>
-                    <td style="font-weight: 700; color: var(--amber)">79%</td>
-                  </tr>
-                  <tr>
-                    <td>Marc Pelletier</td>
-                    <td>Sr. Mechanical</td>
-                    <td><span class="hm-cell hm-partial">65%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-partial">65%</span></td>
-                    <td><span class="hm-cell hm-avail">50%</span></td>
-                    <td><span class="hm-cell hm-avail">45%</span></td>
-                    <td><span class="hm-cell hm-avail">40%</span></td>
-                    <td><span class="hm-cell hm-avail">35%</span></td>
-                    <td>55%</td>
-                  </tr>
-                  <tr>
-                    <td>Nathalie Gagnon</td>
-                    <td>Mech. Technologist</td>
-                    <td><span class="hm-cell hm-leave">—</span></td>
-                    <td><span class="hm-cell hm-leave">—</span></td>
-                    <td><span class="hm-cell hm-avail">40%</span></td>
-                    <td><span class="hm-cell hm-avail">55%</span></td>
-                    <td><span class="hm-cell hm-partial">75%</span></td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td>63%</td>
-                  </tr>
-                  <tr class="hm-dept-row">
-                    <td colspan="11">
-                      <i
-                        class="fa-solid fa-bolt"
-                        style="color: #8b5cf6; margin-right: 6px"
-                      ></i
-                      >Electrical
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Denis Laberge</td>
-                    <td>Sr. Electrical</td>
-                    <td><span class="hm-cell hm-partial">85%</span></td>
-                    <td><span class="hm-cell hm-partial">85%</span></td>
-                    <td><span class="hm-cell hm-over">115%</span></td>
-                    <td><span class="hm-cell hm-over">120%</span></td>
-                    <td><span class="hm-cell hm-partial">90%</span></td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-partial">75%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td style="font-weight: 700; color: var(--red)">90%</td>
-                  </tr>
-                  <tr>
-                    <td>Lucie Bergeron</td>
-                    <td>Sr. Electrical</td>
-                    <td><span class="hm-cell hm-avail">50%</span></td>
-                    <td><span class="hm-cell hm-avail">50%</span></td>
-                    <td><span class="hm-cell hm-partial">65%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-partial">75%</span></td>
-                    <td><span class="hm-cell hm-partial">75%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-partial">60%</span></td>
-                    <td>64%</td>
-                  </tr>
-                  <tr>
-                    <td>Yannick Proulx</td>
-                    <td>Elec. Technologist</td>
-                    <td><span class="hm-cell hm-over">105%</span></td>
-                    <td><span class="hm-cell hm-partial">85%</span></td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-partial">80%</span></td>
-                    <td><span class="hm-cell hm-partial">75%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-partial">70%</span></td>
-                    <td><span class="hm-cell hm-partial">65%</span></td>
-                    <td style="font-weight: 700; color: var(--amber)">79%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="next-btn-row">
-            <button class="btn" onclick="goScreen('award-decision')">
-              <i class="fa-solid fa-arrow-left"></i> Back
-            </button>
-            <button
-              class="btn primary"
-              onclick="goScreen('conflict-resolution')"
-            >
-              Next: Conflict Resolution <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- ══════════════════════════════════
-    STEP 6: CONFLICT RESOLUTION
-    ══════════════════════════════════ -->
-        <section class="screen" id="conflict-resolution">
-          <div class="flow-summary">
-            <h2>
-              <span
-                class="tag-delivery"
-                style="vertical-align: middle; margin-right: 8px"
-                >Delivery</span
-              >
-              Step 6 — Conflict Resolution
-            </h2>
-            <p>
-              Approve, move, or override all conflicts. The plan cannot be
-              approved until all critical conflicts are resolved.
-            </p>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              gap: 8px;
-              margin-bottom: 20px;
-              flex-wrap: wrap;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                padding: 5px 12px;
-                border-radius: 20px;
-                font-size: 11px;
-                font-weight: 600;
-                background: var(--red-dim);
-                color: var(--red);
-                border: 1px solid var(--red);
-              "
-            >
-              <i class="fa-solid fa-triangle-exclamation"></i> 2 critical
-              conflicts
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                padding: 5px 12px;
-                border-radius: 20px;
-                font-size: 11px;
-                font-weight: 600;
-                background: var(--amber-dim);
-                color: var(--amber);
-                border: 1px solid var(--amber);
-              "
-            >
-              <i class="fa-solid fa-graduation-cap"></i> 1 skill gap
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                padding: 5px 12px;
-                border-radius: 20px;
-                font-size: 11px;
-                font-weight: 600;
-                background: var(--teal-dim);
-                color: var(--teal);
-                border: 1px solid var(--teal);
-              "
-            >
-              <i class="fa-solid fa-circle-check"></i> 14 clean assignments
-            </div>
-          </div>
-
-          <div class="conflict-card critical">
-            <div style="display: flex; align-items: flex-start; gap: 12px">
-              <div
-                style="
-                  width: 32px;
-                  height: 32px;
-                  border-radius: 50%;
-                  background: var(--red-dim);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  flex-shrink: 0;
-                "
-              >
-                <i
-                  class="fa-solid fa-user-slash"
-                  style="color: var(--red); font-size: 13px"
-                ></i>
-              </div>
-              <div style="flex: 1">
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    margin-bottom: 5px;
-                  "
-                >
-                  <strong style="font-size: 13px"
-                    >Denis Laberge — double booked</strong
-                  ><span class="badge b-red">Critical</span>
-                </div>
-                <p
-                  style="
-                    font-size: 12px;
-                    color: var(--text2);
-                    margin-bottom: 10px;
-                  "
-                >
-                  Assigned to both Beaumont Substation and Côte-Nord
-                  Transmission at 115–120% load in W24–W25. Work cannot proceed
-                  without resolution.
-                </p>
-                <div style="display: flex; gap: 8px">
-                  <button
-                    class="btn sm primary"
-                    onclick="
-                      toast(
-                        'Denis Laberge moved to Beaumont only — Côte-Nord reassigned to Lucie Bergeron',
-                        'success',
-                      )
-                    "
-                  >
-                    Move to Beaumont only
-                  </button>
-                  <button
-                    class="btn sm"
-                    onclick="
-                      toast(
-                        'Searching available Sr. Electrical engineers…',
-                        'info',
-                      )
-                    "
-                  >
-                    Find Replacement
-                  </button>
+                <div class="card-body">
+                  <div class="progress-row">
+                    <div class="progress-meta">
+                      <span
+                        ><i
+                          class="fa-solid fa-gear"
+                          style="color: #3b82f6; margin-right: 4px"
+                        ></i
+                        >Mech — Sr. Engineer</span
+                      ><span>2,040 / 2,400h</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div
+                        class="progress-fill"
+                        style="width: 85%; background: #3b82f6"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="progress-row">
+                    <div class="progress-meta">
+                      <span
+                        ><i
+                          class="fa-solid fa-gear"
+                          style="color: #3b82f6; margin-right: 4px"
+                        ></i
+                        >Mech — Jr. Engineer</span
+                      ><span>1,200 / 1,600h</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div
+                        class="progress-fill"
+                        style="width: 75%; background: var(--teal)"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="progress-row">
+                    <div class="progress-meta">
+                      <span
+                        ><i
+                          class="fa-solid fa-bolt"
+                          style="color: #8b5cf6; margin-right: 4px"
+                        ></i
+                        >Elec — Sr. Engineer</span
+                      ><span style="color: var(--red)">1,560 / 1,600h ⚠</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div
+                        class="progress-fill"
+                        style="width: 97%; background: var(--amber)"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="progress-row" style="margin-bottom: 0">
+                    <div class="progress-meta">
+                      <span
+                        ><i
+                          class="fa-solid fa-bolt"
+                          style="color: #8b5cf6; margin-right: 4px"
+                        ></i
+                        >Elec — Jr. Engineer</span
+                      ><span>1,040 / 1,280h</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div
+                        class="progress-fill"
+                        style="width: 81%; background: #8b5cf6"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="alert a-amber" style="margin-top: 12px">
+                    <div class="alert-icon">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="alert-content">
+                      <strong>Sr. Electrical near capacity</strong>
+                      <p>
+                        Consider redistributing or sub-contracting before
+                        submission.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="conflict-card critical">
-            <div style="display: flex; align-items: flex-start; gap: 12px">
-              <div
-                style="
-                  width: 32px;
-                  height: 32px;
-                  border-radius: 50%;
-                  background: var(--red-dim);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  flex-shrink: 0;
-                "
-              >
-                <i
-                  class="fa-solid fa-user-slash"
-                  style="color: var(--red); font-size: 13px"
-                ></i>
-              </div>
-              <div style="flex: 1">
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    margin-bottom: 5px;
-                  "
-                >
-                  <strong style="font-size: 13px"
-                    >Sophie Tremblay — overload W24–W25</strong
-                  ><span class="badge b-red">Critical</span>
-                </div>
-                <p
-                  style="
-                    font-size: 12px;
-                    color: var(--text2);
-                    margin-bottom: 10px;
-                  "
-                >
-                  Beaumont + Laval Water Treatment compete at 110% in W24 and
-                  105% in W25. Mechanical dept must coordinate.
-                </p>
-                <div style="display: flex; gap: 8px">
-                  <button
-                    class="btn sm primary"
-                    onclick="
-                      toast(
-                        'Tasks shifted to Marc Pelletier for W24–W25',
-                        'success',
-                      )
-                    "
-                  >
-                    Shift to Marc Pelletier
-                  </button>
-                  <button
-                    class="btn sm"
-                    onclick="
-                      toast('Extending Laval Water start by 2 weeks…', 'info')
-                    "
-                  >
-                    Delay Laval Start
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="conflict-card warning">
-            <div style="display: flex; align-items: flex-start; gap: 12px">
-              <div
-                style="
-                  width: 32px;
-                  height: 32px;
-                  border-radius: 50%;
-                  background: var(--amber-dim);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  flex-shrink: 0;
-                "
-              >
-                <i
-                  class="fa-solid fa-graduation-cap"
-                  style="color: var(--amber); font-size: 13px"
-                ></i>
-              </div>
-              <div style="flex: 1">
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    margin-bottom: 5px;
-                  "
-                >
-                  <strong style="font-size: 13px"
-                    >Safety Officer — no one assigned</strong
-                  ><span class="badge b-amber">Skill gap</span>
-                </div>
-                <p
-                  style="
-                    font-size: 12px;
-                    color: var(--text2);
-                    margin-bottom: 10px;
-                  "
-                >
-                  Beaumont Substation requires a certified Safety Officer for
-                  all site phases (Jul–Nov 2026). No available internal resource
-                  has this certification.
-                </p>
-                <div style="display: flex; gap: 8px">
-                  <button
-                    class="btn sm primary"
-                    onclick="
-                      toast(
-                        'HR notified to source certified Safety Officer',
-                        'success',
-                      )
-                    "
-                  >
-                    Notify HR
-                  </button>
-                  <button
-                    class="btn sm"
-                    onclick="toast('Searching subcontractor database…', 'info')"
-                  >
-                    Find External
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top: 16px">
-            <div class="card-body">
-              <div class="alert a-green">
-                <div class="alert-icon">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <div class="alert-content">
-                  <strong>14 clean assignments ready</strong>
-                  <p>
-                    Maria Chen, Amir Nassar, Julia Santos and 11 others have no
-                    conflicts. Approve the plan once criticals are resolved.
-                  </p>
-                </div>
-              </div>
-              <div style="margin-top: 14px; display: flex; gap: 8px">
-                <button
-                  class="btn success"
-                  onclick="
-                    toast(
-                      'Plan approved and locked — all PMs notified',
-                      'success',
-                    );
-                    goScreen('review-learning');
-                  "
-                >
-                  <i class="fa-solid fa-check"></i> Approve Plan
-                </button>
-                <button
-                  class="btn"
-                  onclick="
-                    toast('Auto-assigning based on availability…', 'info')
-                  "
-                >
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Assign
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="next-btn-row">
-            <button class="btn" onclick="goScreen('assign-resources')">
-              <i class="fa-solid fa-arrow-left"></i> Back
-            </button>
-            <button class="btn primary" onclick="goScreen('review-learning')">
-              Next: Review & Learning <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- ══════════════════════════════════
-    STEP 7: REVIEW & LEARNING
-    ══════════════════════════════════ -->
-        <section class="screen" id="review-learning">
-          <div
-            class="flow-summary"
-            style="background: linear-gradient(135deg, #7f1d1d, #991b1b)"
-          >
-            <h2>
-              <span
-                class="tag-review"
-                style="vertical-align: middle; margin-right: 8px"
-                >Review</span
-              >
-              Step 7 — Review & Learning
-            </h2>
-            <p>
-              Plan vs actual. Log outcomes and templates for future bids. Closes
-              the loop.
-            </p>
-          </div>
-
-          <div class="grid-2" style="margin-bottom: 16px">
             <div class="card">
               <div class="card-header">
-                <div class="card-title">
-                  Plan vs actual — Beaumont Substation
+                <div class="card-title">Dept. heads sign-off</div>
+                <div class="card-sub">
+                  Both must approve before submitting the tender
                 </div>
-                <div class="card-sub">As of Jun 2026</div>
               </div>
               <div class="card-body">
-                <div class="review-row">
-                  <span class="review-label">Budget hours</span
-                  ><span class="review-val">8,800 h</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Actual hours used</span
-                  ><span class="review-val good">6,680 h (76%)</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Budget fees</span
-                  ><span class="review-val">CAD 1,240,000</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Actual fees invoiced</span
-                  ><span class="review-val good">CAD 982,000</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Realized avg rate</span
-                  ><span class="review-val good">CAD 147.0 / h ↑</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Target rate</span
-                  ><span class="review-val">CAD 140.9 / h</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Rate variance</span
-                  ><span class="review-val good">+6.1 / h above target</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Conflicts resolved</span
-                  ><span class="review-val good">3 / 3</span>
-                </div>
-                <div class="review-row">
-                  <span class="review-label">Timeline</span
-                  ><span class="review-val warn"
-                    >2 weeks late on Elec phase</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Lessons learned & templates</div>
-              </div>
-              <div class="card-body">
-                <div class="alert a-green">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Department</th>
+                      <th>Head</th>
+                      <th>Activity hours reviewed</th>
+                      <th>Rate sign-off</th>
+                      <th>Capacity sign-off</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i
+                          class="fa-solid fa-gear"
+                          style="color: #3b82f6; margin-right: 6px"
+                        ></i
+                        >Mechanical
+                      </td>
+                      <td>Marc Pelletier</td>
+                      <td>3,680 h ✓</td>
+                      <td><span class="badge b-green">Approved</span></td>
+                      <td><span class="badge b-green">Approved</span></td>
+                      <td><span class="badge b-green">Ready</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i
+                          class="fa-solid fa-bolt"
+                          style="color: #8b5cf6; margin-right: 6px"
+                        ></i
+                        >Electrical
+                      </td>
+                      <td>Denis Laberge</td>
+                      <td>3,000 h ✓</td>
+                      <td><span class="badge b-green">Approved</span></td>
+                      <td><span class="badge b-amber">Conditional</span></td>
+                      <td><span class="badge b-amber">Pending note</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="alert a-blue" style="margin-top: 12px">
                   <div class="alert-icon">
-                    <i class="fa-solid fa-lightbulb"></i>
+                    <i class="fa-solid fa-comment"></i>
                   </div>
                   <div class="alert-content">
-                    <strong>Sr. Elec buffer needed for substation work</strong>
+                    <strong>Denis Laberge note</strong>
                     <p>
-                      Add 15% Sr. Electrical buffer hours for HV substation
-                      tenders — W24–W25 crunch was predictable from activity
-                      plan.
+                      "Approved conditionally — Sr. Elec overload in W24–W25
+                      must be resolved post-award before delivery starts."
                     </p>
                   </div>
                 </div>
-                <div class="alert a-amber">
-                  <div class="alert-icon">
-                    <i class="fa-solid fa-lightbulb"></i>
-                  </div>
-                  <div class="alert-content">
-                    <strong>Safety Officer sourcing lead time</strong>
-                    <p>
-                      Certified Safety Officers need 6-week hiring lead time.
-                      Initiate search at award stage, not delivery start.
-                    </p>
-                  </div>
-                </div>
-                <div class="alert a-blue">
-                  <div class="alert-icon"><i class="fa-solid fa-copy"></i></div>
-                  <div class="alert-content">
-                    <strong>Template saved: HV Substation EPC</strong>
-                    <p>
-                      Activity breakdown saved as template for future
-                      Hydro-Québec substation bids. Reusable in Step 2.
-                    </p>
-                  </div>
-                </div>
-                <div style="margin-top: 12px; display: flex; gap: 8px">
+                <div style="margin-top: 14px; display: flex; gap: 8px">
                   <button
                     class="btn success"
-                    onclick="toast('Template saved to library', 'success')"
+                    onclick="toast('Tender submitted to client', 'success')"
                   >
-                    <i class="fa-solid fa-floppy-disk"></i> Save Template
+                    <i class="fa-solid fa-paper-plane"></i> Submit Tender
                   </button>
                   <button
                     class="btn"
-                    onclick="toast('Report exported', 'success')"
+                    onclick="toast('Version saved', 'success')"
                   >
-                    <i class="fa-solid fa-download"></i> Export Report
+                    <i class="fa-solid fa-floppy-disk"></i> Save Draft
                   </button>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">All projects — win/loss summary</div>
+            <div class="next-btn-row">
+              <button class="btn" onclick="goScreen('activity-planning')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button class="btn primary" onclick="goScreen('award-decision')">
+                Next: Award Decision <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-            <div style="overflow-x: auto">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Project</th>
-                    <th>Client</th>
-                    <th>Status</th>
-                    <th>Fees</th>
-                    <th>Realized rate</th>
-                    <th>Rate vs target</th>
-                    <th>Conflicts</th>
-                    <th>Timeline</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Beaumont Substation</strong></td>
-                    <td>Hydro-Québec</td>
-                    <td><span class="badge b-green">Won</span></td>
-                    <td>CAD 982K</td>
-                    <td>CAD 147.0/h</td>
-                    <td style="color: var(--teal); font-weight: 600">+6.1/h</td>
-                    <td style="color: var(--teal)">Resolved</td>
-                    <td><span class="badge b-amber">2w late</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Laval Water Tr. Ph.2</strong></td>
-                    <td>Ville de Laval</td>
-                    <td><span class="badge b-green">Won</span></td>
-                    <td>CAD 880K</td>
-                    <td>CAD 137.5/h</td>
-                    <td style="color: var(--teal); font-weight: 600">—</td>
-                    <td>—</td>
-                    <td><span class="badge b-green">On track</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Côte-Nord Study</strong></td>
-                    <td>TransÉnergie</td>
-                    <td><span class="badge b-green">Won</span></td>
-                    <td>CAD 620K</td>
-                    <td>CAD 147.6/h</td>
-                    <td style="color: var(--teal); font-weight: 600">—</td>
-                    <td>—</td>
-                    <td><span class="badge b-green">On track</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>QC Port Electrification</strong></td>
-                    <td>Port de Québec</td>
-                    <td><span class="badge b-gray">Lost</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td style="color: var(--red)">Rate too high</td>
-                    <td>—</td>
-                    <td>—</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          </section>
 
-          <div class="next-btn-row">
-            <button class="btn" onclick="goScreen('conflict-resolution')">
-              <i class="fa-solid fa-arrow-left"></i> Back
-            </button>
-            <button class="btn primary" onclick="goScreen('tender-pipeline')">
-              <i class="fa-solid fa-rotate"></i> Start new tender
-            </button>
-          </div>
-        </section>
-      </div>
-      <!-- /page -->
+          <!-- ══════════════════════════════════
+    STEP 4: AWARD DECISION
+    ══════════════════════════════════ -->
+          <section class="screen" id="award-decision">
+            <div class="flow-summary">
+              <h2>
+                <span
+                  class="tag-award"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Award</span
+                >
+                Step 4 — Award Decision
+              </h2>
+              <p>
+                Won tenders convert to a project (PhaseProjet). Lost tenders log
+                a post-mortem. Still open tenders stay in the pipeline.
+              </p>
+            </div>
+
+            <div class="card" style="margin-bottom: 16px">
+              <div class="card-header">
+                <div class="card-title">
+                  Beaumont Substation Upgrade — Hydro-Québec
+                </div>
+                <div class="card-sub">Tender submitted 28 May 2026</div>
+              </div>
+              <div class="card-body">
+                <div class="award-gate">
+                  <div class="gate-icon">🏆</div>
+                  <h2>Tender won!</h2>
+                  <p>
+                    Hydro-Québec has awarded the contract. CAD 1,240,000 · 8,800
+                    h · Start 01 Aug 2026. Convert to a project to begin
+                    delivery.
+                  </p>
+                  <div class="gate-btns">
+                    <button
+                      class="btn success"
+                      onclick="
+                        toast(
+                          'PhaseProjet created — Beaumont Substation Upgrade',
+                          'success',
+                        );
+                        goScreen('assign-resources');
+                      "
+                    >
+                      <i class="fa-solid fa-rocket"></i> Convert to Project
+                    </button>
+                    <button
+                      class="btn"
+                      onclick="
+                        toast('Tender kept open for negotiation', 'info')
+                      "
+                    >
+                      <i class="fa-solid fa-hourglass-half"></i> Still
+                      Negotiating
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  Québec City Port Electrification — Port de Québec
+                </div>
+                <div class="card-sub">Tender submitted 02 May 2026</div>
+              </div>
+              <div class="card-body">
+                <div class="postmortem-form">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      margin-bottom: 12px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-xmark"
+                      style="color: var(--red); font-size: 18px"
+                    ></i
+                    ><strong style="font-size: 14px; color: var(--red)"
+                      >Tender lost</strong
+                    >
+                  </div>
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 12px;
+                      margin-bottom: 12px;
+                    "
+                  >
+                    <div>
+                      <label class="form-label">Lost reason</label>
+                      <select class="form-control">
+                        <option selected>Rate too high</option>
+                        <option>Scope mismatch</option>
+                        <option>Competition</option>
+                        <option>Client budget cut</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="form-label"
+                        >Competitor avg rate (if known)</label
+                      >
+                      <input class="form-control" value="CAD 128 / h" />
+                    </div>
+                  </div>
+                  <div style="margin-bottom: 12px">
+                    <label class="form-label">Lessons learned</label>
+                    <textarea class="form-control">
+Rate delta of ~13/h vs competitor. Need to review Sr. Electrical cost structure for port-type projects. Consider using more Jr. engineers for cable work.</textarea
+                    >
+                  </div>
+                  <button
+                    class="btn"
+                    onclick="toast('Post-mortem saved', 'success')"
+                  >
+                    <i class="fa-solid fa-floppy-disk"></i> Save Post-mortem
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="next-btn-row">
+              <button class="btn" onclick="goScreen('rate-review')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button
+                class="btn primary"
+                onclick="goScreen('assign-resources')"
+              >
+                Next: Assign Resources <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- ══════════════════════════════════
+    STEP 5: ASSIGN RESOURCES
+    ══════════════════════════════════ -->
+          <section class="screen" id="assign-resources">
+            <div class="flow-summary">
+              <h2>
+                <span
+                  class="tag-delivery"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Delivery</span
+                >
+                Step 5 — Assign Resources
+              </h2>
+              <p>
+                Assign people to phases and dates. The capacity heatmap shows
+                weekly overloads before they become problems.
+              </p>
+              <button class="import-data-btn" id="importDataBtn">
+                Import Data
+              </button>
+
+              <input
+                type="file"
+                id="excelUploader"
+                accept=".xlsx,.xls"
+                style="display: none"
+              />
+            </div>
+
+            <div class="kpi-row kpi-4">
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--teal)"></div>
+                <div class="kpi-label">Available now</div>
+                <div class="kpi-val">14</div>
+                <div class="kpi-sub">All disciplines</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--amber)"></div>
+                <div class="kpi-label">Partially booked</div>
+                <div class="kpi-val">9</div>
+                <div class="kpi-sub">50–90% allocated</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--red)"></div>
+                <div class="kpi-label">Overloaded</div>
+                <div class="kpi-val">4</div>
+                <div class="kpi-sub">Over 100% capacity</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-accent" style="background: var(--purple)"></div>
+                <div class="kpi-label">Assignments</div>
+                <div class="kpi-val">14</div>
+                <div class="kpi-sub">Clean · 3 conflicted</div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 16px">
+              <div class="card-header">
+                <div class="card-title">
+                  People assignments — Beaumont Substation Upgrade
+                </div>
+              </div>
+              <div style="overflow-x: auto">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Role</th>
+                      <th>Person</th>
+                      <th>Skill match</th>
+                      <th>Phase</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Workload</th>
+                      <th>Status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Site Engineer</strong></td>
+                      <td>Maria Chen</td>
+                      <td style="color: var(--teal); font-weight: 700">96%</td>
+                      <td>Structure</td>
+                      <td>Jul 1 2026</td>
+                      <td>Sep 30 2026</td>
+                      <td>
+                        <div class="workload-bar">
+                          <div class="workload-track">
+                            <div
+                              class="workload-fill"
+                              style="width: 72%; background: var(--blue)"
+                            ></div>
+                          </div>
+                          <span style="font-size: 11px">72%</span>
+                        </div>
+                      </td>
+                      <td><span class="badge b-green">Assigned</span></td>
+                      <td><button class="btn sm">Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Site Engineer</strong></td>
+                      <td>Amir Nassar</td>
+                      <td style="color: var(--teal); font-weight: 700">92%</td>
+                      <td>Structure</td>
+                      <td>Jul 1 2026</td>
+                      <td>Sep 30 2026</td>
+                      <td>
+                        <div class="workload-bar">
+                          <div class="workload-track">
+                            <div
+                              class="workload-fill"
+                              style="width: 68%; background: var(--blue)"
+                            ></div>
+                          </div>
+                          <span style="font-size: 11px">68%</span>
+                        </div>
+                      </td>
+                      <td><span class="badge b-green">Assigned</span></td>
+                      <td><button class="btn sm">Edit</button></td>
+                    </tr>
+                    <tr style="background: var(--red-dim)">
+                      <td><strong>Sr. Electrical</strong></td>
+                      <td style="color: var(--red); font-weight: 600">
+                        <i
+                          class="fa-solid fa-triangle-exclamation"
+                          style="margin-right: 4px"
+                        ></i
+                        >Denis Laberge
+                      </td>
+                      <td style="color: var(--teal); font-weight: 700">91%</td>
+                      <td style="color: var(--red)">Beaumont + Côte-Nord</td>
+                      <td>Aug 1 2026</td>
+                      <td>Oct 31 2026</td>
+                      <td>
+                        <div class="workload-bar">
+                          <div class="workload-track">
+                            <div
+                              class="workload-fill"
+                              style="width: 100%; background: var(--red)"
+                            ></div>
+                          </div>
+                          <span style="font-size: 11px; color: var(--red)"
+                            >115%</span
+                          >
+                        </div>
+                      </td>
+                      <td><span class="badge b-red">Conflict</span></td>
+                      <td><button class="btn sm danger">Resolve</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Technician</strong></td>
+                      <td>Julia Santos</td>
+                      <td style="color: var(--teal); font-weight: 700">95%</td>
+                      <td>Electrical</td>
+                      <td>Sep 1 2026</td>
+                      <td>Nov 30 2026</td>
+                      <td>
+                        <div class="workload-bar">
+                          <div class="workload-track">
+                            <div
+                              class="workload-fill"
+                              style="width: 60%; background: var(--blue)"
+                            ></div>
+                          </div>
+                          <span style="font-size: 11px">60%</span>
+                        </div>
+                      </td>
+                      <td><span class="badge b-green">Assigned</span></td>
+                      <td><button class="btn sm">Edit</button></td>
+                    </tr>
+                    <tr style="background: var(--red-dim)">
+                      <td><strong>Safety Officer</strong></td>
+                      <td style="color: var(--text3)">— Unassigned</td>
+                      <td style="color: var(--red)">—</td>
+                      <td>All phases</td>
+                      <td>Jul 1 2026</td>
+                      <td>Nov 30 2026</td>
+                      <td>—</td>
+                      <td><span class="badge b-red">Skill gap</span></td>
+                      <td><button class="btn sm primary">Assign</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  Weekly availability heatmap — W22 to W29
+                </div>
+                <div class="card-sub">
+                  <span class="hm-cell hm-avail" style="margin-right: 6px"
+                    >Free</span
+                  ><span class="hm-cell hm-partial" style="margin-right: 6px"
+                    >Partial</span
+                  ><span class="hm-cell hm-over" style="margin-right: 6px"
+                    >Overload</span
+                  ><span class="hm-cell hm-leave">Leave</span>
+                </div>
+              </div>
+              <div style="overflow-x: auto">
+                <table class="heatmap-table">
+                  <thead>
+                    <tr>
+                      <th style="min-width: 130px">Engineer</th>
+                      <th style="min-width: 120px">Role</th>
+                      <th>W22</th>
+                      <th>W23</th>
+                      <th>W24</th>
+                      <th>W25</th>
+                      <th>W26</th>
+                      <th>W27</th>
+                      <th>W28</th>
+                      <th>W29</th>
+                      <th>Avg</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="hm-dept-row">
+                      <td colspan="11">
+                        <i
+                          class="fa-solid fa-gear"
+                          style="color: #3b82f6; margin-right: 6px"
+                        ></i
+                        >Mechanical
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sophie Tremblay</td>
+                      <td>Sr. Mechanical</td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-over">110%</span></td>
+                      <td><span class="hm-cell hm-over">105%</span></td>
+                      <td><span class="hm-cell hm-partial">75%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-avail">40%</span></td>
+                      <td><span class="hm-cell hm-avail">30%</span></td>
+                      <td style="font-weight: 700; color: var(--amber)">79%</td>
+                    </tr>
+                    <tr>
+                      <td>Marc Pelletier</td>
+                      <td>Sr. Mechanical</td>
+                      <td><span class="hm-cell hm-partial">65%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-partial">65%</span></td>
+                      <td><span class="hm-cell hm-avail">50%</span></td>
+                      <td><span class="hm-cell hm-avail">45%</span></td>
+                      <td><span class="hm-cell hm-avail">40%</span></td>
+                      <td><span class="hm-cell hm-avail">35%</span></td>
+                      <td>55%</td>
+                    </tr>
+                    <tr>
+                      <td>Nathalie Gagnon</td>
+                      <td>Mech. Technologist</td>
+                      <td><span class="hm-cell hm-leave">—</span></td>
+                      <td><span class="hm-cell hm-leave">—</span></td>
+                      <td><span class="hm-cell hm-avail">40%</span></td>
+                      <td><span class="hm-cell hm-avail">55%</span></td>
+                      <td><span class="hm-cell hm-partial">75%</span></td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td>63%</td>
+                    </tr>
+                    <tr class="hm-dept-row">
+                      <td colspan="11">
+                        <i
+                          class="fa-solid fa-bolt"
+                          style="color: #8b5cf6; margin-right: 6px"
+                        ></i
+                        >Electrical
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Denis Laberge</td>
+                      <td>Sr. Electrical</td>
+                      <td><span class="hm-cell hm-partial">85%</span></td>
+                      <td><span class="hm-cell hm-partial">85%</span></td>
+                      <td><span class="hm-cell hm-over">115%</span></td>
+                      <td><span class="hm-cell hm-over">120%</span></td>
+                      <td><span class="hm-cell hm-partial">90%</span></td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-partial">75%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td style="font-weight: 700; color: var(--red)">90%</td>
+                    </tr>
+                    <tr>
+                      <td>Lucie Bergeron</td>
+                      <td>Sr. Electrical</td>
+                      <td><span class="hm-cell hm-avail">50%</span></td>
+                      <td><span class="hm-cell hm-avail">50%</span></td>
+                      <td><span class="hm-cell hm-partial">65%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-partial">75%</span></td>
+                      <td><span class="hm-cell hm-partial">75%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-partial">60%</span></td>
+                      <td>64%</td>
+                    </tr>
+                    <tr>
+                      <td>Yannick Proulx</td>
+                      <td>Elec. Technologist</td>
+                      <td><span class="hm-cell hm-over">105%</span></td>
+                      <td><span class="hm-cell hm-partial">85%</span></td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-partial">80%</span></td>
+                      <td><span class="hm-cell hm-partial">75%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-partial">70%</span></td>
+                      <td><span class="hm-cell hm-partial">65%</span></td>
+                      <td style="font-weight: 700; color: var(--amber)">79%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="next-btn-row">
+              <button class="btn" onclick="goScreen('award-decision')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button
+                class="btn primary"
+                onclick="goScreen('conflict-resolution')"
+              >
+                Next: Conflict Resolution
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- ══════════════════════════════════
+    STEP 6: CONFLICT RESOLUTION
+    ══════════════════════════════════ -->
+          <section class="screen" id="conflict-resolution">
+            <div class="flow-summary">
+              <h2>
+                <span
+                  class="tag-delivery"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Delivery</span
+                >
+                Step 6 — Conflict Resolution
+              </h2>
+              <p>
+                Approve, move, or override all conflicts. The plan cannot be
+                approved until all critical conflicts are resolved.
+              </p>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                gap: 8px;
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 6px;
+                  padding: 5px 12px;
+                  border-radius: 20px;
+                  font-size: 11px;
+                  font-weight: 600;
+                  background: var(--red-dim);
+                  color: var(--red);
+                  border: 1px solid var(--red);
+                "
+              >
+                <i class="fa-solid fa-triangle-exclamation"></i> 2 critical
+                conflicts
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 6px;
+                  padding: 5px 12px;
+                  border-radius: 20px;
+                  font-size: 11px;
+                  font-weight: 600;
+                  background: var(--amber-dim);
+                  color: var(--amber);
+                  border: 1px solid var(--amber);
+                "
+              >
+                <i class="fa-solid fa-graduation-cap"></i> 1 skill gap
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 6px;
+                  padding: 5px 12px;
+                  border-radius: 20px;
+                  font-size: 11px;
+                  font-weight: 600;
+                  background: var(--teal-dim);
+                  color: var(--teal);
+                  border: 1px solid var(--teal);
+                "
+              >
+                <i class="fa-solid fa-circle-check"></i> 14 clean assignments
+              </div>
+            </div>
+
+            <div class="conflict-card critical">
+              <div style="display: flex; align-items: flex-start; gap: 12px">
+                <div
+                  style="
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background: var(--red-dim);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-user-slash"
+                    style="color: var(--red); font-size: 13px"
+                  ></i>
+                </div>
+                <div style="flex: 1">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    <strong style="font-size: 13px"
+                      >Denis Laberge — double booked</strong
+                    ><span class="badge b-red">Critical</span>
+                  </div>
+                  <p
+                    style="
+                      font-size: 12px;
+                      color: var(--text2);
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Assigned to both Beaumont Substation and Côte-Nord
+                    Transmission at 115–120% load in W24–W25. Work cannot
+                    proceed without resolution.
+                  </p>
+                  <div style="display: flex; gap: 8px">
+                    <button
+                      class="btn sm primary"
+                      onclick="
+                        toast(
+                          'Denis Laberge moved to Beaumont only — Côte-Nord reassigned to Lucie Bergeron',
+                          'success',
+                        )
+                      "
+                    >
+                      Move to Beaumont only
+                    </button>
+                    <button
+                      class="btn sm"
+                      onclick="
+                        toast(
+                          'Searching available Sr. Electrical engineers…',
+                          'info',
+                        )
+                      "
+                    >
+                      Find Replacement
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conflict-card critical">
+              <div style="display: flex; align-items: flex-start; gap: 12px">
+                <div
+                  style="
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background: var(--red-dim);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-user-slash"
+                    style="color: var(--red); font-size: 13px"
+                  ></i>
+                </div>
+                <div style="flex: 1">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    <strong style="font-size: 13px"
+                      >Sophie Tremblay — overload W24–W25</strong
+                    ><span class="badge b-red">Critical</span>
+                  </div>
+                  <p
+                    style="
+                      font-size: 12px;
+                      color: var(--text2);
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Beaumont + Laval Water Treatment compete at 110% in W24 and
+                    105% in W25. Mechanical dept must coordinate.
+                  </p>
+                  <div style="display: flex; gap: 8px">
+                    <button
+                      class="btn sm primary"
+                      onclick="
+                        toast(
+                          'Tasks shifted to Marc Pelletier for W24–W25',
+                          'success',
+                        )
+                      "
+                    >
+                      Shift to Marc Pelletier
+                    </button>
+                    <button
+                      class="btn sm"
+                      onclick="
+                        toast('Extending Laval Water start by 2 weeks…', 'info')
+                      "
+                    >
+                      Delay Laval Start
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conflict-card warning">
+              <div style="display: flex; align-items: flex-start; gap: 12px">
+                <div
+                  style="
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background: var(--amber-dim);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-graduation-cap"
+                    style="color: var(--amber); font-size: 13px"
+                  ></i>
+                </div>
+                <div style="flex: 1">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    <strong style="font-size: 13px"
+                      >Safety Officer — no one assigned</strong
+                    ><span class="badge b-amber">Skill gap</span>
+                  </div>
+                  <p
+                    style="
+                      font-size: 12px;
+                      color: var(--text2);
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Beaumont Substation requires a certified Safety Officer for
+                    all site phases (Jul–Nov 2026). No available internal
+                    resource has this certification.
+                  </p>
+                  <div style="display: flex; gap: 8px">
+                    <button
+                      class="btn sm primary"
+                      onclick="
+                        toast(
+                          'HR notified to source certified Safety Officer',
+                          'success',
+                        )
+                      "
+                    >
+                      Notify HR
+                    </button>
+                    <button
+                      class="btn sm"
+                      onclick="
+                        toast('Searching subcontractor database…', 'info')
+                      "
+                    >
+                      Find External
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top: 16px">
+              <div class="card-body">
+                <div class="alert a-green">
+                  <div class="alert-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div class="alert-content">
+                    <strong>14 clean assignments ready</strong>
+                    <p>
+                      Maria Chen, Amir Nassar, Julia Santos and 11 others have
+                      no conflicts. Approve the plan once criticals are
+                      resolved.
+                    </p>
+                  </div>
+                </div>
+                <div style="margin-top: 14px; display: flex; gap: 8px">
+                  <button
+                    class="btn success"
+                    onclick="
+                      toast(
+                        'Plan approved and locked — all PMs notified',
+                        'success',
+                      );
+                      goScreen('review-learning');
+                    "
+                  >
+                    <i class="fa-solid fa-check"></i> Approve Plan
+                  </button>
+                  <button
+                    class="btn"
+                    onclick="
+                      toast('Auto-assigning based on availability…', 'info')
+                    "
+                  >
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Assign
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="next-btn-row">
+              <button class="btn" onclick="goScreen('assign-resources')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button class="btn primary" onclick="goScreen('review-learning')">
+                Next: Review & Learning <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- ══════════════════════════════════
+    STEP 7: REVIEW & LEARNING
+    ══════════════════════════════════ -->
+          <section class="screen" id="review-learning">
+            <div
+              class="flow-summary"
+              style="background: linear-gradient(135deg, #7f1d1d, #991b1b)"
+            >
+              <h2>
+                <span
+                  class="tag-review"
+                  style="vertical-align: middle; margin-right: 8px"
+                  >Review</span
+                >
+                Step 7 — Review & Learning
+              </h2>
+              <p>
+                Plan vs actual. Log outcomes and templates for future bids.
+                Closes the loop.
+              </p>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 16px">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">
+                    Plan vs actual — Beaumont Substation
+                  </div>
+                  <div class="card-sub">As of Jun 2026</div>
+                </div>
+                <div class="card-body">
+                  <div class="review-row">
+                    <span class="review-label">Budget hours</span
+                    ><span class="review-val">8,800 h</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Actual hours used</span
+                    ><span class="review-val good">6,680 h (76%)</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Budget fees</span
+                    ><span class="review-val">CAD 1,240,000</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Actual fees invoiced</span
+                    ><span class="review-val good">CAD 982,000</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Realized avg rate</span
+                    ><span class="review-val good">CAD 147.0 / h ↑</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Target rate</span
+                    ><span class="review-val">CAD 140.9 / h</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Rate variance</span
+                    ><span class="review-val good">+6.1 / h above target</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Conflicts resolved</span
+                    ><span class="review-val good">3 / 3</span>
+                  </div>
+                  <div class="review-row">
+                    <span class="review-label">Timeline</span
+                    ><span class="review-val warn"
+                      >2 weeks late on Elec phase</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Lessons learned & templates</div>
+                </div>
+                <div class="card-body">
+                  <div class="alert a-green">
+                    <div class="alert-icon">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="alert-content">
+                      <strong
+                        >Sr. Elec buffer needed for substation work</strong
+                      >
+                      <p>
+                        Add 15% Sr. Electrical buffer hours for HV substation
+                        tenders — W24–W25 crunch was predictable from activity
+                        plan.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="alert a-amber">
+                    <div class="alert-icon">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="alert-content">
+                      <strong>Safety Officer sourcing lead time</strong>
+                      <p>
+                        Certified Safety Officers need 6-week hiring lead time.
+                        Initiate search at award stage, not delivery start.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="alert a-blue">
+                    <div class="alert-icon">
+                      <i class="fa-solid fa-copy"></i>
+                    </div>
+                    <div class="alert-content">
+                      <strong>Template saved: HV Substation EPC</strong>
+                      <p>
+                        Activity breakdown saved as template for future
+                        Hydro-Québec substation bids. Reusable in Step 2.
+                      </p>
+                    </div>
+                  </div>
+                  <div style="margin-top: 12px; display: flex; gap: 8px">
+                    <button
+                      class="btn success"
+                      onclick="toast('Template saved to library', 'success')"
+                    >
+                      <i class="fa-solid fa-floppy-disk"></i> Save Template
+                    </button>
+                    <button
+                      class="btn"
+                      onclick="toast('Report exported', 'success')"
+                    >
+                      <i class="fa-solid fa-download"></i> Export Report
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">All projects — win/loss summary</div>
+              </div>
+              <div style="overflow-x: auto">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Project</th>
+                      <th>Client</th>
+                      <th>Status</th>
+                      <th>Fees</th>
+                      <th>Realized rate</th>
+                      <th>Rate vs target</th>
+                      <th>Conflicts</th>
+                      <th>Timeline</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Beaumont Substation</strong></td>
+                      <td>Hydro-Québec</td>
+                      <td><span class="badge b-green">Won</span></td>
+                      <td>CAD 982K</td>
+                      <td>CAD 147.0/h</td>
+                      <td style="color: var(--teal); font-weight: 600">
+                        +6.1/h
+                      </td>
+                      <td style="color: var(--teal)">Resolved</td>
+                      <td><span class="badge b-amber">2w late</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Laval Water Tr. Ph.2</strong></td>
+                      <td>Ville de Laval</td>
+                      <td><span class="badge b-green">Won</span></td>
+                      <td>CAD 880K</td>
+                      <td>CAD 137.5/h</td>
+                      <td style="color: var(--teal); font-weight: 600">—</td>
+                      <td>—</td>
+                      <td><span class="badge b-green">On track</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Côte-Nord Study</strong></td>
+                      <td>TransÉnergie</td>
+                      <td><span class="badge b-green">Won</span></td>
+                      <td>CAD 620K</td>
+                      <td>CAD 147.6/h</td>
+                      <td style="color: var(--teal); font-weight: 600">—</td>
+                      <td>—</td>
+                      <td><span class="badge b-green">On track</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>QC Port Electrification</strong></td>
+                      <td>Port de Québec</td>
+                      <td><span class="badge b-gray">Lost</span></td>
+                      <td>—</td>
+                      <td>—</td>
+                      <td style="color: var(--red)">Rate too high</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="next-btn-row">
+              <button class="btn" onclick="goScreen('conflict-resolution')">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button class="btn primary" onclick="goScreen('tender-pipeline')">
+                <i class="fa-solid fa-rotate"></i> Start new tender
+              </button>
+            </div>
+          </section>
+        </div>
+        <!-- /page -->
       </main>
     </div>
     <!-- /app -->
 
     <div class="toast-container" id="toast-container"></div>
-
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <script>
       function openApp() {
         document.getElementById("login-shell").style.display = "none";
@@ -3216,6 +3280,23 @@ Rate delta of ~13/h vs competitor. Need to review Sr. Electrical cost structure 
           }, 300);
         }, 3000);
       }
+      const importBtn = document.getElementById("importDataBtn");
+      const excelUploader = document.getElementById("excelUploader");
+
+      importBtn.addEventListener("click", () => {
+        excelUploader.click();
+      });
+
+      excelUploader.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+
+        if (!file) return;
+
+        console.log("Selected file:", file.name);
+
+        // You can later parse the Excel here
+        alert(`Excel file selected: ${file.name}`);
+      });
     </script>
   </body>
 </html>
