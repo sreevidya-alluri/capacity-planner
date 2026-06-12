@@ -181,129 +181,155 @@
       /* APP SHELL */
       .app {
         display: none;
-        flex-direction: column;
         min-height: 100vh;
       }
-      .topbar {
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-        padding: 0 24px;
-        height: 52px;
+      .sidebar {
+        width: 248px;
+        background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
         display: flex;
-        align-items: center;
-        gap: 16px;
-        position: sticky;
+        flex-direction: column;
+        position: fixed;
         top: 0;
+        left: 0;
+        height: 100vh;
         z-index: 100;
+        overflow-y: auto;
+        flex-shrink: 0;
       }
-      .topbar-brand {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-        font-weight: 700;
-        color: var(--text);
+      .sidebar::-webkit-scrollbar {
+        width: 4px;
       }
-      .topbar-brand span {
-        color: var(--purple);
+      .sidebar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.12);
       }
-      .topbar-brand .tag {
-        font-size: 9px;
-        background: var(--purple-dim);
-        color: var(--purple);
-        border-radius: 4px;
-        padding: 1px 5px;
-        margin-left: 4px;
-      }
-      .topbar-right {
-        margin-left: auto;
+      .sidebar-logo {
+        padding: 20px 18px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         display: flex;
         align-items: center;
         gap: 10px;
+        flex-shrink: 0;
       }
-      .user-pill {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 5px 12px 5px 5px;
-        border: 1px solid var(--border);
-        border-radius: 20px;
-        background: var(--surface2);
-        cursor: pointer;
-        font-size: 12px;
-        color: var(--text2);
-        transition: all 0.15s;
-      }
-      .user-pill:hover {
-        background: var(--border);
-      }
-      .avatar {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
+      .sidebar-logo .logo-icon {
+        width: 36px;
+        height: 36px;
         background: var(--purple);
+        border-radius: 9px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 9px;
-        font-weight: 700;
+        font-size: 15px;
         color: #fff;
         flex-shrink: 0;
       }
-
-      /* FLOW NAV */
-      .flow-nav {
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-        padding: 0 24px;
-        display: flex;
-        align-items: stretch;
-        overflow-x: auto;
+      .sidebar-logo .logo-text {
+        font-size: 17px;
+        font-weight: 700;
+        color: #fff;
       }
-      .flow-step {
+      .sidebar-logo .logo-text span {
+        color: #c4b5fd;
+      }
+      .sidebar-logo .version {
+        font-size: 9px;
+        background: rgba(109, 40, 217, 0.35);
+        color: #c4b5fd;
+        border-radius: 4px;
+        padding: 2px 6px;
+        margin-left: auto;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .sidebar-nav {
+        padding: 12px 0;
+        flex: 1;
+      }
+      .phase-section {
+        margin-bottom: 4px;
+      }
+      .phase-label {
+        padding: 12px 18px 6px;
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
         display: flex;
         align-items: center;
-        gap: 0;
+        gap: 6px;
+      }
+      .phase-label::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
         flex-shrink: 0;
+      }
+      .phase-label.phase-bid {
+        color: #c4b5fd;
+      }
+      .phase-label.phase-bid::before {
+        background: #8b5cf6;
+      }
+      .phase-label.phase-award {
+        color: #6ee7b7;
+      }
+      .phase-label.phase-award::before {
+        background: #34d399;
+      }
+      .phase-label.phase-delivery {
+        color: #fcd34d;
+      }
+      .phase-label.phase-delivery::before {
+        background: #fbbf24;
+      }
+      .phase-label.phase-review {
+        color: #fca5a5;
+      }
+      .phase-label.phase-review::before {
+        background: #f87171;
       }
       .flow-btn {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 14px 18px;
-        font-size: 12px;
+        gap: 10px;
+        padding: 9px 12px;
+        margin: 2px 10px;
+        font-size: 12.5px;
         font-weight: 500;
-        color: var(--text3);
+        color: rgba(255, 255, 255, 0.55);
         cursor: pointer;
-        border-bottom: 2px solid transparent;
+        border-radius: 8px;
+        border-left: 3px solid transparent;
         transition: all 0.15s;
-        white-space: nowrap;
-        position: relative;
       }
       .flow-btn:hover {
-        color: var(--text2);
+        background: rgba(255, 255, 255, 0.07);
+        color: rgba(255, 255, 255, 0.85);
       }
       .flow-btn.active {
-        color: var(--purple);
-        border-bottom-color: var(--purple);
+        background: rgba(109, 40, 217, 0.35);
+        color: #fff;
+        border-left-color: #a78bfa;
       }
       .flow-btn.done {
-        color: var(--teal);
+        color: #6ee7b7;
       }
       .flow-btn.done .step-num {
         background: var(--teal);
+        border-color: var(--teal);
         color: #fff;
       }
       .flow-btn.active .step-num {
         background: var(--purple);
+        border-color: var(--purple);
         color: #fff;
       }
       .step-num {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
-        background: var(--surface2);
-        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -312,35 +338,55 @@
         flex-shrink: 0;
         transition: all 0.15s;
       }
-      .flow-arrow {
-        color: var(--border);
-        font-size: 12px;
-        flex-shrink: 0;
-      }
-      .flow-phase {
-        font-size: 9px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        padding: 0 14px;
-        color: var(--text3);
-        border-right: 1px solid var(--border);
+      .sidebar-user {
+        padding: 14px 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
         display: flex;
         align-items: center;
-        writing-mode: horizontal-tb;
+        gap: 10px;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      .sidebar-user:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .sidebar-user .su-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
         flex-shrink: 0;
       }
-      .phase-bid {
-        color: #6d28d9;
+      .sidebar-user .su-name {
+        font-size: 12px;
+        font-weight: 600;
+        color: #e2e8f0;
       }
-      .phase-award {
-        color: #059669;
+      .sidebar-user .su-role {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.45);
       }
-      .phase-delivery {
-        color: #b45309;
+      .sidebar-user .su-logout {
+        margin-left: auto;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 13px;
       }
-      .phase-review {
-        color: #dc2626;
+      .sidebar-user:hover .su-logout {
+        color: #fca5a5;
+      }
+      .main-content {
+        margin-left: 248px;
+        flex: 1;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
 
       /* PAGE */
@@ -349,6 +395,7 @@
         max-width: 1200px;
         margin: 0 auto;
         width: 100%;
+        flex: 1;
       }
       .screen {
         display: none;
@@ -1088,147 +1135,93 @@
 
     <!-- APP -->
     <div class="app" id="app-shell">
-      <!-- TOPBAR -->
-      <header class="topbar">
-        <div class="topbar-brand">
-          <i class="fa-solid fa-layer-group" style="color: var(--purple)"></i>
-          Cap<span>Plan</span><span class="tag">MVP</span>
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <div class="logo-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="logo-text">Cap<span>Plan</span></div>
+          <span class="version">MVP</span>
         </div>
-        <div class="topbar-right">
-          <div class="user-pill" onclick="logout()">
-            <div class="avatar">AK</div>
-            Alicia Khan &nbsp;<i
-              class="fa-solid fa-right-from-bracket fa-xs"
-              style="color: var(--text3)"
-            ></i>
-          </div>
-        </div>
-      </header>
 
-      <!-- FLOW NAV -->
-      <nav class="flow-nav" id="flow-nav">
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            padding: 0 12px 0 0;
-            border-right: 1px solid var(--border);
-            margin-right: 8px;
-            flex-shrink: 0;
-          "
-        >
-          <span class="tag-bid">Bid</span>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn active"
-            data-screen="tender-pipeline"
-            onclick="goScreen('tender-pipeline')"
-          >
-            <span class="step-num">1</span> Tender Pipeline
+        <nav class="sidebar-nav" id="flow-nav">
+          <div class="phase-section">
+            <div class="phase-label phase-bid">Bid</div>
+            <div
+              class="flow-btn active"
+              data-screen="tender-pipeline"
+              onclick="goScreen('tender-pipeline')"
+            >
+              <span class="step-num">1</span> Tender Pipeline
+            </div>
+            <div
+              class="flow-btn"
+              data-screen="activity-planning"
+              onclick="goScreen('activity-planning')"
+            >
+              <span class="step-num">2</span> Activity Planning
+            </div>
+            <div
+              class="flow-btn"
+              data-screen="rate-review"
+              onclick="goScreen('rate-review')"
+            >
+              <span class="step-num">3</span> Rate & Dept. Review
+            </div>
           </div>
-          <i class="fa-solid fa-chevron-right flow-arrow fa-xs"></i>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn"
-            data-screen="activity-planning"
-            onclick="goScreen('activity-planning')"
-          >
-            <span class="step-num">2</span> Activity Planning
-          </div>
-          <i class="fa-solid fa-chevron-right flow-arrow fa-xs"></i>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn"
-            data-screen="rate-review"
-            onclick="goScreen('rate-review')"
-          >
-            <span class="step-num">3</span> Rate & Dept. Review
-          </div>
-          <i class="fa-solid fa-chevron-right flow-arrow fa-xs"></i>
-        </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            padding: 0 12px;
-            border-right: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-            margin: 0 8px;
-            flex-shrink: 0;
-          "
-        >
-          <span class="tag-award">Award</span>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn"
-            data-screen="award-decision"
-            onclick="goScreen('award-decision')"
-          >
-            <span class="step-num">4</span> Award Decision
-          </div>
-          <i class="fa-solid fa-chevron-right flow-arrow fa-xs"></i>
-        </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            padding: 0 12px;
-            border-right: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-            margin: 0 8px;
-            flex-shrink: 0;
-          "
-        >
-          <span class="tag-delivery">Delivery</span>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn"
-            data-screen="assign-resources"
-            onclick="goScreen('assign-resources')"
-          >
-            <span class="step-num">5</span> Assign Resources
-          </div>
-          <i class="fa-solid fa-chevron-right flow-arrow fa-xs"></i>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn"
-            data-screen="conflict-resolution"
-            onclick="goScreen('conflict-resolution')"
-          >
-            <span class="step-num">6</span> Conflict Resolution
-          </div>
-          <i class="fa-solid fa-chevron-right flow-arrow fa-xs"></i>
-        </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            padding: 0 12px;
-            border-right: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-            margin: 0 8px;
-            flex-shrink: 0;
-          "
-        >
-          <span class="tag-review">Review</span>
-        </div>
-        <div class="flow-step">
-          <div
-            class="flow-btn"
-            data-screen="review-learning"
-            onclick="goScreen('review-learning')"
-          >
-            <span class="step-num">7</span> Review & Learning
-          </div>
-        </div>
-      </nav>
 
+          <div class="phase-section">
+            <div class="phase-label phase-award">Award</div>
+            <div
+              class="flow-btn"
+              data-screen="award-decision"
+              onclick="goScreen('award-decision')"
+            >
+              <span class="step-num">4</span> Award Decision
+            </div>
+          </div>
+
+          <div class="phase-section">
+            <div class="phase-label phase-delivery">Delivery</div>
+            <div
+              class="flow-btn"
+              data-screen="assign-resources"
+              onclick="goScreen('assign-resources')"
+            >
+              <span class="step-num">5</span> Assign Resources
+            </div>
+            <div
+              class="flow-btn"
+              data-screen="conflict-resolution"
+              onclick="goScreen('conflict-resolution')"
+            >
+              <span class="step-num">6</span> Conflict Resolution
+            </div>
+          </div>
+
+          <div class="phase-section">
+            <div class="phase-label phase-review">Review</div>
+            <div
+              class="flow-btn"
+              data-screen="review-learning"
+              onclick="goScreen('review-learning')"
+            >
+              <span class="step-num">7</span> Review & Learning
+            </div>
+          </div>
+        </nav>
+
+        <div class="sidebar-user" onclick="logout()">
+          <div class="su-avatar">AK</div>
+          <div>
+            <div class="su-name">Alicia Khan</div>
+            <div class="su-role">Planning Manager</div>
+          </div>
+          <span class="su-logout" title="Sign out"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></span>
+        </div>
+      </aside>
+
+      <main class="main-content">
       <div class="page">
         <!-- ══════════════════════════════════
     STEP 1: TENDER PIPELINE
@@ -3151,6 +3144,7 @@ Rate delta of ~13/h vs competitor. Need to review Sr. Electrical cost structure 
         </section>
       </div>
       <!-- /page -->
+      </main>
     </div>
     <!-- /app -->
 
@@ -3159,9 +3153,7 @@ Rate delta of ~13/h vs competitor. Need to review Sr. Electrical cost structure 
     <script>
       function openApp() {
         document.getElementById("login-shell").style.display = "none";
-        var app = document.getElementById("app-shell");
-        app.style.display = "flex";
-        app.style.flexDirection = "column";
+        document.getElementById("app-shell").style.display = "block";
       }
       function logout() {
         document.getElementById("app-shell").style.display = "none";
